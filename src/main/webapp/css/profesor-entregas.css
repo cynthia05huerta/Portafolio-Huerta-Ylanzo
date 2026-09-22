@@ -1,0 +1,777 @@
+/* =========================================================
+   PROFESOR - ENTREGAS
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #fbf8f6;
+    color: #302a31;
+}
+
+
+/* =========================================================
+   ESTRUCTURA
+   ========================================================= */
+
+.profesor-entregas-page {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    font-family: "DM Sans", Arial, sans-serif;
+    background:
+            radial-gradient(circle at 80% 5%, #f7e5eb 0, transparent 25%),
+            #fbf8f6;
+}
+
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.profesor-entregas-sidebar {
+    min-height: 100vh;
+    padding: 32px 20px;
+    background: #f5e8ea;
+    border-right: 1px solid #ead8dc;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.profesor-entregas-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 10px 30px;
+}
+
+.profesor-entregas-brand-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 16px;
+    display: grid;
+    place-items: center;
+    background: #fff;
+    border: 1px solid #ead2d7;
+    color: #c35f78;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 22px;
+    font-weight: 800;
+    box-shadow: 0 8px 25px rgba(114, 72, 84, .08);
+}
+
+.profesor-entregas-brand-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.profesor-entregas-brand-text strong {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 19px;
+    color: #30272e;
+}
+
+.profesor-entregas-brand-text span {
+    margin-top: 2px;
+    font-size: 10px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: #9c7e86;
+}
+
+
+/* =========================================================
+   MENÚ
+   ========================================================= */
+
+.profesor-entregas-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.profesor-entregas-menu-item {
+    min-height: 48px;
+    padding: 0 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-radius: 14px;
+    text-decoration: none;
+    color: #665860;
+    transition: .25s ease;
+}
+
+.profesor-entregas-menu-item > span {
+    width: 25px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.profesor-entregas-menu-item b {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.profesor-entregas-menu-item:hover {
+    background: rgba(255, 255, 255, .65);
+    color: #ba5871;
+    transform: translateX(3px);
+}
+
+.profesor-entregas-menu-item.active {
+    background: #fff;
+    color: #ba5871;
+    box-shadow: 0 8px 25px rgba(119, 75, 87, .08);
+}
+
+.profesor-entregas-menu-item.logout {
+    color: #9e6471;
+}
+
+.profesor-entregas-menu-divider {
+    height: 1px;
+    margin: 13px 10px;
+    background: #e4d1d5;
+}
+
+
+/* =========================================================
+   CONTENIDO
+   ========================================================= */
+
+.profesor-entregas-main {
+    min-width: 0;
+    padding: 48px 5vw 70px;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.profesor-entregas-header {
+    position: relative;
+    min-height: 245px;
+    padding: 46px 50px;
+    border-radius: 34px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background:
+            linear-gradient(
+                    135deg,
+                    rgba(255,255,255,.96),
+                    rgba(250,235,239,.92)
+            );
+    border: 1px solid #eedee1;
+    box-shadow: 0 18px 55px rgba(98, 61, 73, .07);
+    animation: profesorEntregaEntrada .6s ease both;
+}
+
+.profesor-entregas-header::before {
+    content: "";
+    position: absolute;
+    width: 290px;
+    height: 290px;
+    right: -90px;
+    top: -130px;
+    border-radius: 50%;
+    background: #efd5dc;
+    opacity: .55;
+}
+
+.profesor-entregas-header::after {
+    content: "";
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    right: 170px;
+    bottom: -100px;
+    border-radius: 50%;
+    background: #ebe6f6;
+    opacity: .7;
+}
+
+.profesor-entregas-header > div {
+    position: relative;
+    z-index: 2;
+}
+
+.profesor-entregas-eyebrow,
+.profesor-entregas-small-title {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #c05f77;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .18em;
+}
+
+.profesor-entregas-header h1 {
+    margin: 0;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(42px, 5vw, 64px);
+    line-height: 1;
+    color: #332932;
+}
+
+.profesor-entregas-header p {
+    max-width: 620px;
+    margin: 20px 0 0;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #786c73;
+}
+
+
+/* =========================================================
+   DECORACIÓN HERO
+   ========================================================= */
+
+.profesor-entregas-decoration {
+    width: 150px;
+    min-width: 150px;
+    text-align: center;
+}
+
+.profesor-entregas-decoration-circle {
+    width: 92px;
+    height: 92px;
+    margin: auto;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #fff;
+    color: #c55d77;
+    font-size: 32px;
+    box-shadow: 0 15px 35px rgba(117, 70, 83, .12);
+}
+
+.profesor-entregas-decoration > span {
+    display: block;
+    margin-top: 13px;
+    font-size: 10px;
+    letter-spacing: .18em;
+    color: #a87885;
+}
+
+
+/* =========================================================
+   SECCIÓN
+   ========================================================= */
+
+.profesor-entregas-content {
+    margin-top: 42px;
+}
+
+.profesor-entregas-title {
+    margin-bottom: 24px;
+}
+
+.profesor-entregas-title span {
+    display: block;
+    margin-bottom: 8px;
+    color: #c15d76;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .16em;
+}
+
+.profesor-entregas-title h2 {
+    margin: 0;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 34px;
+    color: #332b31;
+}
+
+.profesor-entregas-title p {
+    margin: 8px 0 0;
+    color: #8b7e84;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   GRID
+   ========================================================= */
+
+.profesor-entregas-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+
+/* =========================================================
+   TARJETA
+   ========================================================= */
+
+.profesor-entrega-card {
+    position: relative;
+    padding: 30px;
+    overflow: hidden;
+    border-radius: 28px;
+    border: 1px solid #eadde0;
+    background: #fff;
+    box-shadow: 0 12px 38px rgba(79, 54, 62, .06);
+    transition: transform .3s ease, box-shadow .3s ease;
+    animation: profesorEntregaEntrada .55s ease both;
+}
+
+.profesor-entrega-card:nth-child(4n + 1) {
+    background: #fff8f8;
+}
+
+.profesor-entrega-card:nth-child(4n + 2) {
+    background: #f8f6fd;
+}
+
+.profesor-entrega-card:nth-child(4n + 3) {
+    background: #f5f9f3;
+}
+
+.profesor-entrega-card:nth-child(4n + 4) {
+    background: #fff8f1;
+}
+
+.profesor-entrega-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 22px 50px rgba(79, 54, 62, .1);
+}
+
+
+/* NÚMERO GRANDE */
+
+.profesor-entrega-number {
+    position: absolute;
+    right: 22px;
+    top: 8px;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 75px;
+    font-weight: 700;
+    color: rgba(190, 103, 124, .08);
+    line-height: 1;
+}
+
+
+/* CABECERA */
+
+.profesor-entrega-card-top {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.profesor-entrega-label {
+    color: #bf5d75;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .17em;
+}
+
+.profesor-entrega-status {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 11px;
+    border-radius: 50px;
+    background: #edf5eb;
+    color: #70836d;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.profesor-entrega-status i {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #8eaa87;
+}
+
+
+/* TÍTULO */
+
+.profesor-entrega-card h3 {
+    position: relative;
+    z-index: 2;
+    margin: 25px 0 10px;
+    padding-right: 70px;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 27px;
+    line-height: 1.2;
+    color: #342c32;
+    overflow-wrap: anywhere;
+}
+
+.profesor-entrega-description {
+    margin: 0 0 25px;
+    color: #766b71;
+    font-size: 14px;
+    line-height: 1.75;
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   SECCIONES
+   ========================================================= */
+
+.profesor-entrega-section {
+    padding-top: 21px;
+    margin-top: 20px;
+    border-top: 1px solid rgba(116, 87, 95, .12);
+}
+
+.profesor-entrega-section-title {
+    display: block;
+    margin-bottom: 12px;
+    color: #a67a85;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .15em;
+}
+
+
+/* =========================================================
+   ARCHIVOS
+   ========================================================= */
+
+.profesor-entrega-files {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.profesor-entrega-file {
+    padding: 13px;
+    border-radius: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    background: rgba(255,255,255,.7);
+    border: 1px solid rgba(211, 181, 189, .55);
+}
+
+.profesor-entrega-file-left {
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.profesor-entrega-file-icon {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    background: #f5e3e7;
+    color: #bd6077;
+    font-size: 9px;
+    font-weight: 900;
+}
+
+.profesor-entrega-file-info {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.profesor-entrega-file-info strong {
+    max-width: 240px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 13px;
+    color: #493d43;
+}
+
+.profesor-entrega-file-info span {
+    margin-top: 3px;
+    color: #9c8c92;
+    font-size: 10px;
+}
+
+.profesor-entrega-download {
+    padding: 9px 13px;
+    border-radius: 11px;
+    text-decoration: none;
+    background: #fff;
+    border: 1px solid #e5cbd1;
+    color: #b7556d;
+    font-size: 11px;
+    font-weight: 700;
+    transition: .2s ease;
+}
+
+.profesor-entrega-download:hover {
+    background: #bd6077;
+    border-color: #bd6077;
+    color: #fff;
+}
+
+.profesor-entrega-no-file {
+    padding: 15px;
+    border-radius: 15px;
+    background: rgba(255,255,255,.6);
+    color: #9b8c91;
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   ENLACE
+   ========================================================= */
+
+.profesor-entrega-external {
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-radius: 16px;
+    text-decoration: none;
+    background: #f3eff9;
+    color: #655a75;
+    transition: .25s ease;
+}
+
+.profesor-entrega-external > span {
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    background: #fff;
+}
+
+.profesor-entrega-external div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.profesor-entrega-external small {
+    font-size: 8px;
+    letter-spacing: .13em;
+}
+
+.profesor-entrega-external strong {
+    margin-top: 2px;
+    font-size: 12px;
+}
+
+.profesor-entrega-external:hover {
+    transform: translateX(3px);
+}
+
+
+/* =========================================================
+   FOOTER TARJETA
+   ========================================================= */
+
+.profesor-entrega-footer {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(116,87,95,.12);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+}
+
+.profesor-entrega-footer > span {
+    color: #95878d;
+    font-size: 11px;
+}
+
+.profesor-entrega-evaluate {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+    min-height: 43px;
+    padding: 0 18px;
+    border-radius: 13px;
+    text-decoration: none;
+    background: #bd6077;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    box-shadow: 0 9px 22px rgba(189, 96, 119, .18);
+    transition: .25s ease;
+}
+
+.profesor-entrega-evaluate:hover {
+    background: #a94e65;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   VACÍO
+   ========================================================= */
+
+.profesor-entregas-empty {
+    grid-column: 1 / -1;
+    min-height: 320px;
+    padding: 50px;
+    border: 1px dashed #ddc3ca;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: rgba(255,255,255,.7);
+}
+
+.profesor-entregas-empty-icon {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 18px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: #f6e7ea;
+    color: #bd6077;
+    font-size: 26px;
+}
+
+.profesor-entregas-empty > span {
+    color: #bd6077;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: .17em;
+}
+
+.profesor-entregas-empty h3 {
+    margin: 10px 0;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 28px;
+    color: #3d3238;
+}
+
+.profesor-entregas-empty p {
+    max-width: 480px;
+    margin: 0 0 22px;
+    color: #85777d;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   ANIMACIÓN
+   ========================================================= */
+
+@keyframes profesorEntregaEntrada {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+    .profesor-entregas-page {
+        grid-template-columns: 210px 1fr;
+    }
+
+    .profesor-entregas-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 760px) {
+
+    .profesor-entregas-page {
+        display: block;
+    }
+
+    .profesor-entregas-sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        min-height: auto;
+    }
+
+    .profesor-entregas-main {
+        padding: 25px 18px 50px;
+    }
+
+    .profesor-entregas-header {
+        min-height: auto;
+        padding: 32px 25px;
+    }
+
+    .profesor-entregas-header h1 {
+        font-size: 42px;
+    }
+
+    .profesor-entregas-decoration {
+        display: none;
+    }
+
+    .profesor-entrega-card {
+        padding: 23px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .profesor-entrega-file,
+    .profesor-entrega-footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .profesor-entrega-download,
+    .profesor-entrega-evaluate {
+        width: 100%;
+    }
+
+    .profesor-entrega-card h3 {
+        padding-right: 0;
+        font-size: 23px;
+    }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    .profesor-entrega-card,
+    .profesor-entregas-header {
+        animation: none;
+    }
+
+    .profesor-entrega-card,
+    .profesor-entrega-evaluate,
+    .profesor-entregas-menu-item {
+        transition: none;
+    }
+}

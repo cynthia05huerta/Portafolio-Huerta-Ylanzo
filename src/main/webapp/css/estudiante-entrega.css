@@ -1,0 +1,1691 @@
+/* ============================================================
+   NUEVA ENTREGA - ESTUDIANTE
+   PORTAFOLIO ACADÉMICO 2026
+   ============================================================ */
+
+:root {
+    --de-pink: #ed4f7b;
+    --de-pink-dark: #d9426d;
+    --de-pink-soft: #fae2e9;
+
+    --de-cream: #fcf8f6;
+    --de-paper: #ffffff;
+
+    --de-purple: #eee9f7;
+    --de-green: #e9f1e6;
+    --de-blue: #e8f0f8;
+    --de-peach: #faeadf;
+
+    --de-dark: #302833;
+    --de-text: #6c6268;
+    --de-muted: #9a8d94;
+
+    --de-border: rgba(106, 77, 89, .11);
+
+    --de-shadow:
+            0 22px 55px rgba(112, 77, 90, .08);
+}
+
+
+/* ============================================================
+   BASE
+   ============================================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    background:
+            #fcf8f6;
+}
+
+.delivery26-layout {
+    min-height: 100vh;
+
+    display: grid;
+
+    grid-template-columns:
+        255px minmax(0, 1fr);
+
+    color: var(--de-dark);
+
+    font-family:
+            "DM Sans",
+            Arial,
+            sans-serif;
+
+    background:
+            radial-gradient(
+                    circle at 92% 8%,
+                    rgba(248, 208, 220, .48),
+                    transparent 22%
+            ),
+            radial-gradient(
+                    circle at 45% 90%,
+                    rgba(232, 240, 229, .50),
+                    transparent 23%
+            ),
+            var(--de-cream);
+}
+
+
+/* ============================================================
+   SIDEBAR
+   ============================================================ */
+
+.delivery26-sidebar {
+    position: sticky;
+
+    top: 0;
+
+    height: 100vh;
+
+    padding:
+            30px 22px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content:
+            space-between;
+
+    border-right:
+            1px solid rgba(113, 77, 90, .08);
+
+    background:
+            linear-gradient(
+                    180deg,
+                    #faeeee 0%,
+                    #f8efed 100%
+            );
+}
+
+
+/* BRAND */
+
+.delivery26-brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom:
+            42px;
+
+    color: inherit;
+
+    text-decoration: none;
+}
+
+
+.delivery26-brand-logo {
+    width: 48px;
+
+    height: 48px;
+
+    display: grid;
+
+    place-items: center;
+
+    border:
+            1px solid rgba(237, 79, 123, .17);
+
+    border-radius:
+            15px;
+
+    background:
+            white;
+
+    color:
+            var(--de-pink);
+
+    font-family:
+            "Playfair Display",
+            Georgia,
+            serif;
+
+    font-size:
+            23px;
+
+    font-weight:
+            800;
+
+    box-shadow:
+            0 10px 24px
+            rgba(133, 83, 100, .08);
+}
+
+
+.delivery26-brand-copy {
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.delivery26-brand-copy strong {
+    font-family:
+            "Playfair Display",
+            Georgia,
+            serif;
+
+    font-size:
+            21px;
+
+    line-height: 1;
+}
+
+
+.delivery26-brand-copy span {
+    margin-top: 6px;
+
+    color:
+            #a17f8a;
+
+    font-size:
+            8px;
+
+    font-weight:
+            800;
+
+    letter-spacing:
+            1.3px;
+}
+
+
+/* ============================================================
+   MENU
+   ============================================================ */
+
+.delivery26-menu {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.delivery26-menu a {
+    min-height:
+            49px;
+
+    padding:
+            0 14px;
+
+    display:
+            flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    border-radius:
+            14px;
+
+    color:
+            #695f65;
+
+    text-decoration:
+            none;
+
+    font-size:
+            14px;
+
+    font-weight:
+            700;
+
+    transition:
+            transform .25s ease,
+            background .25s ease,
+            color .25s ease;
+}
+
+
+.delivery26-menu a:hover {
+    transform:
+            translateX(4px);
+
+    color:
+            var(--de-pink);
+
+    background:
+            rgba(255,255,255,.62);
+}
+
+
+.delivery26-menu a.active {
+    color:
+            var(--de-pink);
+
+    background:
+            white;
+
+    box-shadow:
+            0 10px 25px
+            rgba(114,73,89,.08);
+}
+
+
+.delivery26-menu-icon {
+    width:
+            29px;
+
+    height:
+            29px;
+
+    display:
+            grid;
+
+    place-items:
+            center;
+
+    border-radius:
+            9px;
+
+    background:
+            rgba(255,255,255,.68);
+
+    color:
+            var(--de-pink);
+
+    font-size:
+            16px;
+}
+
+
+/* ============================================================
+   SIDEBAR BOTTOM
+   ============================================================ */
+
+.delivery26-sidebar-bottom {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.delivery26-sidebar-bottom > a {
+    min-height:
+            42px;
+
+    padding:
+            0 12px;
+
+    display:
+            flex;
+
+    align-items:
+            center;
+
+    gap: 10px;
+
+    border-radius:
+            12px;
+
+    color:
+            #71656c;
+
+    text-decoration:
+            none;
+
+    font-size:
+            13px;
+
+    font-weight:
+            700;
+
+    transition:
+            background .25s ease,
+            color .25s ease;
+}
+
+
+.delivery26-sidebar-bottom > a:hover {
+    background:
+            rgba(255,255,255,.70);
+
+    color:
+            var(--de-pink);
+}
+
+
+.delivery26-sidebar-bottom .logout {
+    color:
+            #ad6678;
+}
+
+
+.delivery26-user {
+    margin-top:
+            16px;
+
+    padding-top:
+            19px;
+
+    display:
+            flex;
+
+    align-items:
+            center;
+
+    gap:
+            11px;
+
+    border-top:
+            1px solid rgba(84,59,69,.09);
+}
+
+
+.delivery26-user-avatar {
+    width:
+            39px;
+
+    height:
+            39px;
+
+    display:
+            grid;
+
+    place-items:
+            center;
+
+    border-radius:
+            50%;
+
+    background:
+            var(--de-pink);
+
+    color:
+            white;
+
+    font-weight:
+            800;
+}
+
+
+.delivery26-user > div:last-child {
+    display:
+            flex;
+
+    flex-direction:
+            column;
+}
+
+
+.delivery26-user span {
+    color:
+            #aa8390;
+
+    font-size:
+            8px;
+
+    font-weight:
+            800;
+
+    letter-spacing:
+            1.3px;
+}
+
+
+.delivery26-user strong {
+    margin-top:
+            3px;
+
+    font-family:
+            "Playfair Display",
+            Georgia,
+            serif;
+
+    font-size:
+            14px;
+}
+
+
+/* ============================================================
+   MAIN
+   ============================================================ */
+
+.delivery26-main {
+    position:
+            relative;
+
+    min-width:
+            0;
+
+    padding:
+            52px
+            clamp(30px, 5vw, 78px)
+            70px;
+}
+
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+.delivery26-header {
+    display:
+            flex;
+
+    align-items:
+            center;
+
+    justify-content:
+            space-between;
+
+    gap:
+            45px;
+
+    margin-bottom:
+            35px;
+
+    padding-bottom:
+            35px;
+
+    border-bottom:
+            1px solid var(--de-border);
+
+    animation:
+            delivery26Enter
+            .65s ease both;
+}
+
+
+.delivery26-header > div:first-child {
+    max-width:
+            650px;
+}
+
+
+.delivery26-eyebrow {
+    color:
+            #b36b80;
+
+    font-size:
+            10px;
+
+    font-weight:
+            800;
+
+    letter-spacing:
+            2px;
+}
+
+
+.delivery26-header h1 {
+    margin:
+            10px 0 10px;
+
+    color:
+            var(--de-dark);
+
+    font-family:
+            "Playfair Display",
+            Georgia,
+            serif;
+
+    font-size:
+            clamp(48px, 5vw, 70px);
+
+    line-height:
+            .98;
+
+    letter-spacing:
+            -2px;
+}
+
+
+.delivery26-header h1 em {
+    color:
+            var(--de-pink);
+
+    font-weight:
+            500;
+}
+
+
+.delivery26-header p {
+    max-width:
+            570px;
+
+    margin:
+            0;
+
+    color:
+            var(--de-text);
+
+    font-size:
+            15px;
+
+    line-height:
+            1.8;
+}
+
+
+/* ============================================================
+   HEADER CARD
+   ============================================================ */
+
+.delivery26-header-card {
+    min-width:
+            175px;
+
+    padding:
+            24px;
+
+    display:
+            flex;
+
+    flex-direction:
+            column;
+
+    border:
+            1px solid
+            rgba(230,131,159,.16);
+
+    border-radius:
+            24px 24px 55px 24px;
+
+    background:
+            linear-gradient(
+                    145deg,
+                    #f9e3e9,
+                    #fdf3f5
+            );
+
+    box-shadow:
+            var(--de-shadow);
+
+    animation:
+            delivery26Float
+            5s ease-in-out infinite;
+}
+
+
+.delivery26-header-card > span {
+    margin-bottom:
+            8px;
+
+    color:
+            #a97a88;
+
+    font-size:
+            8px;
+
+    font-weight:
+            800;
+
+    letter-spacing:
+            1.4px;
+}
+
+
+.delivery26-header-card strong {
+    color:
+            #5c4d54;
+
+    font-family:
+            "Playfair Display",
+            Georgia,
+            serif;
+
+    font-size:
+            19px;
+
+    line-height:
+            1.35;
+}
+
+
+.delivery26-header-card small {
+    margin-top:
+            7px;
+
+    color:
+            var(--de-pink);
+
+    font-size:
+            17px;
+}
+
+
+/* ============================================================
+   ESTRELLAS
+   ============================================================ */
+
+.delivery26-star {
+    position:
+            absolute;
+
+    color:
+            #f0a0b6;
+
+    pointer-events:
+            none;
+
+    animation:
+            delivery26Float
+            4s ease-in-out infinite;
+}
+
+
+.delivery26-star.star-one {
+    top:
+            35px;
+
+    right:
+            7%;
+
+    font-size:
+            20px;
+}
+
+
+.delivery26-star.star-two {
+    top:
+            210px;
+
+    right:
+            3%;
+
+    font-size:
+            15px;
+
+    animation-delay:
+            -1.5s;
+}
+
+
+/* ============================================================
+   FORM CARD
+   ============================================================ */
+
+.delivery26-card {
+    overflow:
+            hidden;
+
+    border:
+            1px solid
+            var(--de-border);
+
+    border-radius:
+            30px;
+
+    background:
+            rgba(255,255,255,.88);
+
+    box-shadow:
+            var(--de-shadow);
+
+    backdrop-filter:
+            blur(10px);
+}
+
+
+/* ============================================================
+   SECCIÓN
+   ============================================================ */
+
+.delivery26-form-section {
+    position:
+            relative;
+
+    display:
+            grid;
+
+    grid-template-columns:
+        120px minmax(0,1fr);
+
+    gap:
+            35px;
+
+    padding:
+            42px;
+
+    border-bottom:
+            1px solid
+            rgba(102,73,85,.08);
+}
+
+
+.delivery26-form-section:last-of-type {
+    border-bottom:
+            none;
+}
+
+
+.delivery26-form-section:nth-of-type(1) {
+    background:
+            linear-gradient(
+                    90deg,
+                    rgba(249,225,232,.38),
+                    transparent 35%
+            );
+}
+
+
+.delivery26-form-section:nth-of-type(2) {
+    background:
+            linear-gradient(
+                    90deg,
+                    rgba(237,232,248,.42),
+                    transparent 35%
+            );
+}
+
+
+.delivery26-form-section:nth-of-type(3) {
+    background:
+            linear-gradient(
+                    90deg,
+                    rgba(232,240,229,.48),
+                    transparent 35%
+            );
+}
+
+
+.delivery26-form-section:nth-of-type(4) {
+    background:
+            linear-gradient(
+                    90deg,
+                    rgba(232,240,248,.45),
+                    transparent 35%
+            );
+}
+
+
+/* ============================================================
+   NUMERACIÓN
+   ============================================================ */
+
+.delivery26-number {
+    width:
+            90px;
+
+    height:
+            90px;
+
+    display:
+            grid;
+
+    place-items:
+            center;
+
+    border-radius:
+            25px;
+
+    background:
+            rgba(255,255,255,.80);
+
+    border:
+            1px solid
+            rgba(124,86,101,.10);
+
+    color:
+            rgba(89,67,77,.28);
+
+    font-family:
+            "Playfair Display",
+            Georgia,
+            serif;
+
+    font-size:
+            40px;
+
+    font-weight:
+            800;
+
+    box-shadow:
+            0 12px 25px
+            rgba(101,75,86,.07);
+}
+
+
+/* ============================================================
+   CONTENIDO
+   ============================================================ */
+
+.delivery26-section-content {
+    min-width:
+            0;
+
+    max-width:
+            850px;
+}
+
+
+.delivery26-section-label {
+    color:
+            var(--de-pink);
+
+    font-size:
+            9px;
+
+    font-weight:
+            900;
+
+    letter-spacing:
+            1.8px;
+}
+
+
+.delivery26-section-content h2 {
+    margin:
+            7px 0 7px;
+
+    color:
+            var(--de-dark);
+
+    font-family:
+            "Playfair Display",
+            Georgia,
+            serif;
+
+    font-size:
+            28px;
+
+    line-height:
+            1.15;
+}
+
+
+.delivery26-section-content > p {
+    max-width:
+            600px;
+
+    margin:
+            0 0 23px;
+
+    color:
+            var(--de-muted);
+
+    font-size:
+            13px;
+
+    line-height:
+            1.7;
+}
+
+
+/* ============================================================
+   FIELDS
+   ============================================================ */
+
+.delivery26-fields-grid {
+    display:
+            grid;
+
+    grid-template-columns:
+        1fr;
+
+    gap:
+            17px;
+}
+
+
+.delivery26-field {
+    width:
+            100%;
+}
+
+
+.delivery26-field.full {
+    grid-column:
+            1 / -1;
+}
+
+
+.delivery26-field label {
+    display:
+            block;
+
+    margin-bottom:
+            8px;
+
+    color:
+            #5d5056;
+
+    font-size:
+            13px;
+
+    font-weight:
+            700;
+}
+
+
+/* ============================================================
+   INPUTS
+   ============================================================ */
+
+.delivery26-input,
+.delivery26-textarea {
+    width:
+            100%;
+
+    border:
+            1px solid
+            rgba(128,91,106,.18);
+
+    border-radius:
+            14px;
+
+    outline:
+            none;
+
+    background:
+            rgba(255,255,255,.86);
+
+    color:
+            var(--de-dark);
+
+    font-family:
+            "DM Sans",
+            Arial,
+            sans-serif;
+
+    font-size:
+            14px;
+
+    transition:
+            border .25s ease,
+            box-shadow .25s ease,
+            background .25s ease;
+}
+
+
+.delivery26-input {
+    min-height:
+            52px;
+
+    padding:
+            0 16px;
+}
+
+
+.delivery26-textarea {
+    min-height:
+            140px;
+
+    padding:
+            15px 16px;
+
+    resize:
+            vertical;
+
+    line-height:
+            1.6;
+}
+
+
+.delivery26-input:focus,
+.delivery26-textarea:focus {
+    border-color:
+            #e787a3;
+
+    background:
+            white;
+
+    box-shadow:
+            0 0 0 4px
+            rgba(237,79,123,.08);
+}
+
+
+/* ============================================================
+   URL
+   ============================================================ */
+
+.delivery26-url-wrap {
+    position:
+            relative;
+}
+
+
+.delivery26-url-wrap > span {
+    position:
+            absolute;
+
+    top:
+            50%;
+
+    left:
+            16px;
+
+    z-index:
+            2;
+
+    transform:
+            translateY(-50%);
+
+    color:
+            var(--de-pink);
+
+    font-size:
+            15px;
+}
+
+
+.delivery26-url-wrap
+.delivery26-input {
+    padding-left:
+            43px;
+}
+
+
+/* ============================================================
+   ARCHIVO
+   ============================================================ */
+
+.delivery26-file-box {
+    min-height:
+            230px;
+
+    padding:
+            30px;
+
+    display:
+            flex;
+
+    flex-direction:
+            column;
+
+    align-items:
+            center;
+
+    justify-content:
+            center;
+
+    border:
+            2px dashed
+            rgba(211,116,143,.30);
+
+    border-radius:
+            24px;
+
+    background:
+            linear-gradient(
+                    145deg,
+                    #fff9fa,
+                    #fdf1f4
+            );
+
+    text-align:
+            center;
+
+    cursor:
+            pointer;
+
+    transition:
+            transform .25s ease,
+            border-color .25s ease,
+            background .25s ease;
+}
+
+
+.delivery26-file-box:hover {
+    transform:
+            translateY(-3px);
+
+    border-color:
+            rgba(211,116,143,.55);
+
+    background:
+            white;
+}
+
+
+.delivery26-file-icon {
+    width:
+            65px;
+
+    height:
+            65px;
+
+    margin-bottom:
+            15px;
+
+    display:
+            grid;
+
+    place-items:
+            center;
+
+    border-radius:
+            18px;
+
+    background:
+            var(--de-pink-soft);
+
+    color:
+            var(--de-pink);
+
+    font-size:
+            28px;
+
+    box-shadow:
+            0 12px 25px
+            rgba(124,75,92,.07);
+}
+
+
+.delivery26-file-box strong {
+    color:
+            var(--de-dark);
+
+    font-family:
+            "Playfair Display",
+            Georgia,
+            serif;
+
+    font-size:
+            20px;
+}
+
+
+.delivery26-file-box > span {
+    margin-top:
+            5px;
+
+    color:
+            #89777f;
+
+    font-size:
+            12px;
+}
+
+
+.delivery26-file-box small {
+    margin-top:
+            7px;
+
+    color:
+            #ac9ba2;
+
+    font-size:
+            10px;
+}
+
+
+.delivery26-file-box input {
+    margin-top:
+            17px;
+
+    max-width:
+            260px;
+
+    color:
+            #7d6d74;
+
+    font-family:
+            "DM Sans",
+            Arial,
+            sans-serif;
+
+    font-size:
+            11px;
+}
+
+
+/* ============================================================
+   ACTIONS
+   ============================================================ */
+
+.delivery26-actions {
+    padding:
+            26px 42px;
+
+    display:
+            flex;
+
+    align-items:
+            center;
+
+    justify-content:
+            flex-end;
+
+    gap:
+            11px;
+
+    background:
+            #fffafa;
+
+    border-top:
+            1px solid
+            rgba(103,72,85,.07);
+}
+
+
+.delivery26-cancel,
+.delivery26-submit {
+    min-height:
+            48px;
+
+    padding:
+            0 20px;
+
+    display:
+            inline-flex;
+
+    align-items:
+            center;
+
+    justify-content:
+            center;
+
+    gap:
+            8px;
+
+    border-radius:
+            14px;
+
+    font-family:
+            "DM Sans",
+            Arial,
+            sans-serif;
+
+    font-size:
+            13px;
+
+    font-weight:
+            800;
+
+    text-decoration:
+            none;
+
+    transition:
+            transform .25s ease,
+            box-shadow .25s ease,
+            background .25s ease;
+}
+
+
+.delivery26-cancel {
+    color:
+            #74656c;
+
+    background:
+            white;
+
+    border:
+            1px solid
+            rgba(119,83,97,.14);
+}
+
+
+.delivery26-submit {
+    border:
+            none;
+
+    cursor:
+            pointer;
+
+    color:
+            white;
+
+    background:
+            linear-gradient(
+                    135deg,
+                    #ef5a83,
+                    #e74573
+            );
+
+    box-shadow:
+            0 13px 27px
+            rgba(230,69,115,.20);
+}
+
+
+.delivery26-cancel:hover,
+.delivery26-submit:hover {
+    transform:
+            translateY(-3px);
+}
+
+
+.delivery26-submit:hover {
+    box-shadow:
+            0 17px 34px
+            rgba(230,69,115,.28);
+}
+
+
+/* ============================================================
+   TIP
+   ============================================================ */
+
+.delivery26-tip {
+    position:
+            relative;
+
+    margin-top:
+            26px;
+
+    padding:
+            25px 30px;
+
+    display:
+            grid;
+
+    grid-template-columns:
+        55px 1fr auto;
+
+    align-items:
+            center;
+
+    gap:
+            18px;
+
+    overflow:
+            hidden;
+
+    border:
+            1px solid
+            rgba(118,82,96,.09);
+
+    border-radius:
+            22px 22px 50px 22px;
+
+    background:
+            linear-gradient(
+                    110deg,
+                    #eee9f7,
+                    #f8f3f5,
+                    #e9f1e6
+            );
+}
+
+
+.delivery26-tip-icon {
+    width:
+            52px;
+
+    height:
+            52px;
+
+    display:
+            grid;
+
+    place-items:
+            center;
+
+    border-radius:
+            16px;
+
+    background:
+            rgba(255,255,255,.76);
+
+    color:
+            #9675ad;
+
+    font-size:
+            22px;
+}
+
+
+.delivery26-tip > div:nth-child(2) > span {
+    color:
+            #997b8d;
+
+    font-size:
+            8px;
+
+    font-weight:
+            900;
+
+    letter-spacing:
+            1.5px;
+}
+
+
+.delivery26-tip h3 {
+    margin:
+            4px 0;
+
+    color:
+            var(--de-dark);
+
+    font-family:
+            "Playfair Display",
+            Georgia,
+            serif;
+
+    font-size:
+            20px;
+}
+
+
+.delivery26-tip p {
+    margin:
+            0;
+
+    color:
+            #776b71;
+
+    font-size:
+            12px;
+
+    line-height:
+            1.6;
+}
+
+
+.delivery26-tip-heart {
+    color:
+            rgba(237,79,123,.55);
+
+    font-size:
+            35px;
+}
+
+
+/* ============================================================
+   ANIMACIONES
+   ============================================================ */
+
+@keyframes delivery26Enter {
+
+    from {
+        opacity:
+                0;
+
+        transform:
+                translateY(15px);
+    }
+
+    to {
+        opacity:
+                1;
+
+        transform:
+                translateY(0);
+    }
+
+}
+
+
+@keyframes delivery26Float {
+
+    0%,
+    100% {
+        transform:
+                translateY(0);
+    }
+
+    50% {
+        transform:
+                translateY(-7px);
+    }
+
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 1050px) {
+
+    .delivery26-layout {
+        grid-template-columns:
+            220px minmax(0,1fr);
+    }
+
+    .delivery26-main {
+        padding:
+                45px 35px 60px;
+    }
+
+}
+
+
+@media (max-width: 850px) {
+
+    .delivery26-layout {
+        display:
+                block;
+    }
+
+    .delivery26-sidebar {
+        position:
+                relative;
+
+        width:
+                100%;
+
+        height:
+                auto;
+
+        padding:
+                18px;
+    }
+
+    .delivery26-brand {
+        margin-bottom:
+                17px;
+    }
+
+    .delivery26-menu {
+        flex-direction:
+                row;
+
+        overflow-x:
+                auto;
+    }
+
+    .delivery26-menu a {
+        flex:
+                0 0 auto;
+    }
+
+    .delivery26-sidebar-bottom {
+        margin-top:
+                15px;
+
+        flex-direction:
+                row;
+
+        flex-wrap:
+                wrap;
+    }
+
+    .delivery26-user {
+        width:
+                100%;
+    }
+
+    .delivery26-header {
+        align-items:
+                flex-start;
+
+        flex-direction:
+                column;
+    }
+
+    .delivery26-header-card {
+        display:
+                none;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .delivery26-main {
+        padding:
+                34px 17px 45px;
+    }
+
+    .delivery26-header h1 {
+        font-size:
+                48px;
+    }
+
+    .delivery26-header p {
+        font-size:
+                13px;
+    }
+
+    .delivery26-form-section {
+        grid-template-columns:
+            1fr;
+
+        gap:
+                18px;
+
+        padding:
+                28px 21px;
+    }
+
+    .delivery26-number {
+        width:
+                65px;
+
+        height:
+                65px;
+
+        border-radius:
+                18px;
+
+        font-size:
+                30px;
+    }
+
+    .delivery26-section-content h2 {
+        font-size:
+                24px;
+    }
+
+    .delivery26-actions {
+        padding:
+                22px 21px;
+
+        flex-direction:
+                column-reverse;
+    }
+
+    .delivery26-cancel,
+    .delivery26-submit {
+        width:
+                100%;
+    }
+
+    .delivery26-tip {
+        grid-template-columns:
+            50px 1fr;
+    }
+
+    .delivery26-tip-heart {
+        display:
+                none;
+    }
+
+}

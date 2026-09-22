@@ -1,0 +1,3510 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800;900&display=swap');
+
+
+/* ============================================================
+   PORTAFOLIO 2026
+   PÁGINA PÚBLICA DE SEMANAS
+   ============================================================ */
+
+.weeks26-page {
+
+    --pink: #ef5f8c;
+    --pink-dark: #d94374;
+    --pink-light: #ffdce7;
+
+    --cream: #fff8f5;
+    --paper: #fffdfb;
+
+    --lavender: #eee8fa;
+    --sage: #e8f1e4;
+    --blue: #e8f0f8;
+    --peach: #fae7dc;
+
+    --ink: #352d3a;
+    --text: #776a72;
+    --muted: #a3959c;
+
+    --line: rgba(69, 48, 61, .09);
+
+    min-height: 100vh;
+
+    background: var(--cream);
+
+    color: var(--text);
+
+    font-family:
+            "DM Sans",
+            sans-serif;
+}
+
+
+.weeks26-page * {
+    box-sizing: border-box;
+}
+
+
+.weeks26-page a {
+    text-decoration: none;
+}
+
+
+.weeks26-container {
+    width:
+            min(1180px, calc(100% - 46px));
+
+    margin-inline: auto;
+}
+
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+.weeks26-header {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    border-bottom:
+            1px solid
+            rgba(80,54,70,.06);
+
+    background:
+            rgba(255,248,245,.93);
+
+    backdrop-filter:
+            blur(18px);
+
+    -webkit-backdrop-filter:
+            blur(18px);
+}
+
+
+.weeks26-nav {
+
+    min-height: 76px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content:
+            space-between;
+
+    gap: 25px;
+}
+
+
+/* ============================================================
+   LOGO
+   ============================================================ */
+
+.weeks26-brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.weeks26-brand-logo {
+
+    width: 49px;
+
+    height: 49px;
+
+    display: grid;
+
+    place-items: center;
+
+    overflow: hidden;
+
+    padding: 4px;
+
+    border:
+            1px solid
+            #efd3dc;
+
+    border-radius: 13px;
+
+    background: white;
+
+    box-shadow:
+            0 8px 20px
+            rgba(217,67,116,.11);
+}
+
+
+.weeks26-brand-logo img {
+
+    width: 100% !important;
+
+    height: 100% !important;
+
+    display: block;
+
+    object-fit: contain;
+}
+
+
+.weeks26-brand-text {
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.weeks26-brand-text strong {
+
+    color: var(--ink);
+
+    font-family:
+            "Nunito",
+            sans-serif;
+
+    font-size: 17px;
+
+    font-weight: 900;
+}
+
+
+.weeks26-brand-text span {
+
+    margin-top: -2px;
+
+    color: var(--muted);
+
+    font-size: 7px;
+
+    font-weight: 700;
+
+    letter-spacing: .8px;
+
+    text-transform: uppercase;
+}
+
+
+/* ============================================================
+   MENU
+   ============================================================ */
+
+.weeks26-menu {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+}
+
+
+.weeks26-menu a {
+
+    position: relative;
+
+    padding: 8px 0;
+
+    color: #625760;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    text-transform:
+            uppercase;
+
+    transition:
+            color .25s ease,
+            transform .25s ease;
+}
+
+
+.weeks26-menu a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 1px;
+
+    width: 0;
+
+    height: 2px;
+
+    border-radius: 20px;
+
+    background:
+            var(--pink);
+
+    transform:
+            translateX(-50%);
+
+    transition:
+            width .25s ease;
+}
+
+
+.weeks26-menu a:hover {
+
+    color:
+            var(--pink-dark);
+
+    transform:
+            translateY(-1px);
+}
+
+
+.weeks26-menu a.active {
+
+    color:
+            var(--pink-dark);
+}
+
+
+.weeks26-menu a:hover::after,
+.weeks26-menu a.active::after {
+
+    width: 23px;
+}
+
+
+/* ============================================================
+   LOGIN
+   ============================================================ */
+
+.weeks26-login {
+
+    min-height: 42px;
+
+    display:
+            inline-flex;
+
+    align-items: center;
+
+    justify-content:
+            center;
+
+    gap: 8px;
+
+    padding:
+            10px 18px;
+
+    border-radius:
+            999px;
+
+    background:
+            linear-gradient(
+                    135deg,
+                    #ef668f,
+                    #e34879
+            );
+
+    color:
+            white;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    box-shadow:
+            0 10px 25px
+            rgba(226,69,118,.18);
+
+    transition:
+            transform .3s ease,
+            box-shadow .3s ease;
+}
+
+
+.weeks26-login:hover {
+
+    transform:
+            translateY(-3px);
+
+    box-shadow:
+            0 15px 32px
+            rgba(226,69,118,.27);
+}
+
+
+/* ============================================================
+   HERO
+   ============================================================ */
+
+.weeks26-hero {
+
+    position: relative;
+
+    min-height: 510px;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    padding:
+            75px 0;
+
+    background:
+            radial-gradient(
+                    circle at 83% 35%,
+                    rgba(255,202,219,.48),
+                    transparent 29%
+            ),
+            linear-gradient(
+                    145deg,
+                    #fff9f6,
+                    #fff4f6
+            );
+}
+
+
+.weeks26-hero-grid {
+
+    position: relative;
+
+    z-index: 5;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0,1fr)
+        420px;
+
+    align-items: center;
+
+    gap: 80px;
+}
+
+
+/* ============================================================
+   TEXTO HERO
+   ============================================================ */
+
+.weeks26-hero-copy {
+
+    animation:
+            weeks26Left
+            .75s ease both;
+}
+
+
+.weeks26-eyebrow {
+
+    display:
+            inline-flex;
+
+    align-items: center;
+
+    padding:
+            7px 12px;
+
+    border-radius:
+            999px;
+
+    background:
+            #ffeaf0;
+
+    color:
+            var(--pink-dark);
+
+    font-size: 7px;
+
+    font-weight: 800;
+
+    letter-spacing:
+            1.3px;
+}
+
+
+.weeks26-hero h1 {
+
+    max-width:
+            720px;
+
+    margin:
+            18px 0 0;
+
+    color:
+            var(--ink);
+
+    font-family:
+            "Nunito",
+            sans-serif;
+
+    font-size:
+            clamp(
+                    50px,
+                    6vw,
+                    78px
+            );
+
+    font-weight: 900;
+
+    line-height: .94;
+
+    letter-spacing:
+            -4px;
+}
+
+
+.weeks26-hero h1 span {
+
+    display: block;
+
+    color:
+            var(--pink);
+}
+
+
+.weeks26-hero-copy p {
+
+    max-width:
+            610px;
+
+    margin:
+            24px 0 0;
+
+    color:
+            #766870;
+
+    font-size: 10px;
+
+    line-height: 1.9;
+}
+
+
+/* BOTÓN */
+
+.weeks26-hero-button {
+
+    min-height: 43px;
+
+    width: fit-content;
+
+    display:
+            inline-flex;
+
+    align-items: center;
+
+    justify-content:
+            center;
+
+    gap: 12px;
+
+    margin-top:
+            25px;
+
+    padding:
+            10px 18px;
+
+    border-radius:
+            10px;
+
+    background:
+            var(--pink);
+
+    color: white;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    box-shadow:
+            0 10px 25px
+            rgba(221,67,113,.17);
+
+    transition:
+            transform .3s ease,
+            box-shadow .3s ease;
+}
+
+
+.weeks26-hero-button:hover {
+
+    transform:
+            translateY(-4px);
+
+    box-shadow:
+            0 16px 34px
+            rgba(221,67,113,.25);
+}
+
+
+/* ============================================================
+   VISUAL HERO
+   ============================================================ */
+
+.weeks26-hero-visual {
+
+    min-height: 360px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    animation:
+            weeks26Right
+            .85s ease both;
+}
+
+
+.weeks26-big-shape {
+
+    position: relative;
+
+    width: 340px;
+
+    height: 340px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius:
+            50% 50% 42% 58% /
+        48% 55% 45% 52%;
+
+    background:
+            linear-gradient(
+                    145deg,
+                    #ffdce7,
+                    #f7c7d8
+            );
+
+    animation:
+            weeks26Shape
+            8s ease-in-out infinite;
+}
+
+
+/* ============================================================
+   LAPTOP DECORATIVA
+   ============================================================ */
+
+.weeks26-laptop {
+
+    position: relative;
+
+    width: 220px;
+
+    height: 155px;
+
+    z-index: 2;
+}
+
+
+.weeks26-laptop-screen {
+
+    width: 200px;
+
+    height: 135px;
+
+    margin: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+            7px solid
+            rgba(255,255,255,.80);
+
+    border-radius:
+            18px;
+
+    background:
+            linear-gradient(
+                    145deg,
+                    #fffafb,
+                    #f7eaf0
+            );
+
+    box-shadow:
+            0 18px 40px
+            rgba(87,48,65,.12);
+
+    transform:
+            rotate(-3deg);
+}
+
+
+.weeks26-laptop-screen span {
+
+    color:
+            var(--pink);
+
+    font-family:
+            "Nunito",
+            sans-serif;
+
+    font-size: 34px;
+
+    font-weight: 900;
+}
+
+
+.weeks26-laptop-screen small {
+
+    margin-top:
+            5px;
+
+    color:
+            #9d7a87;
+
+    font-size:
+            6px;
+
+    font-weight: 800;
+
+    letter-spacing:
+            1.5px;
+}
+
+
+.weeks26-laptop-base {
+
+    width: 225px;
+
+    height: 11px;
+
+    margin-top:
+            -2px;
+
+    border-radius:
+            2px 2px 13px 13px;
+
+    background:
+            #f9f1f3;
+
+    box-shadow:
+            0 8px 17px
+            rgba(78,48,61,.09);
+}
+
+
+/* NOTA */
+
+.weeks26-note {
+
+    position: absolute;
+
+    top: 16px;
+
+    right: -45px;
+
+    z-index: 4;
+
+    min-width: 100px;
+
+    padding:
+            15px;
+
+    border:
+            1px solid
+            rgba(215,93,130,.12);
+
+    border-radius:
+            17px 17px 35px 17px;
+
+    background:
+            rgba(255,253,251,.91);
+
+    box-shadow:
+            0 14px 30px
+            rgba(88,52,67,.10);
+
+    backdrop-filter:
+            blur(10px);
+
+    animation:
+            weeks26Float
+            5s ease-in-out infinite;
+}
+
+
+.weeks26-note > span {
+
+    display: block;
+
+    margin-bottom:
+            5px;
+
+    color:
+            #b28492;
+
+    font-size: 6px;
+
+    letter-spacing:
+            1px;
+}
+
+
+.weeks26-note strong {
+
+    display: block;
+
+    color:
+            #644c57;
+
+    font-family:
+            "Nunito",
+            sans-serif;
+
+    font-size: 10px;
+
+    line-height: 1.4;
+}
+
+
+.weeks26-note small {
+
+    display: block;
+
+    margin-top:
+            4px;
+
+    color:
+            var(--pink);
+
+    text-align: center;
+}
+
+
+/* ============================================================
+   DECORACIONES
+   ============================================================ */
+
+.weeks26-decoration {
+
+    position: absolute;
+
+    border-radius: 50%;
+}
+
+
+.deco-one {
+
+    width: 320px;
+
+    height: 320px;
+
+    left: -160px;
+
+    bottom: -170px;
+
+    background:
+            rgba(232,241,228,.70);
+}
+
+
+.deco-two {
+
+    width: 310px;
+
+    height: 310px;
+
+    right: -170px;
+
+    top: -170px;
+
+    background:
+            rgba(238,232,250,.62);
+}
+
+
+.weeks26-floating-star {
+
+    position: absolute;
+
+    color:
+            #ee8dab;
+
+    opacity: .65;
+
+    animation:
+            weeks26Float
+            5s ease-in-out infinite;
+}
+
+
+.weeks26-floating-star.star-one {
+
+    top: 95px;
+
+    left: 47%;
+
+    font-size: 25px;
+}
+
+
+.weeks26-floating-star.star-two {
+
+    left: 43%;
+
+    bottom: 70px;
+
+    font-size: 21px;
+
+    animation-delay:
+            -2s;
+}
+
+
+/* ============================================================
+   MENSAJES
+   ============================================================ */
+
+.weeks26-messages {
+
+    padding-top:
+            22px;
+}
+
+
+.weeks26-alert {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-bottom:
+            10px;
+
+    padding:
+            12px 15px;
+
+    border-radius:
+            11px;
+
+    font-size: 9px;
+
+    font-weight: 700;
+}
+
+
+.weeks26-alert.success {
+
+    border:
+            1px solid
+            #cfe3c9;
+
+    background:
+            #eef7eb;
+
+    color:
+            #61775e;
+}
+
+
+.weeks26-alert.error {
+
+    border:
+            1px solid
+            #efc5ce;
+
+    background:
+            #fff0f3;
+
+    color:
+            #a35468;
+}
+
+
+/* ============================================================
+   ADMIN
+   ============================================================ */
+
+.weeks26-admin-section {
+
+    padding:
+            25px 0 5px;
+
+    background:
+            #fffaf8;
+}
+
+
+.weeks26-admin {
+
+    overflow: hidden;
+
+    border:
+            1px solid
+            #efd9df;
+
+    border-radius:
+            18px 18px 40px 18px;
+
+    background:
+            white;
+
+    box-shadow:
+            0 10px 28px
+            rgba(75,50,61,.045);
+}
+
+
+.weeks26-admin summary {
+
+    min-height: 76px;
+
+    display: grid;
+
+    grid-template-columns:
+        42px 1fr auto;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding:
+            16px 20px;
+
+    cursor: pointer;
+
+    list-style: none;
+}
+
+
+.weeks26-admin summary::-webkit-details-marker {
+
+    display: none;
+}
+
+
+.weeks26-admin-plus {
+
+    width: 38px;
+
+    height: 38px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius:
+            12px 12px 22px 12px;
+
+    background:
+            var(--pink-light);
+
+    color:
+            var(--pink-dark);
+
+    font-size: 18px;
+}
+
+
+.weeks26-admin summary div {
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.weeks26-admin summary strong {
+
+    color:
+            var(--ink);
+
+    font-family:
+            "Nunito",
+            sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 900;
+}
+
+
+.weeks26-admin summary small {
+
+    margin-top: 2px;
+
+    color:
+            var(--muted);
+
+    font-size: 7px;
+}
+
+
+.weeks26-admin-arrow {
+
+    color:
+            var(--pink);
+
+    font-size: 15px;
+}
+
+
+/* ============================================================
+   FORM ADMIN
+   ============================================================ */
+
+.weeks26-form {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 16px;
+
+    padding:
+            5px 20px 25px;
+}
+
+
+.weeks26-form label {
+
+    display: block;
+}
+
+
+.weeks26-form label > span {
+
+    display: block;
+
+    margin-bottom:
+            7px;
+
+    color:
+            #6f5d66;
+
+    font-size: 8px;
+
+    font-weight: 700;
+}
+
+
+.weeks26-form input,
+.weeks26-form textarea {
+
+    width: 100%;
+
+    padding:
+            12px 13px;
+
+    border:
+            1px solid
+            #ecdce0;
+
+    border-radius:
+            11px;
+
+    outline: none;
+
+    background:
+            #fffaf9;
+
+    color:
+            var(--ink);
+
+    font-family:
+            "DM Sans",
+            sans-serif;
+
+    font-size: 9px;
+
+    transition:
+            border-color .25s ease,
+            box-shadow .25s ease;
+}
+
+
+.weeks26-form input {
+
+    min-height: 45px;
+}
+
+
+.weeks26-form textarea {
+
+    resize: vertical;
+}
+
+
+.weeks26-form input:focus,
+.weeks26-form textarea:focus {
+
+    border-color:
+            #eaa0b5;
+
+    box-shadow:
+            0 0 0 4px
+            rgba(239,95,140,.09);
+}
+
+
+.weeks26-form-full {
+
+    grid-column:
+            1 / -1;
+}
+
+
+.weeks26-create-button {
+
+    min-height: 43px;
+
+    display:
+            inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 11px;
+
+    padding:
+            10px 18px;
+
+    border: 0;
+
+    border-radius:
+            10px;
+
+    background:
+            linear-gradient(
+                    135deg,
+                    #ef628d,
+                    #dd4476
+            );
+
+    color: white;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    box-shadow:
+            0 10px 23px
+            rgba(220,67,113,.17);
+
+    transition:
+            transform .3s ease;
+}
+
+
+.weeks26-create-button:hover {
+
+    transform:
+            translateY(-3px);
+}
+
+
+/* ============================================================
+   CONTENIDO
+   ============================================================ */
+
+.weeks26-content {
+
+    padding:
+            85px 0 100px;
+
+    background:
+            #fffaf8;
+}
+
+
+/* ============================================================
+   ENCABEZADO
+   ============================================================ */
+
+.weeks26-section-heading {
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content:
+            space-between;
+
+    gap: 40px;
+
+    margin-bottom:
+            40px;
+}
+
+
+.weeks26-section-heading > div > span {
+
+    display: block;
+
+    margin-bottom:
+            7px;
+
+    color:
+            var(--pink);
+
+    font-size: 7px;
+
+    font-weight: 800;
+
+    letter-spacing:
+            1.5px;
+}
+
+
+.weeks26-section-heading h2 {
+
+    margin: 0;
+
+    color:
+            var(--ink);
+
+    font-family:
+            "Nunito",
+            sans-serif;
+
+    font-size:
+            clamp(
+                    33px,
+                    4vw,
+                    49px
+            );
+
+    font-weight: 900;
+
+    line-height: 1;
+
+    letter-spacing:
+            -2px;
+}
+
+
+.weeks26-section-heading > p {
+
+    max-width:
+            420px;
+
+    margin: 0;
+
+    color:
+            #8a7b82;
+
+    font-size: 9px;
+
+    line-height: 1.7;
+}
+
+
+/* ============================================================
+   GRID
+   ============================================================ */
+
+.weeks26-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            minmax(0,1fr)
+        );
+
+    gap: 20px;
+}
+
+
+/* ============================================================
+   TARJETAS
+   ============================================================ */
+
+.weeks26-card {
+
+    overflow: hidden;
+
+    border:
+            1px solid
+            #efdee3;
+
+    border-radius:
+            23px 23px 55px 23px;
+
+    background:
+            white;
+
+    box-shadow:
+            0 13px 33px
+            rgba(77,53,64,.055);
+
+    transition:
+            transform .35s
+            cubic-bezier(.2,.8,.2,1),
+            box-shadow .35s ease;
+
+    animation:
+            weeks26Reveal
+            .6s ease both;
+}
+
+
+.weeks26-card:nth-child(2) {
+
+    animation-delay:
+            .08s;
+}
+
+
+.weeks26-card:nth-child(3) {
+
+    animation-delay:
+            .16s;
+}
+
+
+.weeks26-card:nth-child(4) {
+
+    animation-delay:
+            .24s;
+}
+
+
+.weeks26-card:nth-child(5) {
+
+    animation-delay:
+            .32s;
+}
+
+
+.weeks26-card:hover {
+
+    transform:
+            translateY(-9px);
+
+    box-shadow:
+            0 24px 48px
+            rgba(77,53,64,.11);
+}
+
+
+/* ============================================================
+   PREVIEW
+   ============================================================ */
+
+.weeks26-card-preview {
+
+    position: relative;
+
+    height: 230px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+
+.weeks26-card.theme-1
+.weeks26-card-preview {
+
+    background:
+            linear-gradient(
+                    145deg,
+                    #f5dfe7,
+                    #f8eaef
+            );
+}
+
+
+.weeks26-card.theme-2
+.weeks26-card-preview {
+
+    background:
+            linear-gradient(
+                    145deg,
+                    #e6eedf,
+                    #eff4eb
+            );
+}
+
+
+.weeks26-card.theme-3
+.weeks26-card-preview {
+
+    background:
+            linear-gradient(
+                    145deg,
+                    #e5edf6,
+                    #eef4f9
+            );
+}
+
+
+.weeks26-card.theme-4
+.weeks26-card-preview {
+
+    background:
+            linear-gradient(
+                    145deg,
+                    #f8e5da,
+                    #fbefe7
+            );
+}
+
+
+.weeks26-card.theme-5
+.weeks26-card-preview {
+
+    background:
+            linear-gradient(
+                    145deg,
+                    #ede6f8,
+                    #f5f0fb
+            );
+}
+
+
+/* PUNTOS */
+
+.weeks26-card-dots {
+
+    position: absolute;
+
+    top: 15px;
+
+    left: 15px;
+
+    display: flex;
+
+    gap: 5px;
+}
+
+
+.weeks26-card-dots span {
+
+    width: 5px;
+
+    height: 5px;
+
+    border-radius: 50%;
+
+    background:
+            rgba(82,61,72,.20);
+}
+
+
+/* NÚMERO GRANDE */
+
+.weeks26-big-number {
+
+    position: absolute;
+
+    top: 18px;
+
+    right: 18px;
+
+    color:
+            rgba(68,51,60,.16);
+
+    font-family:
+            "Nunito",
+            sans-serif;
+
+    font-size: 56px;
+
+    font-weight: 900;
+
+    line-height: 1;
+}
+
+
+/* ICONO CENTRAL */
+
+.weeks26-card-art {
+
+    width: 125px;
+
+    height: 102px;
+
+    display: grid;
+
+    place-items: center;
+
+    border:
+            5px solid
+            rgba(255,255,255,.73);
+
+    border-radius:
+            19px;
+
+    background:
+            rgba(255,255,255,.55);
+
+    color:
+            #b85d7a;
+
+    font-family:
+            "Nunito",
+            sans-serif;
+
+    font-size: 29px;
+
+    font-weight: 900;
+
+    box-shadow:
+            0 15px 34px
+            rgba(72,52,61,.09);
+
+    transform:
+            rotate(-4deg);
+
+    transition:
+            transform .35s ease;
+}
+
+
+.weeks26-card:hover
+.weeks26-card-art {
+
+    transform:
+            rotate(0deg)
+            scale(1.06);
+}
+
+
+.weeks26-card-mini-star {
+
+    position: absolute;
+
+    left: 35px;
+
+    bottom: 25px;
+
+    color:
+            rgba(220,81,122,.42);
+
+    font-size: 15px;
+}
+
+
+/* ============================================================
+   CUERPO
+   ============================================================ */
+
+.weeks26-card-body {
+
+    min-height: 245px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding:
+            23px;
+}
+
+
+.weeks26-card-label {
+
+    color:
+            var(--pink);
+
+    font-size: 7px;
+
+    font-weight: 800;
+
+    letter-spacing:
+            1.2px;
+}
+
+
+.weeks26-card-body h3 {
+
+    margin:
+            8px 0 10px;
+
+    color:
+            var(--ink);
+
+    font-family:
+            "Nunito",
+            sans-serif;
+
+    font-size: 18px;
+
+    font-weight: 900;
+
+    line-height: 1.18;
+}
+
+
+.weeks26-card-body > p {
+
+    flex: 1;
+
+    margin: 0;
+
+    color:
+            #83747c;
+
+    font-size: 9px;
+
+    line-height: 1.7;
+}
+
+
+/* ============================================================
+   FOOTER DE TARJETA
+   ============================================================ */
+
+.weeks26-card-footer {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content:
+            space-between;
+
+    gap: 13px;
+
+    margin-top:
+            22px;
+
+    padding-top:
+            16px;
+
+    border-top:
+            1px solid
+            #f2e4e7;
+}
+
+
+.weeks26-work-count {
+
+    display:
+            inline-flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    color:
+            #897980;
+
+    font-size: 8px;
+}
+
+
+.weeks26-work-count > span {
+
+    color:
+            var(--pink);
+
+    font-size: 13px;
+}
+
+
+.weeks26-work-count strong {
+
+    color:
+            #5f5057;
+}
+
+
+/* ABRIR */
+
+.weeks26-open {
+
+    min-height: 34px;
+
+    display:
+            inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    padding:
+            8px 12px;
+
+    border-radius:
+            999px;
+
+    background:
+            #ffe8ef;
+
+    color:
+            var(--pink-dark);
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    white-space: nowrap;
+
+    transition:
+            transform .25s ease,
+            color .25s ease,
+            background .25s ease;
+}
+
+
+.weeks26-open > span {
+
+    font-size: 13px;
+
+    transition:
+            transform .25s ease;
+}
+
+
+.weeks26-open:hover {
+
+    transform:
+            translateY(-3px);
+
+    background:
+            var(--pink);
+
+    color:
+            white;
+}
+
+
+.weeks26-open:hover > span {
+
+    transform:
+            translate(2px,-2px);
+}
+
+
+/* ============================================================
+   VACÍO
+   ============================================================ */
+
+.weeks26-empty {
+
+    grid-column:
+            1 / -1;
+
+    min-height:
+            300px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding:
+            40px;
+
+    border:
+            1px dashed
+            #e7bdca;
+
+    border-radius:
+            28px 28px 75px 28px;
+
+    background:
+            #fff2f6;
+
+    text-align: center;
+}
+
+
+.weeks26-empty-icon {
+
+    margin-bottom:
+            8px;
+
+    color:
+            var(--pink);
+
+    font-size: 35px;
+}
+
+
+.weeks26-empty > span {
+
+    color:
+            #b27c8e;
+
+    font-size: 7px;
+
+    font-weight: 800;
+
+    letter-spacing:
+            1.4px;
+}
+
+
+.weeks26-empty h3 {
+
+    margin:
+            7px 0;
+
+    color:
+            var(--ink);
+
+    font-family:
+            "Nunito",
+            sans-serif;
+
+    font-size: 22px;
+
+    font-weight: 900;
+}
+
+
+.weeks26-empty p {
+
+    max-width:
+            450px;
+
+    margin: 0;
+
+    color:
+            #8b7982;
+
+    font-size: 9px;
+
+    line-height: 1.7;
+}
+
+
+/* ============================================================
+   FINAL
+   ============================================================ */
+
+.weeks26-end {
+
+    padding:
+            0 0 90px;
+
+    background:
+            #fffaf8;
+}
+
+
+.weeks26-end-card {
+
+    min-height:
+            280px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content:
+            space-between;
+
+    gap: 50px;
+
+    padding:
+            45px;
+
+    overflow: hidden;
+
+    border:
+            1px solid
+            #efd4dd;
+
+    border-radius:
+            32px 32px 90px 32px;
+
+    background:
+            linear-gradient(
+                    135deg,
+                    #ffe6ee,
+                    #fff1ee
+            );
+}
+
+
+.weeks26-end-card > div > span {
+
+    display: block;
+
+    margin-bottom:
+            9px;
+
+    color:
+            var(--pink-dark);
+
+    font-size: 7px;
+
+    font-weight: 800;
+
+    letter-spacing:
+            1.4px;
+}
+
+
+.weeks26-end-card h2 {
+
+    max-width:
+            560px;
+
+    margin: 0;
+
+    color:
+            var(--ink);
+
+    font-family:
+            "Nunito",
+            sans-serif;
+
+    font-size:
+            clamp(
+                    31px,
+                    4vw,
+                    49px
+            );
+
+    font-weight: 900;
+
+    line-height: 1;
+
+    letter-spacing:
+            -2px;
+}
+
+
+.weeks26-end-card p {
+
+    max-width:
+            480px;
+
+    margin:
+            14px 0 0;
+
+    color:
+            #866f79;
+
+    font-size: 9px;
+
+    line-height: 1.7;
+}
+
+
+.weeks26-end-card > a {
+
+    min-height: 47px;
+
+    display:
+            inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 11px;
+
+    padding:
+            11px 20px;
+
+    border-radius:
+            999px;
+
+    background:
+            var(--pink);
+
+    color:
+            white;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    white-space: nowrap;
+
+    box-shadow:
+            0 10px 25px
+            rgba(220,68,114,.18);
+
+    transition:
+            transform .3s ease;
+}
+
+
+.weeks26-end-card > a:hover {
+
+    transform:
+            translateY(-4px);
+}
+
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.weeks26-footer {
+
+    padding:
+            25px 0;
+
+    border-top:
+            1px solid
+            #f1dde3;
+
+    background:
+            #fff4f5;
+}
+
+
+.weeks26-footer
+.weeks26-container {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content:
+            space-between;
+
+    gap: 20px;
+}
+
+
+.weeks26-footer strong {
+
+    color:
+            var(--pink-dark);
+
+    font-family:
+            "Nunito",
+            sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 900;
+}
+
+
+.weeks26-footer p,
+.weeks26-footer a {
+
+    margin: 0;
+
+    color:
+            #99828c;
+
+    font-size: 7px;
+}
+
+
+/* ============================================================
+   ANIMACIONES
+   ============================================================ */
+
+@keyframes weeks26Reveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+                translateY(25px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+                translateY(0);
+    }
+}
+
+
+@keyframes weeks26Left {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+                translateX(-30px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+                translateX(0);
+    }
+}
+
+
+@keyframes weeks26Right {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+                translateX(30px)
+                scale(.97);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+                translateX(0)
+                scale(1);
+    }
+}
+
+
+@keyframes weeks26Float {
+
+    0%,
+    100% {
+
+        transform:
+                translateY(0);
+    }
+
+    50% {
+
+        transform:
+                translateY(-9px);
+    }
+}
+
+
+@keyframes weeks26Shape {
+
+    0%,
+    100% {
+
+        border-radius:
+                50% 50% 42% 58% /
+            48% 55% 45% 52%;
+    }
+
+    50% {
+
+        border-radius:
+                56% 44% 52% 48% /
+            44% 50% 50% 56%;
+    }
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 1000px) {
+
+    .weeks26-hero-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 40px;
+    }
+
+
+    .weeks26-hero-copy {
+
+        text-align: center;
+    }
+
+
+    .weeks26-eyebrow,
+    .weeks26-hero-button {
+
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+
+    .weeks26-hero-copy p {
+
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+
+    .weeks26-hero-visual {
+
+        min-height:
+                390px;
+    }
+
+
+    .weeks26-grid {
+
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+}
+
+
+/* ============================================================
+   MÓVIL
+   ============================================================ */
+
+@media (max-width: 760px) {
+
+    .weeks26-container {
+
+        width:
+                min(
+                        100% - 30px,
+                        1180px
+                );
+    }
+
+
+    .weeks26-menu {
+
+        display: none;
+    }
+
+
+    .weeks26-brand-text span {
+
+        display: none;
+    }
+
+
+    .weeks26-hero {
+
+        min-height: auto;
+
+        padding:
+                60px 0;
+    }
+
+
+    .weeks26-hero h1 {
+
+        font-size: 51px;
+
+        letter-spacing:
+                -3px;
+    }
+
+
+    .weeks26-big-shape {
+
+        width: 310px;
+
+        height: 310px;
+    }
+
+
+    .weeks26-note {
+
+        display: none;
+    }
+
+
+    .weeks26-section-heading {
+
+        flex-direction: column;
+
+        align-items:
+                flex-start;
+
+        gap: 15px;
+    }
+
+
+    .weeks26-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .weeks26-form {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .weeks26-form-full {
+
+        grid-column:
+                auto;
+    }
+
+
+    .weeks26-end-card {
+
+        flex-direction:
+                column;
+
+        align-items:
+                flex-start;
+
+        padding:
+                35px 27px;
+    }
+
+}
+
+
+/* ============================================================
+   CELULAR PEQUEÑO
+   ============================================================ */
+
+@media (max-width: 450px) {
+
+    .weeks26-brand-logo {
+
+        width: 42px;
+
+        height: 42px;
+    }
+
+
+    .weeks26-login {
+
+        min-height: 38px;
+
+        padding:
+                8px 11px;
+
+        font-size: 7px;
+    }
+
+
+    .weeks26-hero h1 {
+
+        font-size:
+                43px;
+    }
+
+
+    .weeks26-hero-visual {
+
+        min-height:
+                330px;
+    }
+
+
+    .weeks26-big-shape {
+
+        width: 280px;
+
+        height: 280px;
+    }
+
+
+    .weeks26-laptop {
+
+        transform:
+                scale(.85);
+    }
+
+
+    .weeks26-card-preview {
+
+        height:
+                210px;
+    }
+
+
+    .weeks26-card-body {
+
+        min-height:
+                225px;
+    }
+
+
+    .weeks26-card-footer {
+
+        flex-direction:
+                column;
+
+        align-items:
+                flex-start;
+    }
+
+
+    .weeks26-open {
+
+        width: 100%;
+    }
+
+
+    .weeks26-footer
+    .weeks26-container {
+
+        flex-direction:
+                column;
+
+        align-items:
+                flex-start;
+    }
+
+}
+
+
+/* ============================================================
+   ACCESIBILIDAD
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .weeks26-page *,
+    .weeks26-page *::before,
+    .weeks26-page *::after {
+
+        animation:
+                none !important;
+
+        transition-duration:
+                .01ms !important;
+    }
+}
+/* ============================================================
+   AJUSTE FINAL DE LETRAS - PÁGINA MIS SEMANAS
+   Tamaño mediano, limpio y profesional
+   ============================================================ */
+
+
+/* =========================
+   LOGO
+   ========================= */
+
+.weeks26-brand-text strong {
+    font-size: 18px;
+}
+
+.weeks26-brand-text span {
+    font-size: 9px;
+}
+
+
+/* =========================
+   MENÚ SUPERIOR
+   ========================= */
+
+.weeks26-menu a {
+    font-size: 13px;
+}
+
+
+/* =========================
+   BOTÓN INICIAR SESIÓN
+   ========================= */
+
+.weeks26-login {
+    font-size: 13px;
+    min-height: 44px;
+    padding: 10px 18px;
+}
+
+
+/* =========================
+   HERO / PRESENTACIÓN
+   ========================= */
+
+/* EVIDENCIAS ACADÉMICAS */
+
+.weeks26-eyebrow {
+    font-size: 10px;
+}
+
+
+/* TÍTULO PRINCIPAL */
+
+.weeks26-hero h1 {
+    font-size: clamp(52px, 5.5vw, 74px);
+}
+
+
+/* DESCRIPCIÓN */
+
+.weeks26-hero-copy p {
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+
+/* BOTÓN DEL HERO */
+
+.weeks26-hero-button {
+    font-size: 12px;
+    min-height: 46px;
+    padding: 11px 19px;
+}
+
+
+/* =========================
+   LAPTOP / DECORACIÓN
+   ========================= */
+
+.weeks26-laptop-screen span {
+    font-size: 34px;
+}
+
+.weeks26-laptop-screen small {
+    font-size: 9px;
+}
+
+
+/* TARJETA FLOTANTE */
+
+.weeks26-note > span {
+    font-size: 9px;
+}
+
+.weeks26-note strong {
+    font-size: 13px;
+}
+
+.weeks26-note small {
+    font-size: 11px;
+}
+
+
+/* =========================
+   MENSAJES
+   ========================= */
+
+.weeks26-alert {
+    font-size: 12px;
+}
+
+
+/* =========================
+   PANEL ADMINISTRADOR
+   ========================= */
+
+.weeks26-admin summary strong {
+    font-size: 14px;
+}
+
+.weeks26-admin summary small {
+    font-size: 10px;
+}
+
+.weeks26-admin-arrow {
+    font-size: 16px;
+}
+
+
+/* =========================
+   FORMULARIO
+   ========================= */
+
+.weeks26-form label > span {
+    font-size: 11px;
+}
+
+.weeks26-form input,
+.weeks26-form textarea {
+    font-size: 12px;
+}
+
+.weeks26-create-button {
+    font-size: 12px;
+}
+
+
+/* =========================
+   ENCABEZADO DE SEMANAS
+   ========================= */
+
+/* TEXTO PEQUEÑO SUPERIOR */
+
+.weeks26-section-heading > div > span {
+    font-size: 10px;
+}
+
+
+/* TÍTULO */
+
+.weeks26-section-heading h2 {
+    font-size: clamp(34px, 4vw, 48px);
+}
+
+
+/* DESCRIPCIÓN */
+
+.weeks26-section-heading > p {
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   TARJETAS DE SEMANAS
+   ========================= */
+
+/* SEMANA 01, SEMANA 02... */
+
+.weeks26-card-label {
+    font-size: 10px;
+}
+
+
+/* TÍTULO DE LA SEMANA */
+
+.weeks26-card-body h3 {
+    font-size: 19px;
+}
+
+
+/* DESCRIPCIÓN DE LA SEMANA */
+
+.weeks26-card-body > p {
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+
+/* CANTIDAD DE TRABAJOS */
+
+.weeks26-work-count {
+    font-size: 11px;
+}
+
+.weeks26-work-count > span {
+    font-size: 14px;
+}
+
+
+/* BOTÓN ABRIR SEMANA */
+
+.weeks26-open {
+    font-size: 11px;
+    min-height: 36px;
+    padding: 8px 13px;
+}
+
+.weeks26-open > span {
+    font-size: 14px;
+}
+
+
+/* =========================
+   ESTADO VACÍO
+   ========================= */
+
+.weeks26-empty > span {
+    font-size: 10px;
+}
+
+.weeks26-empty h3 {
+    font-size: 23px;
+}
+
+.weeks26-empty p {
+    font-size: 12px;
+}
+
+
+/* =========================
+   TARJETA FINAL
+   ========================= */
+
+.weeks26-end-card > div > span {
+    font-size: 10px;
+}
+
+.weeks26-end-card h2 {
+    font-size: clamp(32px, 4vw, 47px);
+}
+
+.weeks26-end-card p {
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.weeks26-end-card > a {
+    font-size: 12px;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.weeks26-footer strong {
+    font-size: 16px;
+}
+
+.weeks26-footer p,
+.weeks26-footer a {
+    font-size: 10px;
+}
+
+
+/* ============================================================
+   TABLET / CELULAR
+   ============================================================ */
+
+@media (max-width: 760px) {
+
+    .weeks26-login {
+        font-size: 11px;
+    }
+
+    .weeks26-hero h1 {
+        font-size: 49px;
+    }
+
+    .weeks26-hero-copy p {
+        font-size: 13px;
+    }
+
+    .weeks26-section-heading > p {
+        font-size: 12px;
+    }
+
+    .weeks26-card-body h3 {
+        font-size: 18px;
+    }
+
+    .weeks26-card-body > p {
+        font-size: 12px;
+    }
+
+    .weeks26-work-count {
+        font-size: 10px;
+    }
+
+    .weeks26-open {
+        font-size: 11px;
+    }
+}
+
+
+/* ============================================================
+   CELULAR PEQUEÑO
+   ============================================================ */
+
+@media (max-width: 450px) {
+
+    .weeks26-brand-text strong {
+        font-size: 16px;
+    }
+
+    .weeks26-login {
+        font-size: 10px;
+    }
+
+    .weeks26-hero h1 {
+        font-size: 42px;
+    }
+
+    .weeks26-eyebrow {
+        font-size: 9px;
+    }
+
+    .weeks26-hero-copy p {
+        font-size: 12px;
+    }
+
+    .weeks26-hero-button {
+        font-size: 11px;
+    }
+
+    .weeks26-card-label {
+        font-size: 9px;
+    }
+
+    .weeks26-card-body h3 {
+        font-size: 18px;
+    }
+
+    .weeks26-card-body > p {
+        font-size: 12px;
+    }
+
+    .weeks26-open {
+        font-size: 11px;
+    }
+
+    .weeks26-end-card p {
+        font-size: 12px;
+    }
+}
+/* ============================================================
+   AJUSTE DEFINITIVO DE TIPOGRAFÍA
+   Tamaño medio - limpio - profesional
+   ============================================================ */
+
+/* Marca */
+.weeks26-brand-text strong {
+    font-size: 18px;
+}
+
+.weeks26-brand-text span {
+    font-size: 10px;
+}
+
+
+/* Menú superior */
+.weeks26-menu a {
+    font-size: 14px;
+}
+
+
+/* Botón iniciar sesión */
+.weeks26-login {
+    font-size: 13px;
+}
+
+
+/* Etiqueta superior del hero */
+.weeks26-eyebrow {
+    font-size: 11px;
+}
+
+
+/* Título principal */
+.weeks26-hero h1 {
+    font-size: clamp(50px, 5.5vw, 72px);
+}
+
+
+/* Descripción principal */
+.weeks26-hero-copy p {
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+
+/* Botón del hero */
+.weeks26-hero-button {
+    font-size: 13px;
+}
+
+
+/* Texto de la ilustración */
+.weeks26-laptop-screen small {
+    font-size: 10px;
+}
+
+
+/* Tarjeta flotante */
+.weeks26-note > span {
+    font-size: 10px;
+}
+
+.weeks26-note strong {
+    font-size: 13px;
+}
+
+.weeks26-note small {
+    font-size: 11px;
+}
+
+
+/* Mensajes */
+.weeks26-alert {
+    font-size: 13px;
+}
+
+
+/* ============================================================
+   PANEL DE ADMINISTRACIÓN
+   ============================================================ */
+
+.weeks26-admin summary strong {
+    font-size: 15px;
+}
+
+.weeks26-admin summary small {
+    font-size: 12px;
+}
+
+
+/* Formulario */
+.weeks26-form label > span {
+    font-size: 13px;
+}
+
+.weeks26-form input,
+.weeks26-form textarea {
+    font-size: 14px;
+}
+
+.weeks26-form input::placeholder,
+.weeks26-form textarea::placeholder {
+    font-size: 13px;
+}
+
+.weeks26-create-button {
+    font-size: 13px;
+}
+
+
+/* ============================================================
+   SECCIÓN DE SEMANAS
+   ============================================================ */
+
+/* Etiqueta: MIS SEMANAS */
+.weeks26-section-heading > div > span {
+    font-size: 11px;
+}
+
+
+/* Título */
+.weeks26-section-heading h2 {
+    font-size: clamp(35px, 4vw, 48px);
+}
+
+
+/* Descripción */
+.weeks26-section-heading > p {
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+
+/* ============================================================
+   TARJETAS
+   ============================================================ */
+
+/* SEMANA 01 */
+.weeks26-card-label {
+    font-size: 11px;
+}
+
+
+/* Título */
+.weeks26-card-body h3 {
+    font-size: 20px;
+    line-height: 1.25;
+}
+
+
+/* Descripción */
+.weeks26-card-body > p {
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* Cantidad de trabajos */
+.weeks26-work-count {
+    font-size: 12px;
+}
+
+.weeks26-work-count > span {
+    font-size: 15px;
+}
+
+
+/* Botón abrir semana */
+.weeks26-open {
+    min-height: 38px;
+    padding: 9px 14px;
+
+    font-size: 12px;
+}
+
+.weeks26-open > span {
+    font-size: 15px;
+}
+
+
+/* ============================================================
+   ESTADO VACÍO
+   ============================================================ */
+
+.weeks26-empty > span {
+    font-size: 11px;
+}
+
+.weeks26-empty h3 {
+    font-size: 24px;
+}
+
+.weeks26-empty p {
+    font-size: 14px;
+}
+
+
+/* ============================================================
+   TARJETA FINAL
+   ============================================================ */
+
+.weeks26-end-card > div > span {
+    font-size: 11px;
+}
+
+.weeks26-end-card h2 {
+    font-size: clamp(32px, 4vw, 47px);
+}
+
+.weeks26-end-card p {
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+.weeks26-end-card > a {
+    font-size: 13px;
+}
+
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.weeks26-footer strong {
+    font-size: 17px;
+}
+
+.weeks26-footer p,
+.weeks26-footer a {
+    font-size: 11px;
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 760px) {
+
+    .weeks26-login {
+        font-size: 12px;
+    }
+
+    .weeks26-hero h1 {
+        font-size: 48px;
+    }
+
+    .weeks26-hero-copy p {
+        font-size: 14px;
+    }
+
+    .weeks26-section-heading > p {
+        font-size: 13px;
+    }
+
+    .weeks26-card-body h3 {
+        font-size: 19px;
+    }
+
+    .weeks26-card-body > p {
+        font-size: 13px;
+    }
+
+    .weeks26-work-count {
+        font-size: 11px;
+    }
+
+    .weeks26-open {
+        font-size: 12px;
+    }
+}
+
+
+/* ============================================================
+   CELULAR
+   ============================================================ */
+
+@media (max-width: 450px) {
+
+    .weeks26-brand-text strong {
+        font-size: 16px;
+    }
+
+    .weeks26-login {
+        font-size: 11px;
+    }
+
+    .weeks26-hero h1 {
+        font-size: 41px;
+    }
+
+    .weeks26-eyebrow {
+        font-size: 10px;
+    }
+
+    .weeks26-hero-copy p {
+        font-size: 13px;
+    }
+
+    .weeks26-hero-button {
+        font-size: 12px;
+    }
+
+    .weeks26-card-label {
+        font-size: 10px;
+    }
+
+    .weeks26-card-body h3 {
+        font-size: 18px;
+    }
+
+    .weeks26-card-body > p {
+        font-size: 13px;
+    }
+
+    .weeks26-open {
+        font-size: 11px;
+    }
+
+    .weeks26-end-card p {
+        font-size: 13px;
+    }
+}
+/* ============================================================
+   AJUSTE DEFINITIVO DE TIPOGRAFÍA
+   Tamaño medio - limpio - profesional
+   ============================================================ */
+
+/* Marca */
+.weeks26-brand-text strong {
+    font-size: 18px;
+}
+
+.weeks26-brand-text span {
+    font-size: 10px;
+}
+
+
+/* Menú superior */
+.weeks26-menu a {
+    font-size: 14px;
+}
+
+
+/* Botón iniciar sesión */
+.weeks26-login {
+    font-size: 13px;
+}
+
+
+/* Etiqueta superior del hero */
+.weeks26-eyebrow {
+    font-size: 11px;
+}
+
+
+/* Título principal */
+.weeks26-hero h1 {
+    font-size: clamp(50px, 5.5vw, 72px);
+}
+
+
+/* Descripción principal */
+.weeks26-hero-copy p {
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+
+/* Botón del hero */
+.weeks26-hero-button {
+    font-size: 13px;
+}
+
+
+/* Texto de la ilustración */
+.weeks26-laptop-screen small {
+    font-size: 10px;
+}
+
+
+/* Tarjeta flotante */
+.weeks26-note > span {
+    font-size: 10px;
+}
+
+.weeks26-note strong {
+    font-size: 13px;
+}
+
+.weeks26-note small {
+    font-size: 11px;
+}
+
+
+/* Mensajes */
+.weeks26-alert {
+    font-size: 13px;
+}
+
+
+/* ============================================================
+   PANEL DE ADMINISTRACIÓN
+   ============================================================ */
+
+.weeks26-admin summary strong {
+    font-size: 15px;
+}
+
+.weeks26-admin summary small {
+    font-size: 12px;
+}
+
+
+/* Formulario */
+.weeks26-form label > span {
+    font-size: 13px;
+}
+
+.weeks26-form input,
+.weeks26-form textarea {
+    font-size: 14px;
+}
+
+.weeks26-form input::placeholder,
+.weeks26-form textarea::placeholder {
+    font-size: 13px;
+}
+
+.weeks26-create-button {
+    font-size: 13px;
+}
+
+
+/* ============================================================
+   SECCIÓN DE SEMANAS
+   ============================================================ */
+
+/* Etiqueta: MIS SEMANAS */
+.weeks26-section-heading > div > span {
+    font-size: 11px;
+}
+
+
+/* Título */
+.weeks26-section-heading h2 {
+    font-size: clamp(35px, 4vw, 48px);
+}
+
+
+/* Descripción */
+.weeks26-section-heading > p {
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+
+/* ============================================================
+   TARJETAS
+   ============================================================ */
+
+/* SEMANA 01 */
+.weeks26-card-label {
+    font-size: 11px;
+}
+
+
+/* Título */
+.weeks26-card-body h3 {
+    font-size: 20px;
+    line-height: 1.25;
+}
+
+
+/* Descripción */
+.weeks26-card-body > p {
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* Cantidad de trabajos */
+.weeks26-work-count {
+    font-size: 12px;
+}
+
+.weeks26-work-count > span {
+    font-size: 15px;
+}
+
+
+/* Botón abrir semana */
+.weeks26-open {
+    min-height: 38px;
+    padding: 9px 14px;
+
+    font-size: 12px;
+}
+
+.weeks26-open > span {
+    font-size: 15px;
+}
+
+
+/* ============================================================
+   ESTADO VACÍO
+   ============================================================ */
+
+.weeks26-empty > span {
+    font-size: 11px;
+}
+
+.weeks26-empty h3 {
+    font-size: 24px;
+}
+
+.weeks26-empty p {
+    font-size: 14px;
+}
+
+
+/* ============================================================
+   TARJETA FINAL
+   ============================================================ */
+
+.weeks26-end-card > div > span {
+    font-size: 11px;
+}
+
+.weeks26-end-card h2 {
+    font-size: clamp(32px, 4vw, 47px);
+}
+
+.weeks26-end-card p {
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+.weeks26-end-card > a {
+    font-size: 13px;
+}
+
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.weeks26-footer strong {
+    font-size: 17px;
+}
+
+.weeks26-footer p,
+.weeks26-footer a {
+    font-size: 11px;
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 760px) {
+
+    .weeks26-login {
+        font-size: 12px;
+    }
+
+    .weeks26-hero h1 {
+        font-size: 48px;
+    }
+
+    .weeks26-hero-copy p {
+        font-size: 14px;
+    }
+
+    .weeks26-section-heading > p {
+        font-size: 13px;
+    }
+
+    .weeks26-card-body h3 {
+        font-size: 19px;
+    }
+
+    .weeks26-card-body > p {
+        font-size: 13px;
+    }
+
+    .weeks26-work-count {
+        font-size: 11px;
+    }
+
+    .weeks26-open {
+        font-size: 12px;
+    }
+}
+
+
+/* ============================================================
+   CELULAR
+   ============================================================ */
+
+@media (max-width: 450px) {
+
+    .weeks26-brand-text strong {
+        font-size: 16px;
+    }
+
+    .weeks26-login {
+        font-size: 11px;
+    }
+
+    .weeks26-hero h1 {
+        font-size: 41px;
+    }
+
+    .weeks26-eyebrow {
+        font-size: 10px;
+    }
+
+    .weeks26-hero-copy p {
+        font-size: 13px;
+    }
+
+    .weeks26-hero-button {
+        font-size: 12px;
+    }
+
+    .weeks26-card-label {
+        font-size: 10px;
+    }
+
+    .weeks26-card-body h3 {
+        font-size: 18px;
+    }
+
+    .weeks26-card-body > p {
+        font-size: 13px;
+    }
+
+    .weeks26-open {
+        font-size: 11px;
+    }
+
+    .weeks26-end-card p {
+        font-size: 13px;
+    }
+}
+

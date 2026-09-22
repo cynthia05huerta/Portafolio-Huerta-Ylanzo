@@ -1,0 +1,1607 @@
+/* ============================================================
+   MIS EVALUACIONES - ESTUDIANTE
+   ============================================================ */
+
+:root {
+    --ev-pink: #ed4f7b;
+    --ev-pink-dark: #d9436d;
+    --ev-pink-soft: #f9e4ea;
+
+    --ev-dark: #302833;
+    --ev-text: #70656b;
+    --ev-muted: #a09399;
+
+    --ev-cream: #fcf8f6;
+    --ev-paper: #ffffff;
+
+    --ev-lilac: #eee9f7;
+    --ev-sage: #e9f1e6;
+    --ev-peach: #faeade;
+    --ev-blue: #e8f0f7;
+
+    --ev-border: rgba(100, 72, 83, .10);
+    --ev-shadow: 0 22px 55px rgba(111, 77, 90, .08);
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    background: var(--ev-cream);
+}
+
+
+/* ============================================================
+   LAYOUT
+   ============================================================ */
+
+.eval26-layout {
+    min-height: 100vh;
+
+    display: grid;
+
+    grid-template-columns:
+        255px minmax(0, 1fr);
+
+    font-family:
+            "DM Sans",
+            Arial,
+            sans-serif;
+
+    color: var(--ev-dark);
+
+    background:
+            radial-gradient(
+                    circle at 93% 5%,
+                    rgba(248, 212, 222, .55),
+                    transparent 21%
+            ),
+            radial-gradient(
+                    circle at 50% 95%,
+                    rgba(232, 240, 229, .45),
+                    transparent 22%
+            ),
+            var(--ev-cream);
+}
+
+
+/* ============================================================
+   SIDEBAR
+   ============================================================ */
+
+.eval26-sidebar {
+    position: sticky;
+
+    top: 0;
+
+    height: 100vh;
+
+    padding: 30px 22px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    border-right:
+            1px solid rgba(113, 77, 90, .08);
+
+    background:
+            linear-gradient(
+                    180deg,
+                    #faeeee 0%,
+                    #f8efed 100%
+            );
+}
+
+
+.eval26-brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 42px;
+
+    color: inherit;
+
+    text-decoration: none;
+}
+
+
+.eval26-brand-logo {
+    width: 48px;
+
+    height: 48px;
+
+    display: grid;
+
+    place-items: center;
+
+    border:
+            1px solid rgba(237, 79, 123, .17);
+
+    border-radius: 15px;
+
+    background: white;
+
+    color: var(--ev-pink);
+
+    font-family:
+            "Playfair Display",
+            Georgia,
+            serif;
+
+    font-size: 23px;
+
+    font-weight: 800;
+
+    box-shadow:
+            0 10px 24px rgba(133, 83, 100, .08);
+}
+
+
+.eval26-brand-copy {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.eval26-brand-copy strong {
+    font-family:
+            "Playfair Display",
+            Georgia,
+            serif;
+
+    font-size: 21px;
+    line-height: 1;
+}
+
+
+.eval26-brand-copy span {
+    margin-top: 6px;
+
+    color: #a17f8a;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.3px;
+}
+
+
+/* ============================================================
+   MENÚ
+   ============================================================ */
+
+.eval26-menu {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.eval26-menu a {
+    min-height: 49px;
+
+    padding: 0 14px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    border-radius: 14px;
+
+    color: #695f65;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition:
+            transform .25s ease,
+            background .25s ease,
+            color .25s ease;
+}
+
+
+.eval26-menu a:hover {
+    transform: translateX(4px);
+
+    color: var(--ev-pink);
+
+    background: rgba(255,255,255,.62);
+}
+
+
+.eval26-menu a.active {
+    color: var(--ev-pink);
+
+    background: white;
+
+    box-shadow:
+            0 10px 25px rgba(114,73,89,.08);
+}
+
+
+.eval26-menu-icon {
+    width: 29px;
+
+    height: 29px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 9px;
+
+    background: rgba(255,255,255,.68);
+
+    color: var(--ev-pink);
+
+    font-size: 16px;
+}
+
+
+/* ============================================================
+   SIDEBAR INFERIOR
+   ============================================================ */
+
+.eval26-sidebar-bottom {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.eval26-sidebar-bottom > a {
+    min-height: 42px;
+
+    padding: 0 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    border-radius: 12px;
+
+    color: #71656c;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition:
+            background .25s ease,
+            color .25s ease;
+}
+
+
+.eval26-sidebar-bottom > a:hover {
+    background: rgba(255,255,255,.7);
+
+    color: var(--ev-pink);
+}
+
+
+.eval26-sidebar-bottom .logout {
+    color: #ad6678;
+}
+
+
+.eval26-user {
+    margin-top: 16px;
+
+    padding-top: 19px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    border-top:
+            1px solid rgba(84,59,69,.09);
+}
+
+
+.eval26-user-avatar {
+    width: 39px;
+
+    height: 39px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: var(--ev-pink);
+
+    color: white;
+
+    font-weight: 800;
+}
+
+
+.eval26-user > div:last-child {
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.eval26-user span {
+    color: #aa8390;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.3px;
+}
+
+
+.eval26-user strong {
+    margin-top: 3px;
+
+    font-family:
+            "Playfair Display",
+            Georgia,
+            serif;
+
+    font-size: 14px;
+}
+
+
+/* ============================================================
+   MAIN
+   ============================================================ */
+
+.eval26-main {
+    position: relative;
+
+    min-width: 0;
+
+    padding:
+            52px
+            clamp(30px, 5vw, 78px)
+            70px;
+}
+
+
+/* ============================================================
+   HERO
+   ============================================================ */
+
+.eval26-hero {
+    min-height: 240px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 50px;
+
+    padding-bottom: 35px;
+
+    border-bottom:
+            1px solid var(--ev-border);
+
+    animation:
+            eval26Enter .65s ease both;
+}
+
+
+.eval26-hero-copy {
+    max-width: 670px;
+}
+
+
+.eval26-eyebrow {
+    color: #b36b80;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+.eval26-hero h1 {
+    margin: 10px 0;
+
+    color: var(--ev-dark);
+
+    font-family:
+            "Playfair Display",
+            Georgia,
+            serif;
+
+    font-size:
+            clamp(48px, 5vw, 70px);
+
+    line-height: .98;
+
+    letter-spacing: -2px;
+}
+
+
+.eval26-hero h1 em {
+    color: var(--ev-pink);
+
+    font-weight: 500;
+}
+
+
+.eval26-hero p {
+    max-width: 580px;
+
+    margin: 0;
+
+    color: var(--ev-text);
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* ============================================================
+   HERO ART
+   ============================================================ */
+
+.eval26-hero-art {
+    position: relative;
+
+    width: 230px;
+
+    height: 180px;
+
+    flex: 0 0 auto;
+}
+
+
+.eval26-art-circle {
+    position: absolute;
+
+    top: 8px;
+    right: 18px;
+
+    width: 155px;
+
+    height: 155px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius:
+            50% 50% 42% 58% /
+        45% 58% 42% 55%;
+
+    background:
+            linear-gradient(
+                    145deg,
+                    #f9dfe6,
+                    #f8ebef
+            );
+
+    box-shadow: var(--ev-shadow);
+
+    animation:
+            eval26Float 5s ease-in-out infinite;
+}
+
+
+.eval26-art-circle > span {
+    color: #d88ca2;
+
+    font-size: 15px;
+}
+
+
+.eval26-art-circle strong {
+    color: var(--ev-dark);
+
+    font-family:
+            "Playfair Display",
+            Georgia,
+            serif;
+
+    font-size: 50px;
+
+    line-height: 1;
+}
+
+
+.eval26-art-circle small {
+    margin-top: 5px;
+
+    color: #a17a87;
+
+    font-size: 7px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.4px;
+}
+
+
+.eval26-art-line {
+    position: absolute;
+
+    left: 10px;
+    bottom: 35px;
+
+    width: 100px;
+
+    height: 60px;
+
+    border-left:
+            1px solid #d9a4b2;
+
+    border-bottom:
+            1px solid #d9a4b2;
+
+    border-radius:
+            0 0 0 100%;
+}
+
+
+.eval26-art-heart {
+    position: absolute;
+
+    left: 0;
+    top: 20px;
+
+    color: #dc9aad;
+
+    font-size: 25px;
+
+    transform: rotate(-12deg);
+}
+
+
+/* ============================================================
+   DECORACIÓN
+   ============================================================ */
+
+.eval26-decoration {
+    position: absolute;
+
+    pointer-events: none;
+
+    color: #e5a0b3;
+
+    animation:
+            eval26Float 4s ease-in-out infinite;
+}
+
+
+.eval26-decoration-one {
+    top: 35px;
+    right: 6%;
+
+    font-size: 18px;
+}
+
+
+.eval26-decoration-two {
+    top: 310px;
+    right: 3%;
+
+    font-size: 17px;
+
+    animation-delay: -1.5s;
+}
+
+
+/* ============================================================
+   SECTION HEADING
+   ============================================================ */
+
+.eval26-section-heading {
+    margin: 40px 0 20px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+.eval26-section-heading > div:first-child > span {
+    color: #b87a8c;
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.8px;
+}
+
+
+.eval26-section-heading h2 {
+    margin: 5px 0 0;
+
+    font-family:
+            "Playfair Display",
+            Georgia,
+            serif;
+
+    font-size: 30px;
+
+    line-height: 1.1;
+}
+
+
+.eval26-section-pill {
+    padding: 9px 14px;
+
+    border:
+            1px solid rgba(222, 137, 160, .18);
+
+    border-radius: 100px;
+
+    background: #fae7ec;
+
+    color: #b4647c;
+
+    font-size: 10px;
+
+    font-weight: 800;
+}
+
+
+/* ============================================================
+   GRID
+   ============================================================ */
+
+.eval26-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0,1fr));
+
+    gap: 20px;
+}
+
+
+/* ============================================================
+   CARD
+   ============================================================ */
+
+.eval26-card {
+    position: relative;
+
+    overflow: hidden;
+
+    min-width: 0;
+
+    border:
+            1px solid var(--ev-border);
+
+    border-radius:
+            27px 27px 45px 27px;
+
+    background: white;
+
+    box-shadow:
+            0 16px 42px rgba(107,76,88,.06);
+
+    transition:
+            transform .3s ease,
+            box-shadow .3s ease;
+
+    animation:
+            eval26CardEnter .55s ease both;
+}
+
+
+.eval26-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+            0 25px 50px rgba(107,76,88,.11);
+}
+
+
+/* diferentes tonos */
+
+.eval26-card:nth-child(4n+1) {
+    background:
+            linear-gradient(
+                    145deg,
+                    #fff,
+                    #fdf1f4
+            );
+}
+
+
+.eval26-card:nth-child(4n+2) {
+    background:
+            linear-gradient(
+                    145deg,
+                    #fff,
+                    #f3eff9
+            );
+}
+
+
+.eval26-card:nth-child(4n+3) {
+    background:
+            linear-gradient(
+                    145deg,
+                    #fff,
+                    #eff5ed
+            );
+}
+
+
+.eval26-card:nth-child(4n+4) {
+    background:
+            linear-gradient(
+                    145deg,
+                    #fff,
+                    #fbf0e7
+            );
+}
+
+
+/* ============================================================
+   CARD TOP
+   ============================================================ */
+
+.eval26-card-top {
+    min-height: 150px;
+
+    padding: 25px;
+
+    display: grid;
+
+    grid-template-columns:
+        70px minmax(0,1fr) auto;
+
+    align-items: center;
+
+    gap: 17px;
+}
+
+
+.eval26-card-number {
+    color:
+            rgba(69, 54, 62, .17);
+
+    font-family:
+            "Playfair Display",
+            Georgia,
+            serif;
+
+    font-size: 45px;
+
+    font-weight: 800;
+
+    line-height: 1;
+}
+
+
+.eval26-card-heading span {
+    color: #b87a8c;
+
+    font-size: 8px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.4px;
+}
+
+
+.eval26-card-heading h2 {
+    margin: 5px 0 0;
+
+    color: var(--ev-dark);
+
+    font-family:
+            "Playfair Display",
+            Georgia,
+            serif;
+
+    font-size: 23px;
+
+    line-height: 1.15;
+}
+
+
+/* ============================================================
+   NOTA
+   ============================================================ */
+
+.eval26-grade {
+    min-width: 88px;
+
+    min-height: 90px;
+
+    padding: 12px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+            1px solid rgba(218,127,151,.16);
+
+    border-radius:
+            22px;
+
+    background:
+            rgba(255,255,255,.74);
+
+    box-shadow:
+            0 10px 25px rgba(103,73,85,.06);
+}
+
+
+.eval26-grade > span {
+    color: #b37a89;
+
+    font-size: 7px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.2px;
+}
+
+
+.eval26-grade > div {
+    display: flex;
+
+    align-items: baseline;
+}
+
+
+.eval26-grade strong {
+    color: var(--ev-pink);
+
+    font-family:
+            "Playfair Display",
+            Georgia,
+            serif;
+
+    font-size: 35px;
+
+    line-height: 1;
+}
+
+
+.eval26-grade small {
+    color: #9a8c92;
+
+    font-size: 10px;
+}
+
+
+.eval26-grade strong.pending {
+    color: #aaa0a4;
+}
+
+
+/* ============================================================
+   COMENTARIO
+   ============================================================ */
+
+.eval26-comment {
+    margin: 0 25px;
+
+    padding: 20px;
+
+    display: grid;
+
+    grid-template-columns:
+        35px 1fr;
+
+    gap: 12px;
+
+    border:
+            1px solid rgba(103,74,85,.07);
+
+    border-radius: 18px;
+
+    background:
+            rgba(255,255,255,.63);
+}
+
+
+.eval26-quote {
+    color: #e1a1b3;
+
+    font-family:
+            Georgia,
+            serif;
+
+    font-size: 38px;
+
+    line-height: .8;
+}
+
+
+.eval26-small-label {
+    color: #9d7c87;
+
+    font-size: 7px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.3px;
+}
+
+
+.eval26-comment p {
+    margin: 7px 0 0;
+
+    color: #62575c;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+.eval26-comment p.eval26-muted {
+    color: #9d9297;
+
+    font-style: italic;
+}
+
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.eval26-card-footer {
+    min-height: 58px;
+
+    padding: 14px 25px 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+
+.eval26-status {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #6f6569;
+
+    font-size: 10px;
+
+    font-weight: 800;
+}
+
+
+.eval26-status-dot {
+    width: 7px;
+
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #83ad7b;
+
+    box-shadow:
+            0 0 0 4px rgba(131,173,123,.12);
+}
+
+
+.eval26-status-dot.pending {
+    background: #d6a16f;
+
+    box-shadow:
+            0 0 0 4px rgba(214,161,111,.12);
+}
+
+
+.eval26-date {
+    color: #9a8d92;
+
+    font-size: 9px;
+}
+
+
+.eval26-date strong {
+    color: #74676d;
+}
+
+
+/* ============================================================
+   EMPTY STATE
+   ============================================================ */
+
+.eval26-empty {
+    grid-column: 1 / -1;
+
+    position: relative;
+
+    min-height: 390px;
+
+    padding: 55px 35px;
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+            1px solid rgba(116,82,95,.09);
+
+    border-radius:
+            30px 30px 70px 30px;
+
+    background:
+            linear-gradient(
+                    135deg,
+                    #fff,
+                    #fcf0f3 45%,
+                    #f1edf8
+            );
+
+    text-align: center;
+
+    box-shadow: var(--ev-shadow);
+
+    animation:
+            eval26Enter .65s ease both;
+}
+
+
+.eval26-empty-art {
+    position: relative;
+
+    width: 120px;
+
+    height: 110px;
+
+    margin-bottom: 12px;
+}
+
+
+.eval26-empty-paper {
+    position: absolute;
+
+    left: 30px;
+    top: 4px;
+
+    width: 73px;
+
+    height: 91px;
+
+    padding: 15px;
+
+    border:
+            1px solid rgba(214,125,150,.18);
+
+    border-radius:
+            16px 16px 26px 16px;
+
+    background: white;
+
+    box-shadow:
+            0 15px 30px rgba(109,75,89,.10);
+
+    transform: rotate(5deg);
+
+    animation:
+            eval26Float 5s ease-in-out infinite;
+}
+
+
+.eval26-empty-paper span {
+    width: 27px;
+
+    height: 27px;
+
+    margin: 0 auto 12px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: var(--ev-pink-soft);
+
+    color: var(--ev-pink);
+
+    font-size: 12px;
+}
+
+
+.eval26-empty-paper div {
+    height: 3px;
+
+    margin: 6px 0;
+
+    border-radius: 20px;
+
+    background: #eee3e7;
+}
+
+
+.eval26-empty-paper div:nth-of-type(2) {
+    width: 75%;
+}
+
+
+.eval26-empty-paper div:nth-of-type(3) {
+    width: 55%;
+}
+
+
+.eval26-empty-star {
+    position: absolute;
+
+    top: 8px;
+    left: 6px;
+
+    color: #d59aab;
+
+    font-size: 20px;
+}
+
+
+.eval26-empty-heart {
+    position: absolute;
+
+    right: 0;
+    bottom: 5px;
+
+    color: #d59aab;
+
+    font-size: 25px;
+}
+
+
+.eval26-empty-label {
+    color: #b36b80;
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.8px;
+}
+
+
+.eval26-empty h2 {
+    margin: 8px 0 10px;
+
+    color: var(--ev-dark);
+
+    font-family:
+            "Playfair Display",
+            Georgia,
+            serif;
+
+    font-size: 36px;
+}
+
+
+.eval26-empty h2 em {
+    color: var(--ev-pink);
+
+    font-weight: 500;
+}
+
+
+.eval26-empty > p {
+    max-width: 500px;
+
+    margin: 0;
+
+    color: #7d7076;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+
+.eval26-empty-button {
+    min-height: 46px;
+
+    margin-top: 22px;
+
+    padding: 0 19px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    border-radius: 14px;
+
+    background:
+            linear-gradient(
+                    135deg,
+                    #ef5a83,
+                    #e74573
+            );
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    box-shadow:
+            0 13px 27px rgba(230,69,115,.19);
+
+    transition:
+            transform .25s ease,
+            box-shadow .25s ease;
+}
+
+
+.eval26-empty-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+            0 17px 32px rgba(230,69,115,.27);
+}
+
+
+/* ============================================================
+   MENSAJE FINAL
+   ============================================================ */
+
+.eval26-message {
+    margin-top: 25px;
+
+    padding: 24px 28px;
+
+    display: grid;
+
+    grid-template-columns:
+        55px 1fr auto;
+
+    align-items: center;
+
+    gap: 18px;
+
+    border:
+            1px solid rgba(111,80,92,.08);
+
+    border-radius:
+            22px 22px 50px 22px;
+
+    background:
+            linear-gradient(
+                    110deg,
+                    #eee9f7,
+                    #f8f3f5,
+                    #e9f1e6
+            );
+}
+
+
+.eval26-message-icon {
+    width: 52px;
+
+    height: 52px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 16px;
+
+    background: rgba(255,255,255,.75);
+
+    color: #9675ad;
+
+    font-size: 22px;
+}
+
+
+.eval26-message > div:nth-child(2) > span {
+    color: #997b8d;
+
+    font-size: 8px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+}
+
+
+.eval26-message h3 {
+    margin: 4px 0;
+
+    font-family:
+            "Playfair Display",
+            Georgia,
+            serif;
+
+    font-size: 20px;
+}
+
+
+.eval26-message p {
+    margin: 0;
+
+    color: #776b71;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+
+.eval26-message-heart {
+    color: rgba(237,79,123,.55);
+
+    font-size: 35px;
+}
+
+
+/* ============================================================
+   ANIMACIONES
+   ============================================================ */
+
+@keyframes eval26Enter {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes eval26CardEnter {
+
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes eval26Float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 1050px) {
+
+    .eval26-layout {
+        grid-template-columns:
+            220px minmax(0,1fr);
+    }
+
+    .eval26-main {
+        padding:
+                45px 35px 60px;
+    }
+
+    .eval26-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 850px) {
+
+    .eval26-layout {
+        display: block;
+    }
+
+    .eval26-sidebar {
+        position: relative;
+
+        width: 100%;
+
+        height: auto;
+
+        padding: 18px;
+    }
+
+    .eval26-brand {
+        margin-bottom: 17px;
+    }
+
+    .eval26-menu {
+        flex-direction: row;
+        overflow-x: auto;
+    }
+
+    .eval26-menu a {
+        flex: 0 0 auto;
+    }
+
+    .eval26-sidebar-bottom {
+        margin-top: 15px;
+
+        flex-direction: row;
+
+        flex-wrap: wrap;
+    }
+
+    .eval26-user {
+        width: 100%;
+    }
+
+    .eval26-hero-art {
+        display: none;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .eval26-main {
+        padding:
+                34px 17px 45px;
+    }
+
+    .eval26-hero {
+        min-height: auto;
+    }
+
+    .eval26-hero h1 {
+        font-size: 48px;
+    }
+
+    .eval26-section-heading {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .eval26-card-top {
+        grid-template-columns:
+            55px minmax(0,1fr);
+
+        align-items: start;
+    }
+
+    .eval26-card-number {
+        font-size: 36px;
+    }
+
+    .eval26-grade {
+        grid-column: 1 / -1;
+
+        width: 100%;
+
+        min-height: 65px;
+
+        flex-direction: row;
+
+        gap: 8px;
+    }
+
+    .eval26-comment {
+        margin: 0 17px;
+    }
+
+    .eval26-card-footer {
+        padding:
+                15px 17px 20px;
+
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .eval26-empty {
+        min-height: 360px;
+
+        padding:
+                45px 22px;
+    }
+
+    .eval26-empty h2 {
+        font-size: 31px;
+    }
+
+    .eval26-message {
+        grid-template-columns:
+            50px 1fr;
+    }
+
+    .eval26-message-heart {
+        display: none;
+    }
+
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    .eval26-hero,
+    .eval26-card,
+    .eval26-empty,
+    .eval26-art-circle,
+    .eval26-empty-paper,
+    .eval26-decoration {
+        animation: none;
+    }
+
+}

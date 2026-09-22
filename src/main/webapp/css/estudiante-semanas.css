@@ -1,0 +1,1395 @@
+/* ============================================================
+   ESTUDIANTE - MIS SEMANAS
+   PORTAFOLIO ABIGAIL 2026
+   ============================================================ */
+
+:root {
+    --st-pink: #ed4f7b;
+    --st-pink-dark: #d9426d;
+    --st-pink-soft: #f9dfe7;
+    --st-blush: #fff4f5;
+
+    --st-purple: #eee9f7;
+    --st-green: #e9f1e6;
+    --st-blue: #e8f0f8;
+    --st-peach: #faeadf;
+
+    --st-dark: #302833;
+    --st-text: #665e65;
+    --st-muted: #968b92;
+
+    --st-white: #ffffff;
+    --st-border: rgba(91, 62, 75, .10);
+
+    --st-shadow:
+            0 22px 55px rgba(116, 76, 91, .09);
+
+    --st-shadow-hover:
+            0 28px 65px rgba(116, 76, 91, .15);
+}
+
+
+/* ============================================================
+   BASE
+   ============================================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #fcf8f6;
+}
+
+.student26-layout {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 255px minmax(0, 1fr);
+
+    font-family: "DM Sans", Arial, sans-serif;
+
+    color: var(--st-dark);
+    background:
+            radial-gradient(
+                    circle at 85% 7%,
+                    rgba(248, 208, 220, .45),
+                    transparent 22%
+            ),
+            radial-gradient(
+                    circle at 40% 85%,
+                    rgba(232, 240, 229, .45),
+                    transparent 22%
+            ),
+            #fcf8f6;
+}
+
+
+/* ============================================================
+   SIDEBAR
+   ============================================================ */
+
+.student26-sidebar {
+    min-height: 100vh;
+
+    position: sticky;
+    top: 0;
+
+    height: 100vh;
+
+    padding: 30px 22px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background:
+            linear-gradient(
+                    180deg,
+                    #faeeee 0%,
+                    #f8eeee 55%,
+                    #f7f0ed 100%
+            );
+
+    border-right: 1px solid rgba(115, 77, 91, .08);
+}
+
+
+/* ============================================================
+   MARCA
+   ============================================================ */
+
+.student26-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 42px;
+}
+
+.student26-brand-logo {
+    width: 48px;
+    height: 48px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 15px;
+
+    background: white;
+
+    border: 1px solid rgba(237, 79, 123, .18);
+
+    color: var(--st-pink);
+
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 23px;
+    font-weight: 800;
+
+    box-shadow:
+            0 10px 24px rgba(133, 83, 100, .08);
+}
+
+.student26-brand-copy {
+    display: flex;
+    flex-direction: column;
+}
+
+.student26-brand-copy strong {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 21px;
+    line-height: 1;
+}
+
+.student26-brand-copy span {
+    margin-top: 6px;
+
+    color: #a17f8a;
+
+    font-size: 8px;
+    font-weight: 800;
+
+    letter-spacing: 1.3px;
+}
+
+
+/* ============================================================
+   MENÚ
+   ============================================================ */
+
+.student26-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.student26-menu a {
+    min-height: 49px;
+
+    padding: 0 14px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    border-radius: 14px;
+
+    color: #695f65;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition:
+            transform .25s ease,
+            background .25s ease,
+            color .25s ease,
+            box-shadow .25s ease;
+}
+
+.student26-menu a:hover {
+    transform: translateX(4px);
+
+    color: var(--st-pink);
+
+    background: rgba(255, 255, 255, .65);
+}
+
+.student26-menu a.active {
+    color: var(--st-pink);
+
+    background: white;
+
+    box-shadow:
+            0 10px 25px rgba(114, 73, 89, .08);
+}
+
+.student26-menu-icon {
+    width: 29px;
+    height: 29px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 9px;
+
+    background: rgba(255, 255, 255, .65);
+
+    color: var(--st-pink);
+
+    font-size: 16px;
+}
+
+
+/* ============================================================
+   SIDEBAR INFERIOR
+   ============================================================ */
+
+.student26-sidebar-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.student26-sidebar-bottom > a {
+    min-height: 42px;
+
+    padding: 0 12px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    border-radius: 12px;
+
+    color: #71656c;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    transition: .25s ease;
+}
+
+.student26-sidebar-bottom > a:hover {
+    background: rgba(255, 255, 255, .7);
+    color: var(--st-pink);
+}
+
+.student26-sidebar-bottom > a.logout {
+    color: #ad6678;
+}
+
+.student26-user {
+    margin-top: 16px;
+    padding-top: 19px;
+
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    border-top: 1px solid rgba(84, 59, 69, .09);
+}
+
+.student26-user-avatar {
+    width: 39px;
+    height: 39px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    color: white;
+    background: var(--st-pink);
+
+    font-weight: 800;
+}
+
+.student26-user > div:last-child {
+    display: flex;
+    flex-direction: column;
+}
+
+.student26-user span {
+    color: #aa8390;
+
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+}
+
+.student26-user strong {
+    margin-top: 3px;
+
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 14px;
+}
+
+
+/* ============================================================
+   MAIN
+   ============================================================ */
+
+.student26-main {
+    position: relative;
+
+    min-width: 0;
+
+    padding:
+            55px
+            clamp(30px, 5vw, 82px)
+            70px;
+}
+
+
+/* ============================================================
+   DECORACIONES
+   ============================================================ */
+
+.student26-star {
+    position: absolute;
+
+    color: #f4a7bc;
+
+    pointer-events: none;
+
+    animation: student26Float 4s ease-in-out infinite;
+}
+
+.student26-star.star-one {
+    top: 35px;
+    right: 11%;
+
+    font-size: 23px;
+}
+
+.student26-star.star-two {
+    top: 185px;
+    right: 4%;
+
+    font-size: 13px;
+
+    animation-delay: 1s;
+}
+
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+.student26-header {
+    position: relative;
+
+    padding-bottom: 45px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+
+    border-bottom: 1px solid var(--st-border);
+
+    animation: student26Enter .65s ease both;
+}
+
+.student26-header-copy {
+    max-width: 650px;
+}
+
+.student26-eyebrow {
+    display: inline-flex;
+    align-items: center;
+
+    color: #b36b80;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.student26-header h1 {
+    margin: 12px 0 12px;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: clamp(46px, 5vw, 72px);
+
+    line-height: .98;
+
+    letter-spacing: -2px;
+
+    color: var(--st-dark);
+}
+
+.student26-header h1 em {
+    color: var(--st-pink);
+
+    font-weight: 500;
+}
+
+.student26-header p {
+    max-width: 570px;
+
+    margin: 0;
+
+    color: var(--st-text);
+
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* ============================================================
+   HEADER BOTONES
+   ============================================================ */
+
+.student26-header-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.student26-btn-light,
+.student26-btn-primary {
+    min-height: 48px;
+
+    padding: 0 20px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    border-radius: 14px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    transition:
+            transform .25s ease,
+            box-shadow .25s ease,
+            background .25s ease;
+}
+
+.student26-btn-light {
+    color: #715f67;
+
+    background: white;
+
+    border: 1px solid rgba(150, 102, 119, .15);
+}
+
+.student26-btn-primary {
+    color: white;
+
+    background:
+            linear-gradient(
+                    135deg,
+                    #ef5a83,
+                    #e74573
+            );
+
+    box-shadow:
+            0 13px 27px rgba(230, 69, 115, .20);
+}
+
+.student26-btn-light:hover,
+.student26-btn-primary:hover {
+    transform: translateY(-3px);
+}
+
+.student26-btn-primary:hover {
+    box-shadow:
+            0 17px 34px rgba(230, 69, 115, .28);
+}
+
+
+/* ============================================================
+   ALERTAS
+   ============================================================ */
+
+.student26-alert {
+    margin-top: 24px;
+
+    padding: 15px 18px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    border-radius: 14px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    animation: student26Enter .45s ease both;
+}
+
+.student26-alert.success {
+    color: #52684f;
+    background: #edf5eb;
+    border: 1px solid #d9e8d5;
+}
+
+.student26-alert.error {
+    color: #a34d66;
+    background: #fff0f3;
+    border: 1px solid #f3d2da;
+}
+
+
+/* ============================================================
+   TÍTULO DE SECCIÓN
+   ============================================================ */
+
+.student26-section-title {
+    margin: 44px 0 22px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.student26-section-title > div > span {
+    color: var(--st-pink);
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 1.8px;
+}
+
+.student26-section-title h2 {
+    margin: 5px 0 0;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 32px;
+
+    color: var(--st-dark);
+}
+
+.student26-section-title p {
+    max-width: 350px;
+
+    margin: 0;
+
+    color: var(--st-muted);
+
+    text-align: right;
+
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+
+/* ============================================================
+   GRID DE SEMANAS
+   ============================================================ */
+
+.student26-weeks {
+    display: grid;
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 22px;
+}
+
+
+/* ============================================================
+   TARJETA
+   ============================================================ */
+
+.student26-week-card {
+    min-width: 0;
+
+    overflow: hidden;
+
+    display: grid;
+    grid-template-columns: 170px minmax(0, 1fr);
+
+    border-radius: 26px;
+
+    background: white;
+
+    border: 1px solid rgba(124, 82, 98, .08);
+
+    box-shadow: var(--st-shadow);
+
+    transition:
+            transform .35s ease,
+            box-shadow .35s ease;
+
+    animation: student26CardEnter .65s ease both;
+}
+
+.student26-week-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: var(--st-shadow-hover);
+}
+
+
+/* COLORES ALTERNADOS */
+
+.student26-week-card:nth-child(5n + 1)
+.student26-week-art {
+    background:
+            linear-gradient(
+                    145deg,
+                    #f8e1e8,
+                    #fbeef1
+            );
+}
+
+.student26-week-card:nth-child(5n + 2)
+.student26-week-art {
+    background:
+            linear-gradient(
+                    145deg,
+                    #e8f0e4,
+                    #f1f5ed
+            );
+}
+
+.student26-week-card:nth-child(5n + 3)
+.student26-week-art {
+    background:
+            linear-gradient(
+                    145deg,
+                    #e6edf6,
+                    #f0f4f9
+            );
+}
+
+.student26-week-card:nth-child(5n + 4)
+.student26-week-art {
+    background:
+            linear-gradient(
+                    145deg,
+                    #eee8f7,
+                    #f5f1fa
+            );
+}
+
+.student26-week-card:nth-child(5n)
+.student26-week-art {
+    background:
+            linear-gradient(
+                    145deg,
+                    #f9e9dc,
+                    #fcf2e9
+            );
+}
+
+
+/* ============================================================
+   PARTE VISUAL
+   ============================================================ */
+
+.student26-week-art {
+    position: relative;
+
+    min-height: 285px;
+
+    overflow: hidden;
+}
+
+.student26-window-dots {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+
+    display: flex;
+    gap: 5px;
+}
+
+.student26-window-dots i {
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: rgba(81, 67, 75, .20);
+}
+
+.student26-big-number {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    color: rgba(73, 58, 66, .13);
+
+    font-size: 46px;
+    font-weight: 900;
+
+    letter-spacing: -3px;
+}
+
+.student26-art-icon {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 84px;
+    height: 84px;
+
+    transform:
+            translate(-50%, -50%)
+            rotate(-3deg);
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 22px;
+
+    background: rgba(255, 255, 255, .78);
+
+    border: 4px solid rgba(255, 255, 255, .65);
+
+    color: #bd5a78;
+
+    font-family: monospace;
+
+    font-size: 27px;
+    font-weight: 800;
+
+    box-shadow:
+            0 15px 30px rgba(80, 61, 70, .10);
+
+    transition: transform .35s ease;
+}
+
+.student26-week-card:hover
+.student26-art-icon {
+    transform:
+            translate(-50%, -50%)
+            rotate(3deg)
+            scale(1.07);
+}
+
+.student26-art-circle {
+    position: absolute;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(199, 99, 128, .20);
+}
+
+.student26-art-circle.circle-one {
+    width: 75px;
+    height: 75px;
+
+    left: -30px;
+    bottom: -25px;
+}
+
+.student26-art-circle.circle-two {
+    width: 36px;
+    height: 36px;
+
+    right: -8px;
+    bottom: 27px;
+}
+
+
+/* ============================================================
+   CONTENIDO TARJETA
+   ============================================================ */
+
+.student26-week-content {
+    min-width: 0;
+
+    padding: 28px 28px 23px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.student26-week-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.student26-week-meta > span {
+    color: var(--st-pink);
+
+    font-size: 9px;
+    font-weight: 900;
+
+    letter-spacing: 1.6px;
+}
+
+.student26-work-count {
+    padding: 7px 10px;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+
+    border-radius: 999px;
+
+    background: #fbf3f5;
+
+    color: #8b717b;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.student26-week-content h3 {
+    margin: 17px 0 8px;
+
+    color: var(--st-dark);
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 24px;
+    line-height: 1.15;
+}
+
+.student26-week-content > p {
+    margin: 0;
+
+    color: var(--st-text);
+
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+
+/* ============================================================
+   ACCIONES
+   ============================================================ */
+
+.student26-week-actions {
+    margin-top: auto;
+    padding-top: 23px;
+
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    flex-wrap: wrap;
+}
+
+.student26-upload,
+.student26-view {
+    min-height: 39px;
+
+    padding: 0 14px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    border-radius: 11px;
+
+    text-decoration: none;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    transition: .25s ease;
+}
+
+.student26-upload {
+    color: white;
+
+    background: var(--st-pink);
+}
+
+.student26-view {
+    color: #765f69;
+
+    background: #fbf7f7;
+
+    border: 1px solid rgba(119, 83, 97, .10);
+}
+
+.student26-upload:hover,
+.student26-view:hover {
+    transform: translateY(-2px);
+}
+
+
+/* ============================================================
+   EDITAR / ELIMINAR
+   ============================================================ */
+
+.student26-admin-actions {
+    margin-top: 17px;
+    padding-top: 15px;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    border-top: 1px solid rgba(81, 60, 69, .07);
+}
+
+.student26-admin-actions form {
+    margin: 0;
+}
+
+.student26-edit,
+.student26-delete {
+    padding: 0;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+
+    border: 0;
+    background: transparent;
+
+    color: #98858c;
+
+    text-decoration: none;
+
+    font-family: "DM Sans", Arial, sans-serif;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: color .2s ease;
+}
+
+.student26-edit:hover {
+    color: var(--st-pink);
+}
+
+.student26-delete:hover {
+    color: #c94e61;
+}
+
+
+/* ============================================================
+   ESTADO VACÍO
+   ============================================================ */
+
+.student26-empty {
+    grid-column: 1 / -1;
+
+    min-height: 380px;
+
+    padding: 55px 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    border-radius: 30px;
+
+    background:
+            radial-gradient(
+                    circle at center,
+                    #fff 0%,
+                    #fdf5f6 100%
+            );
+
+    border: 1px dashed rgba(221, 111, 142, .30);
+}
+
+.student26-empty-icon {
+    width: 74px;
+    height: 74px;
+
+    margin-bottom: 20px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 22px;
+
+    background: var(--st-pink-soft);
+
+    color: var(--st-pink);
+
+    font-size: 30px;
+}
+
+.student26-empty > span {
+    color: var(--st-pink);
+
+    font-size: 9px;
+    font-weight: 900;
+
+    letter-spacing: 1.6px;
+}
+
+.student26-empty h3 {
+    margin: 8px 0;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 31px;
+}
+
+.student26-empty p {
+    max-width: 430px;
+
+    margin: 0 0 20px;
+
+    color: var(--st-text);
+
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* ============================================================
+   TARJETA FINAL
+   ============================================================ */
+
+.student26-bottom-card {
+    margin-top: 35px;
+
+    min-height: 210px;
+
+    padding: 35px 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    overflow: hidden;
+
+    border-radius: 30px;
+
+    background:
+            linear-gradient(
+                    120deg,
+                    #f9e8eb 0%,
+                    #f8eeec 55%,
+                    #eef3e9 100%
+            );
+
+    border: 1px solid rgba(126, 87, 101, .08);
+}
+
+.student26-bottom-card h2 {
+    max-width: 470px;
+
+    margin: 9px 0;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 34px;
+    line-height: 1.08;
+}
+
+.student26-bottom-card h2 em {
+    color: var(--st-pink);
+
+    font-weight: 500;
+}
+
+.student26-bottom-card p {
+    margin: 0;
+
+    color: var(--st-text);
+
+    font-size: 13px;
+}
+
+
+/* ============================================================
+   LIBROS DECORATIVOS
+   ============================================================ */
+
+.student26-bottom-decoration {
+    position: relative;
+
+    width: 220px;
+    height: 130px;
+
+    flex: 0 0 auto;
+}
+
+.student26-mini-book {
+    position: absolute;
+    right: 20px;
+
+    width: 150px;
+    height: 24px;
+
+    border-radius: 5px 12px 12px 5px;
+
+    box-shadow:
+            0 7px 14px rgba(82, 63, 72, .08);
+}
+
+.student26-mini-book.book-one {
+    bottom: 21px;
+    background: #d9e4d4;
+}
+
+.student26-mini-book.book-two {
+    right: 31px;
+    bottom: 48px;
+
+    width: 135px;
+
+    background: #f0cfd7;
+}
+
+.student26-mini-book.book-three {
+    right: 12px;
+    bottom: 75px;
+
+    width: 145px;
+
+    background: #e3dcf0;
+}
+
+.student26-bottom-decoration > span {
+    position: absolute;
+    top: 0;
+    right: 20px;
+
+    color: var(--st-pink);
+
+    font-size: 34px;
+
+    animation: student26Float 3s ease-in-out infinite;
+}
+
+
+/* ============================================================
+   ANIMACIONES
+   ============================================================ */
+
+@keyframes student26Enter {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes student26CardEnter {
+
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes student26Float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+}
+
+
+/* RETARDOS */
+
+.student26-week-card:nth-child(1) {
+    animation-delay: .05s;
+}
+
+.student26-week-card:nth-child(2) {
+    animation-delay: .12s;
+}
+
+.student26-week-card:nth-child(3) {
+    animation-delay: .19s;
+}
+
+.student26-week-card:nth-child(4) {
+    animation-delay: .26s;
+}
+
+.student26-week-card:nth-child(5) {
+    animation-delay: .33s;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 1180px) {
+
+    .student26-layout {
+        grid-template-columns: 220px minmax(0, 1fr);
+    }
+
+    .student26-main {
+        padding:
+                45px
+                35px
+                60px;
+    }
+
+    .student26-weeks {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 850px) {
+
+    .student26-layout {
+        display: block;
+    }
+
+    .student26-sidebar {
+        position: relative;
+
+        width: 100%;
+        height: auto;
+        min-height: 0;
+
+        padding: 18px;
+    }
+
+    .student26-brand {
+        margin-bottom: 17px;
+    }
+
+    .student26-menu {
+        flex-direction: row;
+        overflow-x: auto;
+    }
+
+    .student26-menu a {
+        flex: 0 0 auto;
+    }
+
+    .student26-sidebar-bottom {
+        margin-top: 15px;
+
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .student26-user {
+        width: 100%;
+    }
+
+    .student26-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .student26-header-actions {
+        width: 100%;
+    }
+
+    .student26-section-title {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 7px;
+    }
+
+    .student26-section-title p {
+        text-align: left;
+    }
+
+}
+
+
+@media (max-width: 620px) {
+
+    .student26-main {
+        padding:
+                34px
+                17px
+                45px;
+    }
+
+    .student26-header h1 {
+        font-size: 47px;
+    }
+
+    .student26-header p {
+        font-size: 13px;
+    }
+
+    .student26-header-actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .student26-btn-light,
+    .student26-btn-primary {
+        padding: 0 12px;
+
+        font-size: 11px;
+    }
+
+    .student26-weeks {
+        gap: 17px;
+    }
+
+    .student26-week-card {
+        display: block;
+    }
+
+    .student26-week-art {
+        min-height: 180px;
+    }
+
+    .student26-week-content {
+        padding: 23px 20px 20px;
+    }
+
+    .student26-week-content h3 {
+        font-size: 23px;
+    }
+
+    .student26-bottom-card {
+        padding: 28px 24px;
+
+        display: block;
+    }
+
+    .student26-bottom-decoration {
+        margin:
+                20px
+                auto
+                0;
+    }
+
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    .student26-week-card,
+    .student26-header,
+    .student26-star,
+    .student26-bottom-decoration > span {
+        animation: none;
+    }
+
+    .student26-week-card,
+    .student26-art-icon,
+    .student26-menu a {
+        transition: none;
+    }
+
+}

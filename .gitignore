@@ -1,0 +1,31 @@
+target/
+.idea/workspace.xml
+*.iml
+*.log
+.DS_Store
+# Los archivos subidos al portafolio deben vivir fuera del repositorio
+portafolio-uploads/
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Maven
+target/
+*.war
+
+# Variables y secretos
+.env
+.env.*
+!.env.example
+
+# Temporales
+*.tmp
+*.temp
+*.bak
+Thumbs.db
+desktop.ini
+
+# Archivos subidos por usuarios
+portafolio-uploads/

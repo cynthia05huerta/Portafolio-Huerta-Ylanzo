@@ -1,0 +1,2875 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800;900&display=swap');
+
+
+/* ============================================================
+   PORTAFOLIO ACADÉMICO 2026 - INICIO
+   ============================================================ */
+
+.home26-page {
+    --pink: #ef5f8c;
+    --pink-dark: #d94374;
+    --pink-soft: #ffdce7;
+
+    --cream: #fff8f5;
+    --paper: #fffdfb;
+
+    --lavender: #eee8fa;
+    --blue: #e9f2fa;
+    --sage: #e8f1e4;
+    --peach: #fbe9df;
+    --yellow: #fff3cf;
+
+    --ink: #352d3a;
+    --text: #71656e;
+    --muted: #a0939b;
+
+    --line: rgba(66, 47, 60, .10);
+
+    min-height: 100vh;
+
+    background: var(--cream);
+
+    color: var(--text);
+
+    font-family: "DM Sans", sans-serif;
+}
+
+
+.home26-page * {
+    box-sizing: border-box;
+}
+
+
+.home26-page img {
+    max-width: 100%;
+}
+
+
+.home26-container {
+    width: min(1180px, calc(100% - 46px));
+
+    margin-inline: auto;
+}
+
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+.home26-header {
+    position: sticky;
+    top: 0;
+
+    z-index: 999;
+
+    border-bottom:
+            1px solid
+            rgba(80, 54, 70, .06);
+
+    background:
+            rgba(255, 248, 245, .91);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+}
+
+
+.home26-nav {
+    min-height: 76px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+}
+
+
+/* ============================================================
+   MARCA
+   ============================================================ */
+
+.home26-brand {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.home26-brand-logo {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    background: white;
+
+    border: 1px solid #f1d6de;
+
+    box-shadow:
+            0 8px 20px
+            rgba(222, 70, 117, .12);
+}
+
+.home26-brand-logo img {
+    width: 100% !important;
+    height: 100% !important;
+
+    object-fit: contain;
+
+    padding: 5px;
+}
+.home26-brand-text {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.home26-brand-text strong {
+    color: var(--ink);
+
+    font-family: "Nunito", sans-serif;
+
+    font-size: 17px;
+    font-weight: 900;
+}
+
+
+.home26-brand-text span {
+    margin-top: -2px;
+
+    color: var(--muted);
+
+    font-size: 7px;
+    font-weight: 700;
+
+    letter-spacing: .8px;
+
+    text-transform: uppercase;
+}
+
+
+/* ============================================================
+   MENÚ
+   ============================================================ */
+
+.home26-menu {
+    display: flex;
+    align-items: center;
+
+    gap: 28px;
+}
+
+
+.home26-menu a {
+    position: relative;
+
+    padding: 8px 0;
+
+    color: #625760;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    transition:
+            color .25s ease,
+            transform .25s ease;
+}
+
+
+.home26-menu a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 1px;
+
+    width: 0;
+    height: 2px;
+
+    border-radius: 20px;
+
+    background: var(--pink);
+
+    transform: translateX(-50%);
+
+    transition: width .25s ease;
+}
+
+
+.home26-menu a:hover,
+.home26-menu a.active {
+    color: var(--pink-dark);
+}
+
+
+.home26-menu a:hover {
+    transform: translateY(-1px);
+}
+
+
+.home26-menu a:hover::after,
+.home26-menu a.active::after {
+    width: 22px;
+}
+
+
+/* ============================================================
+   LOGIN
+   ============================================================ */
+
+.home26-login {
+    min-height: 42px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    padding: 10px 18px;
+
+    border-radius: 999px;
+
+    background:
+            linear-gradient(
+                    135deg,
+                    #ef668f,
+                    #e34879
+            );
+
+    color: white;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    box-shadow:
+            0 10px 25px
+            rgba(226, 69, 118, .18);
+
+    transition:
+            transform .3s ease,
+            box-shadow .3s ease;
+}
+
+
+.home26-login:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+            0 15px 32px
+            rgba(226, 69, 118, .26);
+}
+
+
+/* ============================================================
+   HERO
+   ============================================================ */
+
+.home26-hero {
+    position: relative;
+
+    min-height: 690px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    padding: 65px 0 80px;
+
+    background:
+            radial-gradient(
+                    circle at 79% 42%,
+                    rgba(255, 201, 217, .52),
+                    transparent 31%
+            ),
+            var(--cream);
+}
+
+
+.home26-hero-grid {
+    position: relative;
+
+    z-index: 3;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1.05fr;
+
+    align-items: center;
+
+    gap: 55px;
+}
+
+
+/* ============================================================
+   TEXTO HERO
+   ============================================================ */
+
+.home26-hero-copy {
+    animation:
+            home26Left .75s ease both;
+}
+
+
+.home26-pill {
+    width: fit-content;
+
+    display: inline-flex;
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 7px 12px;
+
+    border-radius: 999px;
+
+    background: #fff0f4;
+
+    color: #745a65;
+
+    font-size: 7px;
+    font-weight: 800;
+
+    letter-spacing: .8px;
+}
+
+
+.home26-pill span {
+    color: var(--pink);
+}
+
+
+.home26-hello {
+    margin: 22px 0 0;
+
+    color: #63535c;
+
+    font-family: "Nunito", sans-serif;
+
+    font-size: 16px;
+    font-weight: 800;
+}
+
+
+.home26-hero h1 {
+    margin: 2px 0 0;
+
+    color: var(--pink);
+
+    font-family: "Nunito", sans-serif;
+
+    font-size:
+            clamp(60px, 6vw, 89px);
+
+    font-weight: 900;
+
+    line-height: .9;
+
+    letter-spacing: -4px;
+}
+
+
+.home26-hero h1 span {
+    display: block;
+
+    color: var(--ink);
+}
+
+
+.home26-role {
+    width: fit-content;
+
+    margin-top: 19px;
+
+    padding: 7px 13px;
+
+    border-radius: 7px;
+
+    background: #f8e5e8;
+
+    color: #765a65;
+
+    font-size: 8px;
+    font-weight: 700;
+}
+
+
+.home26-description {
+    max-width: 480px;
+
+    margin: 18px 0 0;
+
+    color: #70626a;
+
+    font-size: 10px;
+
+    line-height: 1.8;
+}
+
+
+.home26-hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 24px;
+}
+
+
+/* ============================================================
+   BOTONES HERO
+   ============================================================ */
+
+.home26-btn-primary,
+.home26-btn-secondary {
+    min-height: 43px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 11px;
+
+    padding: 10px 18px;
+
+    border-radius: 10px;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    transition:
+            transform .3s ease,
+            box-shadow .3s ease,
+            background .3s ease;
+}
+
+
+.home26-btn-primary {
+    background:
+            linear-gradient(
+                    135deg,
+                    #ef628d,
+                    #dd4476
+            );
+
+    color: white;
+
+    box-shadow:
+            0 10px 25px
+            rgba(224, 67, 116, .20);
+}
+
+
+.home26-btn-primary:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+            0 16px 32px
+            rgba(224, 67, 116, .27);
+}
+
+
+.home26-btn-primary span {
+    font-size: 14px;
+
+    transition: transform .25s ease;
+}
+
+
+.home26-btn-primary:hover span {
+    transform: translateX(4px);
+}
+
+
+.home26-btn-secondary {
+    border:
+            1px solid
+            #efb5c6;
+
+    background:
+            rgba(255,255,255,.65);
+
+    color: #9a5369;
+}
+
+
+.home26-btn-secondary:hover {
+    transform: translateY(-4px);
+
+    background: white;
+
+    box-shadow:
+            0 10px 25px
+            rgba(91, 57, 70, .08);
+}
+
+
+/* ============================================================
+   REDES HERO
+   ============================================================ */
+
+.home26-social-mini {
+    margin-top: 31px;
+}
+
+
+.home26-social-mini > span {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: #80727a;
+
+    font-size: 7px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+.home26-social-mini > div {
+    display: flex;
+
+    gap: 8px;
+}
+
+
+.home26-social-mini a {
+    width: 31px;
+    height: 31px;
+
+    display: grid;
+    place-items: center;
+
+    border:
+            1px solid
+            #f0d6dc;
+
+    border-radius: 50%;
+
+    background:
+            rgba(255,255,255,.65);
+
+    color: var(--pink-dark);
+
+    font-size: 10px;
+    font-weight: 800;
+
+    transition:
+            transform .25s ease,
+            color .25s ease,
+            background .25s ease;
+}
+
+
+.home26-social-mini a:hover {
+    transform: translateY(-4px);
+
+    background: var(--pink);
+
+    color: white;
+}
+
+
+/* ============================================================
+   VISUAL HERO
+   ============================================================ */
+
+.home26-visual {
+    position: relative;
+
+    min-height: 555px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    animation:
+            home26Right .85s ease both;
+}
+
+
+/* ============================================================
+   FONDO ROSA DETRÁS DE LA ILUSTRACIÓN
+   ============================================================ */
+
+.home26-bg-circle {
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    left: 50%;
+    bottom: 5px;
+
+    transform:
+            translateX(-50%);
+
+    border-radius:
+            50% 50% 45% 55% /
+        46% 54% 46% 54%;
+
+    background:
+            linear-gradient(
+                    145deg,
+                    #ffdce7 0%,
+                    #f8c9d8 55%,
+                    #f4dce5 100%
+            );
+
+    opacity: .78;
+
+    box-shadow:
+            inset 0 0 80px
+            rgba(255, 255, 255, .25);
+
+    animation:
+            home26Bubble
+            8s ease-in-out infinite;
+}
+
+
+/* ============================================================
+   ILUSTRACIÓN PRINCIPAL
+   ============================================================ */
+
+.home26-photo-card {
+    position: relative;
+
+    z-index: 3;
+
+    width: 460px;
+    height: 500px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    overflow: visible;
+
+    border-radius: 0;
+
+    background: transparent;
+
+    box-shadow: none;
+
+    transition:
+            transform .45s ease,
+            filter .45s ease;
+
+    animation:
+            home26GirlEntrance
+            .9s ease both;
+}
+
+
+.home26-photo-card:hover {
+    transform:
+            translateY(-8px)
+            scale(1.015);
+
+    filter:
+            drop-shadow(
+                    0 25px 25px
+                    rgba(185, 94, 125, .12)
+            );
+}
+
+
+.home26-photo-card img {
+    width: 100% !important;
+    height: 100% !important;
+
+    max-width: 100% !important;
+    max-height: 100% !important;
+
+    display: block !important;
+
+    object-fit: contain !important;
+    object-position: center bottom !important;
+
+    border-radius: 0 !important;
+
+    filter:
+            drop-shadow(
+                    0 24px 25px
+                    rgba(113, 66, 84, .10)
+            );
+}
+
+
+/* RESPLANDOR DETRÁS */
+
+.home26-photo-card::before {
+    content: "";
+
+    position: absolute;
+
+    z-index: -1;
+
+    width: 390px;
+    height: 390px;
+
+    left: 50%;
+    bottom: 20px;
+
+    transform:
+            translateX(-50%);
+
+    border-radius: 50%;
+
+    background:
+            radial-gradient(
+                    circle,
+                    rgba(255, 196, 216, .48) 0%,
+                    rgba(255, 220, 231, .28) 48%,
+                    rgba(255, 232, 239, 0) 73%
+            );
+
+    filter: blur(5px);
+
+    pointer-events: none;
+}
+
+
+/* ESTRELLA AL LADO DE LA CHICA */
+
+.home26-photo-card::after {
+    content: "✦";
+
+    position: absolute;
+
+    z-index: 4;
+
+    top: 45px;
+    right: 10px;
+
+    color: #ef8dac;
+
+    font-size: 22px;
+
+    opacity: .75;
+
+    animation:
+            home26Float
+            4s ease-in-out infinite;
+
+    pointer-events: none;
+}
+
+
+/* ============================================================
+   NOTAS FLOTANTES
+   ============================================================ */
+
+.home26-note {
+    position: absolute;
+
+    z-index: 5;
+
+    padding: 15px;
+
+    border:
+            1px solid
+            rgba(225, 83, 125, .13);
+
+    background:
+            rgba(255, 250, 249, .90);
+
+    box-shadow:
+            0 14px 30px
+            rgba(91, 58, 69, .10);
+
+    backdrop-filter: blur(10px);
+
+    animation:
+            home26Float
+            5s ease-in-out infinite;
+}
+
+
+.home26-note span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #b17789;
+
+    font-size: 6px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+.home26-note strong {
+    display: block;
+
+    color: #5f4752;
+
+    font-family: "Nunito", sans-serif;
+
+    font-size: 11px;
+
+    line-height: 1.4;
+}
+
+
+.home26-note small {
+    display: block;
+
+    margin-top: 5px;
+
+    color: var(--pink);
+
+    text-align: center;
+}
+
+
+.note-top {
+    top: 75px;
+    right: -10px;
+
+    border-radius:
+            18px 18px 35px 18px;
+}
+
+
+.note-bottom {
+    left: 0;
+    bottom: 72px;
+
+    border-radius:
+            16px 30px 16px 16px;
+
+    animation-delay: -2s;
+}
+
+
+/* ============================================================
+   PLANTA DECORATIVA
+   ============================================================ */
+
+.home26-plant {
+    position: absolute;
+
+    z-index: 1;
+
+    right: -15px;
+    bottom: 50px;
+
+    width: 90px;
+    height: 190px;
+}
+
+
+.home26-stem {
+    position: absolute;
+
+    width: 2px;
+    height: 155px;
+
+    left: 43px;
+    bottom: 0;
+
+    background: #6f8b61;
+
+    transform: rotate(8deg);
+}
+
+
+.home26-plant .leaf {
+    position: absolute;
+
+    width: 31px;
+    height: 55px;
+
+    border-radius:
+            100% 0 100% 0;
+
+    background:
+            linear-gradient(
+                    135deg,
+                    #8ba879,
+                    #67865c
+            );
+}
+
+
+.home26-plant .l1 {
+    top: 10px;
+    right: 8px;
+
+    transform: rotate(36deg);
+}
+
+
+.home26-plant .l2 {
+    top: 48px;
+    left: 7px;
+
+    transform: rotate(-50deg);
+}
+
+
+.home26-plant .l3 {
+    top: 90px;
+    right: 1px;
+
+    transform: rotate(53deg);
+}
+
+
+.home26-plant .l4 {
+    top: 122px;
+    left: 4px;
+
+    transform: rotate(-58deg);
+}
+
+
+/* ============================================================
+   ESTRELLAS
+   ============================================================ */
+
+.home26-deco-star {
+    position: absolute;
+
+    z-index: 2;
+
+    color: #ee8ba8;
+
+    opacity: .6;
+
+    animation:
+            home26Float
+            6s ease-in-out infinite;
+}
+
+
+.star-one {
+    left: 48%;
+    top: 100px;
+
+    font-size: 25px;
+}
+
+
+.star-two {
+    left: 41%;
+    bottom: 125px;
+
+    font-size: 23px;
+
+    animation-delay: -2s;
+}
+
+
+/* ============================================================
+   QUÉ APRENDO
+   ============================================================ */
+
+.home26-services {
+    padding-bottom: 85px;
+
+    background: var(--cream);
+}
+
+
+.home26-services-card {
+    display: grid;
+
+    grid-template-columns:
+        1.25fr repeat(4,1fr);
+
+    overflow: hidden;
+
+    border:
+            1px solid
+            #f0dfe3;
+
+    border-radius:
+            24px 24px 55px 24px;
+
+    background: var(--paper);
+
+    box-shadow:
+            0 20px 48px
+            rgba(71, 52, 62, .06);
+}
+
+
+.home26-services-intro,
+.home26-service {
+    min-height: 250px;
+
+    padding: 28px;
+}
+
+
+.home26-services-intro {
+    border-right:
+            1px solid
+            #f0e1e4;
+
+    background:
+            linear-gradient(
+                    145deg,
+                    #fffaf9,
+                    #fff5f7
+            );
+}
+
+
+.home26-mini-title {
+    display: block;
+
+    margin-bottom: 13px;
+
+    color: #d55b80;
+
+    font-size: 7px;
+    font-weight: 800;
+
+    letter-spacing: 1.4px;
+}
+
+
+.home26-services-intro h2 {
+    max-width: 220px;
+
+    margin: 0;
+
+    color: var(--ink);
+
+    font-family: "Nunito", sans-serif;
+
+    font-size: 27px;
+    font-weight: 800;
+
+    line-height: 1.15;
+}
+
+
+.home26-service {
+    border-right:
+            1px solid
+            #f0e1e4;
+
+    transition:
+            transform .3s ease,
+            background .3s ease;
+}
+
+
+.home26-service:last-child {
+    border-right: none;
+}
+
+
+.home26-service:hover {
+    transform: translateY(-5px);
+
+    background: #fff8fa;
+}
+
+
+.home26-service-icon {
+    width: 72px;
+    height: 72px;
+
+    display: grid;
+    place-items: center;
+
+    margin-bottom: 24px;
+
+    border-radius:
+            18px 18px 34px 18px;
+
+    color: #6b5961;
+
+    font-family: "Nunito", sans-serif;
+
+    font-size: 21px;
+    font-weight: 900;
+}
+
+
+.home26-service h3 {
+    margin: 0 0 8px;
+
+    color: var(--ink);
+
+    font-family: "Nunito", sans-serif;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+
+.home26-service p {
+    margin: 0;
+
+    color: #85757d;
+
+    font-size: 8px;
+
+    line-height: 1.7;
+}
+
+
+/* ============================================================
+   COLORES
+   ============================================================ */
+
+.home26-page .lavender {
+    background: var(--lavender);
+}
+
+
+.home26-page .rose {
+    background: var(--pink-soft);
+}
+
+
+.home26-page .sage {
+    background: var(--sage);
+}
+
+
+.home26-page .peach {
+    background: var(--peach);
+}
+
+
+.home26-page .blue {
+    background: var(--blue);
+}
+
+
+.home26-page .yellow {
+    background: var(--yellow);
+}
+
+
+/* ============================================================
+   SECCIONES
+   ============================================================ */
+
+.home26-section {
+    padding: 100px 0;
+}
+
+
+.home26-section-top {
+    display: grid;
+
+    grid-template-columns:
+        120px minmax(0,1fr);
+
+    gap: 30px;
+
+    align-items: start;
+
+    margin-bottom: 50px;
+}
+
+
+.home26-section-top > div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+
+    padding-top: 6px;
+}
+
+
+.home26-section-top > div > span {
+    color: var(--pink);
+
+    font-family: "Nunito", sans-serif;
+
+    font-size: 15px;
+    font-weight: 900;
+}
+
+
+.home26-section-top small {
+    color: #9e8e96;
+
+    font-size: 7px;
+    font-weight: 800;
+
+    letter-spacing: 1.4px;
+}
+
+
+.home26-section-top h2 {
+    max-width: 650px;
+
+    margin: 0;
+
+    color: var(--ink);
+
+    font-family: "Nunito", sans-serif;
+
+    font-size:
+            clamp(39px,5vw,62px);
+
+    font-weight: 900;
+
+    line-height: .98;
+
+    letter-spacing: -2px;
+}
+
+
+.home26-section-top h2 em {
+    display: block;
+
+    color: var(--pink);
+
+    font-style: normal;
+
+    font-weight: 800;
+}
+
+
+/* ============================================================
+   SOBRE MÍ
+   ============================================================ */
+
+.home26-about {
+    background: #fffdfb;
+}
+
+
+.home26-about-grid {
+    display: grid;
+
+    grid-template-columns:
+        .9fr 1.1fr;
+
+    gap: 28px;
+
+    align-items: stretch;
+}
+
+
+.home26-about-photo {
+    position: relative;
+
+    min-height: 570px;
+
+    overflow: hidden;
+
+    border-radius:
+            34px 34px 105px 34px;
+
+    background: var(--pink-soft);
+
+    box-shadow:
+            0 20px 50px
+            rgba(76, 54, 64, .09);
+}
+
+
+.home26-about-photo::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+            linear-gradient(
+                    180deg,
+                    transparent 60%,
+                    rgba(55, 38, 47, .18)
+            );
+
+    pointer-events: none;
+}
+
+
+.home26-about-photo img {
+    width: 100% !important;
+    height: 100% !important;
+
+    position: absolute;
+
+    inset: 0;
+
+    display: block;
+
+    object-fit: cover !important;
+    object-position: center;
+}
+
+
+.home26-about-badge {
+    position: absolute;
+
+    z-index: 3;
+
+    left: 23px;
+    bottom: 23px;
+
+    padding: 9px 13px;
+
+    border-radius: 999px;
+
+    background:
+            rgba(255,255,255,.84);
+
+    color: #7c5261;
+
+    font-size: 7px;
+    font-weight: 800;
+
+    backdrop-filter: blur(10px);
+}
+
+
+.home26-about-content {
+    min-height: 570px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 50px;
+
+    border:
+            1px solid
+            #f0dfe3;
+
+    border-radius:
+            34px 90px 34px 34px;
+
+    background:
+            linear-gradient(
+                    145deg,
+                    #fff9f8,
+                    #fff2f5
+            );
+}
+
+
+.home26-about-content h3 {
+    max-width: 530px;
+
+    margin:
+            0 0 23px;
+
+    color: var(--ink);
+
+    font-family: "Nunito", sans-serif;
+
+    font-size:
+            clamp(29px,3vw,42px);
+
+    font-weight: 900;
+
+    line-height: 1.08;
+
+    letter-spacing: -1.5px;
+}
+
+
+.home26-about-content p {
+    max-width: 550px;
+
+    margin:
+            0 0 13px;
+
+    color: #75666e;
+
+    font-size: 10px;
+
+    line-height: 1.9;
+}
+
+
+.home26-about-tags {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    margin-top: 18px;
+}
+
+
+.home26-about-tags span {
+    padding: 8px 12px;
+
+    border:
+            1px solid
+            #efced8;
+
+    border-radius: 999px;
+
+    background:
+            rgba(255,255,255,.65);
+
+    color: #915e6f;
+
+    font-size: 7px;
+    font-weight: 700;
+
+    transition:
+            transform .25s ease,
+            background .25s ease;
+}
+
+
+.home26-about-tags span:hover {
+    transform: translateY(-3px);
+
+    background: white;
+}
+
+
+/* ============================================================
+   SEMANAS / PROYECTOS
+   ============================================================ */
+
+.home26-projects {
+    background: #fff7f7;
+}
+
+
+.home26-project-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap: 18px;
+}
+
+
+.home26-project-card {
+    overflow: hidden;
+
+    border:
+            1px solid
+            #f0dfe3;
+
+    border-radius:
+            23px 23px 50px 23px;
+
+    background: white;
+
+    box-shadow:
+            0 12px 32px
+            rgba(77,53,64,.055);
+
+    transition:
+            transform .35s ease,
+            box-shadow .35s ease;
+}
+
+
+.home26-project-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+            0 22px 46px
+            rgba(77,53,64,.10);
+}
+
+
+/* PREVIEW */
+
+.home26-project-preview {
+    position: relative;
+
+    height: 220px;
+
+    overflow: hidden;
+
+    padding: 17px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.project-one .home26-project-preview {
+    background:
+            linear-gradient(
+                    145deg,
+                    #f3dfe7,
+                    #f9edf1
+            );
+}
+
+
+.project-two .home26-project-preview {
+    background:
+            linear-gradient(
+                    145deg,
+                    #e7eee0,
+                    #f2f6ef
+            );
+}
+
+
+.project-three .home26-project-preview {
+    background:
+            linear-gradient(
+                    145deg,
+                    #e6edf6,
+                    #f1f5fa
+            );
+}
+
+
+.home26-project-browser {
+    position: absolute;
+
+    top: 14px;
+    left: 14px;
+
+    display: flex;
+
+    gap: 4px;
+}
+
+
+.home26-project-browser span {
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background:
+            rgba(77,60,68,.20);
+}
+
+
+.home26-project-preview > strong {
+    position: absolute;
+
+    top: 18px;
+    right: 18px;
+
+    color:
+            rgba(62,44,53,.18);
+
+    font-family: "Nunito", sans-serif;
+
+    font-size: 51px;
+    font-weight: 900;
+}
+
+
+.home26-project-art {
+    width: 125px;
+    height: 100px;
+
+    display: grid;
+    place-items: center;
+
+    border:
+            5px solid
+            rgba(255,255,255,.72);
+
+    border-radius: 19px;
+
+    background:
+            rgba(255,255,255,.54);
+
+    color: #b25e79;
+
+    font-family: "Nunito", sans-serif;
+
+    font-size: 30px;
+    font-weight: 900;
+
+    box-shadow:
+            0 15px 30px
+            rgba(68,50,60,.08);
+
+    transform: rotate(-3deg);
+
+    transition:
+            transform .35s ease;
+}
+
+
+.home26-project-card:hover
+.home26-project-art {
+    transform:
+            rotate(0deg)
+            scale(1.05);
+}
+
+
+/* INFO */
+
+.home26-project-info {
+    min-height: 180px;
+
+    display: flex;
+
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 21px;
+}
+
+
+.home26-project-info > div {
+    flex: 1;
+}
+
+
+.home26-project-info span {
+    color: var(--pink);
+
+    font-size: 7px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+.home26-project-info h3 {
+    margin: 7px 0;
+
+    color: var(--ink);
+
+    font-family: "Nunito", sans-serif;
+
+    font-size: 15px;
+    font-weight: 900;
+
+    line-height: 1.2;
+}
+
+
+.home26-project-info p {
+    margin: 0;
+
+    color: #84747c;
+
+    font-size: 8px;
+
+    line-height: 1.6;
+}
+
+
+.home26-project-info > a {
+    width: 34px;
+    height: 34px;
+
+    min-width: 34px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: #ffeaf0;
+
+    color: var(--pink-dark);
+
+    font-size: 15px;
+
+    transition:
+            transform .25s ease,
+            color .25s ease,
+            background .25s ease;
+}
+
+
+.home26-project-info > a:hover {
+    transform:
+            translate(3px,-3px);
+
+    background: var(--pink);
+
+    color: white;
+}
+
+
+.home26-project-all {
+    margin-top: 27px;
+
+    text-align: right;
+}
+
+
+.home26-project-all a {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 12px;
+
+    color: #995568;
+
+    font-size: 9px;
+    font-weight: 800;
+}
+
+
+.home26-project-all span {
+    width: 30px;
+    height: 30px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: var(--pink);
+
+    color: white;
+
+    transition: transform .25s ease;
+}
+
+
+.home26-project-all a:hover span {
+    transform: translateX(4px);
+}
+
+
+/* ============================================================
+   HABILIDADES
+   ============================================================ */
+
+.home26-skills {
+    background: var(--cream);
+}
+
+
+.home26-skills-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5,1fr);
+
+    gap: 13px;
+}
+
+
+.home26-skill {
+    min-width: 0;
+
+    min-height: 190px;
+
+    padding: 13px;
+
+    border:
+            1px solid
+            #f0dfe3;
+
+    border-radius:
+            18px 18px 38px 18px;
+
+    background: white;
+
+    box-shadow:
+            0 9px 24px
+            rgba(77,53,64,.04);
+
+    transition:
+            transform .3s ease,
+            box-shadow .3s ease;
+}
+
+
+.home26-skill:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+            0 17px 35px
+            rgba(77,53,64,.09);
+}
+
+
+.home26-skill-image {
+    height: 115px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius:
+            13px 13px 29px 13px;
+
+    overflow: hidden;
+}
+
+
+/* EVITA LOGOS GIGANTES */
+
+.home26-skill-image img {
+    width: 55px !important;
+    height: 55px !important;
+
+    max-width: 55px !important;
+    max-height: 55px !important;
+
+    display: block !important;
+
+    object-fit: contain !important;
+
+    transition:
+            transform .3s ease;
+}
+
+
+.home26-skill:hover
+.home26-skill-image img {
+    transform: scale(1.12);
+}
+
+
+.home26-skill > span {
+    display: block;
+
+    margin:
+            11px 3px 1px;
+
+    color: #b39ca5;
+
+    font-size: 6px;
+    font-weight: 700;
+}
+
+
+.home26-skill h3 {
+    margin: 0 3px;
+
+    color: var(--ink);
+
+    font-family: "Nunito", sans-serif;
+
+    font-size: 10px;
+    font-weight: 900;
+}
+
+
+/* ============================================================
+   CONTACTO
+   ============================================================ */
+
+.home26-contact {
+    background: #fff9f7;
+}
+
+
+.home26-contact-box {
+    position: relative;
+
+    min-height: 430px;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr .9fr;
+
+    align-items: center;
+
+    gap: 60px;
+
+    padding: 55px;
+
+    overflow: hidden;
+
+    border:
+            1px solid
+            #f0d7df;
+
+    border-radius:
+            35px 35px 100px 35px;
+
+    background:
+            linear-gradient(
+                    135deg,
+                    #ffe8ef,
+                    #fff2ef
+            );
+}
+
+
+.home26-contact-copy {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.home26-contact-copy h2 {
+    margin: 0;
+
+    color: var(--ink);
+
+    font-family: "Nunito", sans-serif;
+
+    font-size:
+            clamp(43px,5vw,67px);
+
+    font-weight: 900;
+
+    line-height: .9;
+
+    letter-spacing: -3px;
+}
+
+
+.home26-contact-copy h2 em {
+    display: block;
+
+    color: var(--pink);
+
+    font-style: normal;
+}
+
+
+.home26-contact-copy p {
+    max-width: 440px;
+
+    margin-top: 20px;
+
+    color: #806f77;
+
+    font-size: 9px;
+
+    line-height: 1.8;
+}
+
+
+/* LINKS */
+
+.home26-contact-links {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+.home26-contact-links a {
+    min-height: 60px;
+
+    display: grid;
+
+    grid-template-columns:
+        35px 1fr auto;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 13px 16px;
+
+    border:
+            1px solid
+            rgba(216,111,142,.15);
+
+    border-radius: 13px;
+
+    background:
+            rgba(255,255,255,.58);
+
+    color: #654e57;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    transition:
+            transform .25s ease,
+            background .25s ease;
+}
+
+
+.home26-contact-links a:hover {
+    transform: translateX(5px);
+
+    background: white;
+}
+
+
+.home26-contact-links span {
+    color: #bb8a99;
+
+    font-size: 7px;
+}
+
+
+.home26-contact-links b {
+    color: var(--pink);
+
+    font-size: 15px;
+}
+
+
+/* CORAZÓN DECORATIVO */
+
+.home26-contact-decoration {
+    position: absolute;
+
+    right: -30px;
+    bottom: -70px;
+
+    color:
+            rgba(239,95,140,.13);
+
+    font-family: "Nunito", sans-serif;
+
+    font-size: 260px;
+
+    line-height: 1;
+
+    transform: rotate(-10deg);
+}
+
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.home26-footer {
+    padding: 25px 0;
+
+    border-top:
+            1px solid
+            #f1dde3;
+
+    background: #fff4f5;
+}
+
+
+.home26-footer
+.home26-container {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+.home26-footer strong {
+    color: var(--pink-dark);
+
+    font-family: "Nunito", sans-serif;
+
+    font-size: 15px;
+    font-weight: 900;
+}
+
+
+.home26-footer p,
+.home26-footer a {
+    margin: 0;
+
+    color: #9a838c;
+
+    font-size: 7px;
+}
+
+
+/* ============================================================
+   ANIMACIONES
+   ============================================================ */
+
+@keyframes home26Left {
+
+    from {
+        opacity: 0;
+
+        transform:
+                translateX(-28px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+                translateX(0);
+    }
+}
+
+
+@keyframes home26Right {
+
+    from {
+        opacity: 0;
+
+        transform:
+                translateX(30px)
+                scale(.97);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+                translateX(0)
+                scale(1);
+    }
+}
+
+
+@keyframes home26Float {
+
+    0%,
+    100% {
+        transform:
+                translateY(0);
+    }
+
+    50% {
+        transform:
+                translateY(-9px);
+    }
+}
+
+
+@keyframes home26GirlEntrance {
+
+    from {
+        opacity: 0;
+
+        transform:
+                translateY(25px)
+                scale(.96);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+                translateY(0)
+                scale(1);
+    }
+}
+
+
+@keyframes home26Bubble {
+
+    0%,
+    100% {
+        border-radius:
+                50% 50% 45% 55% /
+            46% 54% 46% 54%;
+
+        transform:
+                translateX(-50%)
+                rotate(0deg);
+    }
+
+    50% {
+        border-radius:
+                55% 45% 52% 48% /
+            50% 46% 54% 50%;
+
+        transform:
+                translateX(-50%)
+                rotate(2deg);
+    }
+}
+
+
+/* ============================================================
+   RESPONSIVE - TABLET
+   ============================================================ */
+
+@media (max-width: 1050px) {
+
+    .home26-hero-grid {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+
+    .home26-hero-copy {
+        text-align: center;
+    }
+
+
+    .home26-pill,
+    .home26-role {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .home26-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .home26-hero-buttons,
+    .home26-social-mini > div {
+        justify-content: center;
+    }
+
+
+    .home26-social-mini {
+        text-align: center;
+    }
+
+
+    .home26-visual {
+        width: min(600px,100%);
+
+        margin-inline: auto;
+    }
+
+
+    .home26-services-card {
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+
+    .home26-services-intro {
+        grid-column: 1 / -1;
+
+        min-height: auto;
+    }
+
+
+    .home26-project-grid {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+
+    .home26-skills-grid {
+        grid-template-columns:
+            repeat(3,1fr);
+    }
+}
+
+
+/* ============================================================
+   RESPONSIVE - MÓVIL
+   ============================================================ */
+
+@media (max-width: 760px) {
+
+    .home26-container {
+        width:
+                min(100% - 30px,1180px);
+    }
+
+
+    .home26-menu {
+        display: none;
+    }
+
+
+    .home26-brand-text span {
+        display: none;
+    }
+
+
+    .home26-hero {
+        min-height: auto;
+
+        padding:
+                55px 0 70px;
+    }
+
+
+    .home26-hero h1 {
+        font-size: 60px;
+    }
+
+
+    .home26-visual {
+        min-height: 500px;
+    }
+
+
+    .home26-bg-circle {
+        width: 410px;
+        height: 410px;
+    }
+
+
+    .home26-photo-card {
+        width: 390px;
+        height: 450px;
+    }
+
+
+    .home26-photo-card::before {
+        width: 330px;
+        height: 330px;
+    }
+
+
+    .home26-note {
+        display: none;
+    }
+
+
+    .home26-services-card {
+        grid-template-columns: 1fr;
+    }
+
+
+    .home26-services-intro {
+        grid-column: auto;
+    }
+
+
+    .home26-service {
+        min-height: auto;
+
+        border-right: 0;
+
+        border-top:
+                1px solid
+                #f0e1e4;
+    }
+
+
+    .home26-section {
+        padding: 75px 0;
+    }
+
+
+    .home26-section-top {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+
+    .home26-section-top h2 {
+        font-size: 45px;
+    }
+
+
+    .home26-about-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .home26-about-photo {
+        min-height: 500px;
+    }
+
+
+    .home26-about-content {
+        min-height: auto;
+
+        padding:
+                35px 27px;
+    }
+
+
+    .home26-project-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .home26-skills-grid {
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+
+    .home26-contact-box {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        padding:
+                38px 25px;
+
+        border-radius:
+                28px 28px 70px 28px;
+    }
+
+
+    .home26-contact-copy h2 {
+        font-size: 47px;
+    }
+}
+
+
+/* ============================================================
+   RESPONSIVE - CELULARES PEQUEÑOS
+   ============================================================ */
+
+@media (max-width: 450px) {
+
+    .home26-login {
+        padding:
+                8px 12px;
+
+        font-size: 7px;
+    }
+
+
+    .home26-hero h1 {
+        font-size: 49px;
+
+        letter-spacing: -3px;
+    }
+
+
+    .home26-hero-buttons {
+        flex-direction: column;
+    }
+
+
+    .home26-btn-primary,
+    .home26-btn-secondary {
+        width: 100%;
+    }
+
+
+    .home26-visual {
+        min-height: 410px;
+    }
+
+
+    .home26-bg-circle {
+        width: 315px;
+        height: 315px;
+    }
+
+
+    .home26-photo-card {
+        width: 315px;
+        height: 380px;
+    }
+
+
+    .home26-photo-card::before {
+        width: 270px;
+        height: 270px;
+    }
+
+
+    .home26-photo-card::after {
+        top: 30px;
+        right: 4px;
+
+        font-size: 17px;
+    }
+
+
+    .home26-plant {
+        display: none;
+    }
+
+
+    .home26-skills-grid {
+        gap: 9px;
+    }
+
+
+    .home26-skill {
+        min-height: 170px;
+    }
+
+
+    .home26-skill-image {
+        height: 100px;
+    }
+
+
+    .home26-footer
+    .home26-container {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+}
+
+
+/* ============================================================
+   ACCESIBILIDAD
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .home26-page *,
+    .home26-page *::before,
+    .home26-page *::after {
+
+        animation: none !important;
+
+        transition-duration:
+                .01ms !important;
+    }
+
+}
+/* ============================================================
+   AJUSTE FINAL DE TAMAÑOS DE TEXTO
+   MEDIANO Y PROPORCIONADO
+   ============================================================ */
+
+/* LOGO / MARCA */
+
+.home26-brand-text strong {
+    font-size: 18px;
+}
+
+.home26-brand-text span {
+    font-size: 9px;
+}
+
+
+/* MENÚ SUPERIOR */
+
+.home26-menu a {
+    font-size: 13px;
+}
+
+
+/* BOTÓN LOGIN */
+
+.home26-login {
+    font-size: 13px;
+
+    min-height: 44px;
+
+    padding: 10px 18px;
+}
+
+
+/* PORTAFOLIO ACADÉMICO 2026 */
+
+.home26-pill {
+    font-size: 10px;
+}
+
+
+/* HOLA SOY */
+
+.home26-hello {
+    font-size: 18px;
+}
+
+
+/* NOMBRE PRINCIPAL */
+
+.home26-hero h1 {
+    font-size: clamp(68px, 6.2vw, 94px);
+}
+
+
+/* DISEÑO - PROGRAMACIÓN - DESARROLLO WEB */
+
+.home26-role {
+    font-size: 12px;
+
+    padding: 8px 14px;
+}
+
+
+/* DESCRIPCIÓN HERO */
+
+.home26-description {
+    max-width: 520px;
+
+    font-size: 15px;
+
+    line-height: 1.75;
+}
+
+
+/* BOTONES PRINCIPALES */
+
+.home26-btn-primary,
+.home26-btn-secondary {
+    min-height: 48px;
+
+    padding: 11px 20px;
+
+    font-size: 13px;
+}
+
+
+/* ENCUÉNTRAME */
+
+.home26-social-mini > span {
+    font-size: 10px;
+}
+
+
+/* REDES */
+
+.home26-social-mini a {
+    width: 38px;
+    height: 38px;
+
+    font-size: 13px;
+}
+
+
+/* TARJETAS FLOTANTES */
+
+.home26-note span {
+    font-size: 9px;
+}
+
+.home26-note strong {
+    font-size: 13px;
+}
+
+
+/* ============================================================
+   SECCIÓN LO QUE APRENDO
+   ============================================================ */
+
+.home26-mini-title {
+    font-size: 10px;
+}
+
+.home26-services-intro h2 {
+    font-size: 32px;
+}
+
+.home26-service h3 {
+    font-size: 15px;
+}
+
+.home26-service p {
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+/* ============================================================
+   TÍTULOS DE SECCIONES
+   ============================================================ */
+
+.home26-section-top > div > span {
+    font-size: 17px;
+}
+
+.home26-section-top small {
+    font-size: 10px;
+}
+
+.home26-section-top h2 {
+    font-size: clamp(42px, 5vw, 64px);
+}
+
+
+/* ============================================================
+   SOBRE MÍ
+   ============================================================ */
+
+.home26-about-content h3 {
+    font-size: clamp(32px, 3.5vw, 46px);
+}
+
+.home26-about-content p {
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+.home26-about-tags span {
+    font-size: 11px;
+
+    padding: 8px 13px;
+}
+
+.home26-about-badge {
+    font-size: 10px;
+}
+
+
+/* ============================================================
+   SEMANAS / PROYECTOS
+   ============================================================ */
+
+.home26-project-info span {
+    font-size: 10px;
+}
+
+.home26-project-info h3 {
+    font-size: 17px;
+}
+
+.home26-project-info p {
+    font-size: 12px;
+
+    line-height: 1.65;
+}
+
+.home26-project-all a {
+    font-size: 12px;
+}
+
+
+/* ============================================================
+   HABILIDADES
+   ============================================================ */
+
+.home26-skill > span {
+    font-size: 9px;
+}
+
+.home26-skill h3 {
+    font-size: 13px;
+}
+
+
+/* ============================================================
+   CONTACTO
+   ============================================================ */
+
+.home26-contact-copy p {
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+.home26-contact-links a {
+    font-size: 13px;
+}
+
+.home26-contact-links span {
+    font-size: 10px;
+}
+
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.home26-footer strong {
+    font-size: 16px;
+}
+
+.home26-footer p,
+.home26-footer a {
+    font-size: 10px;
+}
+
+
+/* ============================================================
+   RESPONSIVE TABLET / MÓVIL
+   ============================================================ */
+
+@media (max-width: 760px) {
+
+    .home26-menu a {
+        font-size: 11px;
+    }
+
+    .home26-login {
+        font-size: 11px;
+    }
+
+    .home26-hero h1 {
+        font-size: 58px;
+    }
+
+    .home26-description {
+        font-size: 13px;
+    }
+
+    .home26-role {
+        font-size: 11px;
+    }
+
+    .home26-about-content p {
+        font-size: 13px;
+    }
+
+    .home26-service p {
+        font-size: 11px;
+    }
+
+    .home26-project-info p {
+        font-size: 11px;
+    }
+}
+
+
+/* ============================================================
+   CELULAR PEQUEÑO
+   ============================================================ */
+
+@media (max-width: 450px) {
+
+    .home26-brand-text strong {
+        font-size: 16px;
+    }
+
+    .home26-login {
+        font-size: 10px;
+    }
+
+    .home26-hero h1 {
+        font-size: 48px;
+    }
+
+    .home26-hello {
+        font-size: 16px;
+    }
+
+    .home26-description {
+        font-size: 12px;
+    }
+
+    .home26-role {
+        font-size: 10px;
+    }
+
+    .home26-section-top h2 {
+        font-size: 40px;
+    }
+
+    .home26-about-content h3 {
+        font-size: 30px;
+    }
+
+    .home26-about-content p {
+        font-size: 12px;
+    }
+
+    .home26-service h3 {
+        font-size: 14px;
+    }
+
+    .home26-service p {
+        font-size: 11px;
+    }
+}

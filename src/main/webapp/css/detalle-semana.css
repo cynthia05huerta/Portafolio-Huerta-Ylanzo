@@ -1,0 +1,1986 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800;900&display=swap');
+
+
+/* ============================================================
+   DETALLE PÚBLICO DE SEMANA
+   PORTAFOLIO ACADÉMICO 2026
+   ============================================================ */
+
+.detail26-page {
+    --pink: #ef5f8c;
+    --pink-dark: #d94374;
+    --pink-light: #ffdce7;
+
+    --cream: #fff8f5;
+    --paper: #fffdfb;
+
+    --lavender: #eee8fa;
+    --sage: #e8f1e4;
+    --blue: #e9f2fa;
+    --peach: #fbe9df;
+
+    --ink: #352d3a;
+    --text: #766970;
+    --muted: #a0939b;
+
+    --line: rgba(66,47,60,.10);
+
+    min-height: 100vh;
+
+    background: var(--cream);
+
+    color: var(--text);
+
+    font-family: "DM Sans", sans-serif;
+}
+
+
+.detail26-page * {
+    box-sizing: border-box;
+}
+
+
+.detail26-page a {
+    text-decoration: none;
+}
+
+
+.detail26-container {
+    width: min(1180px, calc(100% - 46px));
+
+    margin-inline: auto;
+}
+
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+.detail26-header {
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    border-bottom:
+            1px solid
+            rgba(80,54,70,.06);
+
+    background:
+            rgba(255,248,245,.93);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+}
+
+
+.detail26-nav {
+    min-height: 76px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+}
+
+
+/* ============================================================
+   BRAND
+   ============================================================ */
+
+.detail26-brand {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.detail26-brand-logo {
+    width: 49px;
+    height: 49px;
+
+    display: grid;
+    place-items: center;
+
+    overflow: hidden;
+
+    padding: 4px;
+
+    border:
+            1px solid
+            #efd3dc;
+
+    border-radius: 13px;
+
+    background: white;
+
+    box-shadow:
+            0 8px 20px
+            rgba(217,67,116,.11);
+}
+
+
+.detail26-brand-logo img {
+    width: 100% !important;
+    height: 100% !important;
+
+    display: block;
+
+    object-fit: contain;
+}
+
+
+.detail26-brand-text {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.detail26-brand-text strong {
+    color: var(--ink);
+
+    font-family: "Nunito", sans-serif;
+
+    font-size: 18px;
+    font-weight: 900;
+}
+
+
+.detail26-brand-text span {
+    margin-top: -2px;
+
+    color: var(--muted);
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: .8px;
+
+    text-transform: uppercase;
+}
+
+
+/* ============================================================
+   MENU
+   ============================================================ */
+
+.detail26-menu {
+    display: flex;
+    align-items: center;
+
+    gap: 28px;
+}
+
+
+.detail26-menu a {
+    position: relative;
+
+    padding: 8px 0;
+
+    color: #625760;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    transition:
+            color .25s ease,
+            transform .25s ease;
+}
+
+
+.detail26-menu a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 1px;
+
+    width: 0;
+    height: 2px;
+
+    border-radius: 20px;
+
+    background: var(--pink);
+
+    transform: translateX(-50%);
+
+    transition: width .25s ease;
+}
+
+
+.detail26-menu a:hover,
+.detail26-menu a.active {
+    color: var(--pink-dark);
+}
+
+
+.detail26-menu a:hover {
+    transform: translateY(-1px);
+}
+
+
+.detail26-menu a:hover::after,
+.detail26-menu a.active::after {
+    width: 23px;
+}
+
+
+/* ============================================================
+   LOGIN
+   ============================================================ */
+
+.detail26-login {
+    min-height: 44px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 10px 18px;
+
+    border-radius: 999px;
+
+    background:
+            linear-gradient(
+                    135deg,
+                    #ef668f,
+                    #e34879
+            );
+
+    color: white;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    box-shadow:
+            0 10px 25px
+            rgba(226,69,118,.18);
+
+    transition:
+            transform .3s ease,
+            box-shadow .3s ease;
+}
+
+
+.detail26-login:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+            0 15px 32px
+            rgba(226,69,118,.27);
+}
+
+
+/* ============================================================
+   HERO
+   ============================================================ */
+
+.detail26-hero {
+    position: relative;
+
+    min-height: 515px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    padding: 75px 0;
+
+    background:
+            radial-gradient(
+                    circle at 80% 40%,
+                    rgba(255,199,218,.45),
+                    transparent 30%
+            ),
+            linear-gradient(
+                    145deg,
+                    #fff9f6,
+                    #fff3f6
+            );
+}
+
+
+.detail26-hero-grid {
+    position: relative;
+
+    z-index: 5;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0,1fr)
+        420px;
+
+    align-items: center;
+
+    gap: 80px;
+}
+
+
+/* ============================================================
+   HERO COPY
+   ============================================================ */
+
+.detail26-hero-copy {
+    animation:
+            detail26Left
+            .75s ease both;
+}
+
+
+.detail26-eyebrow {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 8px 13px;
+
+    border-radius: 999px;
+
+    background: #ffeaf0;
+
+    color: var(--pink-dark);
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 1.3px;
+}
+
+
+.detail26-hero h1 {
+    max-width: 730px;
+
+    margin: 18px 0 0;
+
+    color: var(--ink);
+
+    font-family: "Nunito", sans-serif;
+
+    font-size:
+            clamp(48px,5.5vw,72px);
+
+    font-weight: 900;
+
+    line-height: .98;
+
+    letter-spacing: -3.5px;
+}
+
+
+.detail26-hero-copy p {
+    max-width: 620px;
+
+    margin: 23px 0 0;
+
+    color: #766870;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* ============================================================
+   BACK BUTTON
+   ============================================================ */
+
+.detail26-back {
+    width: fit-content;
+
+    min-height: 46px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 25px;
+
+    padding: 10px 17px;
+
+    border:
+            1px solid
+            #edbdca;
+
+    border-radius: 999px;
+
+    background:
+            rgba(255,255,255,.70);
+
+    color: #975468;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    transition:
+            transform .3s ease,
+            background .3s ease,
+            box-shadow .3s ease;
+}
+
+
+.detail26-back:hover {
+    transform: translateY(-3px);
+
+    background: white;
+
+    box-shadow:
+            0 11px 25px
+            rgba(91,55,68,.08);
+}
+
+
+/* ============================================================
+   HERO VISUAL
+   ============================================================ */
+
+.detail26-hero-visual {
+    min-height: 360px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    animation:
+            detail26Right
+            .85s ease both;
+}
+
+
+.detail26-shape {
+    position: relative;
+
+    width: 345px;
+    height: 345px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius:
+            50% 50% 43% 57% /
+        48% 55% 45% 52%;
+
+    background:
+            linear-gradient(
+                    145deg,
+                    #ffdce7,
+                    #f7c6d7
+            );
+
+    animation:
+            detail26Shape
+            8s ease-in-out infinite;
+}
+
+
+/* NUMERO */
+
+.detail26-visual-number {
+    position: absolute;
+
+    top: 33px;
+    left: 37px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+.detail26-visual-number span {
+    color:
+            rgba(81,53,66,.48);
+
+    font-size: 8px;
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+}
+
+
+.detail26-visual-number strong {
+    margin-top: -5px;
+
+    color:
+            rgba(81,53,66,.22);
+
+    font-family: "Nunito", sans-serif;
+
+    font-size: 74px;
+    font-weight: 900;
+}
+
+
+/* CODE CARD */
+
+.detail26-code-card {
+    width: 160px;
+    height: 125px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border:
+            6px solid
+            rgba(255,255,255,.75);
+
+    border-radius: 23px;
+
+    background:
+            rgba(255,255,255,.58);
+
+    box-shadow:
+            0 18px 39px
+            rgba(77,49,61,.10);
+
+    transform: rotate(-4deg);
+
+    transition:
+            transform .35s ease;
+}
+
+
+.detail26-code-card:hover {
+    transform:
+            rotate(0deg)
+            scale(1.05);
+}
+
+
+.detail26-code-card span {
+    color: var(--pink);
+
+    font-family: "Nunito", sans-serif;
+
+    font-size: 35px;
+    font-weight: 900;
+}
+
+
+.detail26-code-card small {
+    margin-top: 5px;
+
+    color: #a47c89;
+
+    font-size: 8px;
+    font-weight: 800;
+
+    letter-spacing: 1.3px;
+}
+
+
+/* NOTE */
+
+.detail26-note {
+    position: absolute;
+
+    top: 30px;
+    right: -45px;
+
+    z-index: 4;
+
+    min-width: 105px;
+
+    padding: 15px;
+
+    border:
+            1px solid
+            rgba(215,93,130,.12);
+
+    border-radius:
+            17px 17px 35px 17px;
+
+    background:
+            rgba(255,253,251,.92);
+
+    box-shadow:
+            0 14px 30px
+            rgba(88,52,67,.10);
+
+    backdrop-filter: blur(10px);
+
+    animation:
+            detail26Float
+            5s ease-in-out infinite;
+}
+
+
+.detail26-note small {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #b28492;
+
+    font-size: 8px;
+    font-weight: 800;
+}
+
+
+.detail26-note strong {
+    display: block;
+
+    color: #644c57;
+
+    font-family: "Nunito", sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.4;
+}
+
+
+.detail26-note > span {
+    display: block;
+
+    margin-top: 5px;
+
+    color: var(--pink);
+
+    text-align: center;
+
+    font-size: 14px;
+}
+
+
+/* ============================================================
+   DECORACIONES
+   ============================================================ */
+
+.detail26-decoration {
+    position: absolute;
+
+    border-radius: 50%;
+}
+
+
+.deco-a {
+    width: 300px;
+    height: 300px;
+
+    left: -160px;
+    bottom: -160px;
+
+    background:
+            rgba(232,241,228,.70);
+}
+
+
+.deco-b {
+    width: 320px;
+    height: 320px;
+
+    right: -170px;
+    top: -180px;
+
+    background:
+            rgba(238,232,250,.62);
+}
+
+
+.detail26-star {
+    position: absolute;
+
+    color: #ee8dab;
+
+    opacity: .65;
+
+    animation:
+            detail26Float
+            5s ease-in-out infinite;
+}
+
+
+.star-a {
+    top: 100px;
+    left: 48%;
+
+    font-size: 25px;
+}
+
+
+.star-b {
+    left: 43%;
+    bottom: 75px;
+
+    font-size: 22px;
+
+    animation-delay: -2s;
+}
+
+
+/* ============================================================
+   CONTENT
+   ============================================================ */
+
+.detail26-content {
+    padding:
+            90px 0 100px;
+
+    background: #fffaf8;
+}
+
+
+/* ============================================================
+   SECTION HEADING
+   ============================================================ */
+
+.detail26-section-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 40px;
+
+    margin-bottom: 40px;
+}
+
+
+.detail26-section-heading > div > span {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: var(--pink);
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+
+.detail26-section-heading h2 {
+    margin: 0;
+
+    color: var(--ink);
+
+    font-family: "Nunito", sans-serif;
+
+    font-size:
+            clamp(34px,4vw,48px);
+
+    font-weight: 900;
+
+    line-height: 1;
+
+    letter-spacing: -2px;
+}
+
+
+.detail26-section-heading > p {
+    max-width: 420px;
+
+    margin: 0;
+
+    color: #8a7b82;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* ============================================================
+   WORK LIST
+   ============================================================ */
+
+.detail26-work-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 24px;
+}
+
+
+/* ============================================================
+   WORK CARD
+   ============================================================ */
+
+.detail26-work-card {
+    padding: 28px;
+
+    border:
+            1px solid
+            #efdde2;
+
+    border-radius:
+            24px 24px 58px 24px;
+
+    background: white;
+
+    box-shadow:
+            0 14px 35px
+            rgba(84,52,65,.06);
+
+    transition:
+            transform .35s ease,
+            box-shadow .35s ease;
+
+    animation:
+            detail26Reveal
+            .6s ease both;
+}
+
+
+.detail26-work-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+            0 22px 48px
+            rgba(84,52,65,.10);
+}
+
+
+/* ============================================================
+   TOP
+   ============================================================ */
+
+.detail26-work-top {
+    display: grid;
+
+    grid-template-columns:
+        58px
+        minmax(0,1fr)
+        auto;
+
+    align-items: center;
+
+    gap: 17px;
+
+    padding-bottom: 21px;
+
+    border-bottom:
+            1px solid
+            #f0e3e5;
+}
+
+
+/* NUMERO */
+
+.detail26-work-number {
+    width: 54px;
+    height: 54px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius:
+            15px 15px 28px 15px;
+
+    background:
+            linear-gradient(
+                    145deg,
+                    #f8e2e8,
+                    #f3d8df
+            );
+
+    color: #aa5e74;
+
+    font-family: "Nunito", sans-serif;
+
+    font-size: 18px;
+    font-weight: 900;
+}
+
+
+/* TITULO */
+
+.detail26-work-title > span {
+    color: var(--pink);
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 1.4px;
+}
+
+
+.detail26-work-title h3 {
+    margin:
+            5px 0 0;
+
+    color: var(--ink);
+
+    font-family: "Nunito", sans-serif;
+
+    font-size: 22px;
+    font-weight: 900;
+
+    line-height: 1.2;
+}
+
+
+/* FECHA */
+
+.detail26-work-date {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    gap: 3px;
+}
+
+
+.detail26-work-date span {
+    color: #aa919a;
+
+    font-size: 8px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+.detail26-work-date strong {
+    color: #77616a;
+
+    font-size: 12px;
+}
+
+
+/* ============================================================
+   DESCRIPCION
+   ============================================================ */
+
+.detail26-description {
+    padding:
+            22px 0 4px;
+}
+
+
+.detail26-description > span {
+    color: #ad7183;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 1.3px;
+}
+
+
+.detail26-description p {
+    max-width: 900px;
+
+    margin:
+            7px 0 0;
+
+    color: #776970;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* ============================================================
+   WORK SECTION
+   ============================================================ */
+
+.detail26-work-section {
+    margin-top: 20px;
+
+    padding-top: 20px;
+
+    border-top:
+            1px solid
+            #f1e5e7;
+}
+
+
+/* TITLE */
+
+.detail26-work-section-title {
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    margin-bottom: 13px;
+}
+
+
+.detail26-section-icon {
+    width: 38px;
+    height: 38px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius:
+            12px 12px 22px 12px;
+
+    background:
+            #ffe8ef;
+
+    color: var(--pink-dark);
+
+    font-size: 16px;
+}
+
+
+.detail26-section-icon.external {
+    background:
+            #e9f2fa;
+
+    color:
+            #64889a;
+}
+
+
+.detail26-work-section-title > div:last-child {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.detail26-work-section-title span {
+    color: #ad7183;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+}
+
+
+.detail26-work-section-title strong {
+    margin-top: 2px;
+
+    color: #57474f;
+
+    font-size: 13px;
+}
+
+
+/* ============================================================
+   FILES
+   ============================================================ */
+
+.detail26-file-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 9px;
+}
+
+
+.detail26-file-item {
+    min-height: 68px;
+
+    display: grid;
+
+    grid-template-columns:
+        46px
+        minmax(0,1fr)
+        auto;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding:
+            10px 13px;
+
+    border:
+            1px solid
+            #efe1e4;
+
+    border-radius: 13px;
+
+    background:
+            #fffafa;
+
+    transition:
+            transform .25s ease,
+            background .25s ease,
+            border-color .25s ease;
+}
+
+
+.detail26-file-item:hover {
+    transform: translateX(4px);
+
+    border-color:
+            #e8c8d0;
+
+    background: white;
+}
+
+
+.detail26-file-icon {
+    width: 42px;
+    height: 42px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius:
+            11px;
+
+    background:
+            #f6e5ea;
+
+    font-size: 18px;
+}
+
+
+.detail26-file-info {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.detail26-file-info strong {
+    color: #58464f;
+
+    font-size: 13px;
+}
+
+
+.detail26-file-info span {
+    margin-top: 2px;
+
+    color: #9a858e;
+
+    font-size: 10px;
+}
+
+
+.detail26-file-download {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 7px;
+
+    padding:
+            8px 11px;
+
+    border-radius:
+            999px;
+
+    background:
+            #ffe7ee;
+
+    color: var(--pink-dark);
+
+    font-size: 11px;
+    font-weight: 800;
+}
+
+
+.detail26-file-download > span {
+    font-size: 13px;
+}
+
+
+/* ============================================================
+   NO FILE
+   ============================================================ */
+
+.detail26-no-file {
+    min-height: 74px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding:
+            15px;
+
+    border:
+            1px dashed
+            #e3c7ce;
+
+    border-radius: 13px;
+
+    background:
+            #fff8f9;
+
+    color: #907b84;
+
+    font-size: 12px;
+}
+
+
+.detail26-no-file > div {
+    font-size: 22px;
+}
+
+
+/* ============================================================
+   EXTERNAL LINK
+   ============================================================ */
+
+.detail26-external-link {
+    min-height: 62px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding:
+            13px 15px;
+
+    border:
+            1px solid
+            #d9e5eb;
+
+    border-radius: 13px;
+
+    background:
+            #f6fafc;
+
+    color: #5c7581;
+
+    transition:
+            transform .25s ease,
+            background .25s ease;
+}
+
+
+.detail26-external-link:hover {
+    transform: translateX(4px);
+
+    background: white;
+}
+
+
+.detail26-external-link > div {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+}
+
+
+.detail26-external-link > div > span {
+    font-size: 17px;
+}
+
+
+.detail26-external-link strong {
+    font-size: 12px;
+}
+
+
+/* ============================================================
+   EMPTY
+   ============================================================ */
+
+.detail26-empty {
+    min-height: 390px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 45px;
+
+    border:
+            1px dashed
+            #e5bdc9;
+
+    border-radius:
+            30px 30px 85px 30px;
+
+    background:
+            linear-gradient(
+                    145deg,
+                    #fff4f6,
+                    #fff9f7
+            );
+
+    text-align: center;
+}
+
+
+/* ART */
+
+.detail26-empty-art {
+    position: relative;
+
+    width: 130px;
+    height: 110px;
+
+    margin-bottom: 16px;
+}
+
+
+.detail26-empty-circle {
+    width: 105px;
+    height: 105px;
+
+    display: grid;
+    place-items: center;
+
+    margin: auto;
+
+    border-radius:
+            50% 50% 45% 55% /
+        52% 45% 55% 48%;
+
+    background:
+            #ffdfe8;
+
+    box-shadow:
+            0 15px 35px
+            rgba(102,60,77,.08);
+}
+
+
+.detail26-empty-circle span {
+    color: var(--pink);
+
+    font-family: "Nunito", sans-serif;
+
+    font-size: 28px;
+    font-weight: 900;
+}
+
+
+.detail26-empty-star,
+.detail26-empty-heart {
+    position: absolute;
+
+    color:
+            #ef91ac;
+
+    animation:
+            detail26Float
+            4s ease-in-out infinite;
+}
+
+
+.detail26-empty-star {
+    top: 0;
+    right: 0;
+
+    font-size: 18px;
+}
+
+
+.detail26-empty-heart {
+    left: 0;
+    bottom: 5px;
+
+    font-size: 18px;
+
+    animation-delay: -2s;
+}
+
+
+.detail26-empty-label {
+    color: var(--pink);
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 1.4px;
+}
+
+
+.detail26-empty h3 {
+    margin:
+            8px 0;
+
+    color: var(--ink);
+
+    font-family: "Nunito", sans-serif;
+
+    font-size: 27px;
+    font-weight: 900;
+}
+
+
+.detail26-empty p {
+    max-width: 500px;
+
+    margin: 0;
+
+    color: #897981;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+.detail26-empty > a {
+    min-height: 43px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 20px;
+
+    padding:
+            10px 17px;
+
+    border-radius: 999px;
+
+    background: var(--pink);
+
+    color: white;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    box-shadow:
+            0 10px 23px
+            rgba(220,67,113,.17);
+
+    transition:
+            transform .3s ease;
+}
+
+
+.detail26-empty > a:hover {
+    transform: translateY(-3px);
+}
+
+
+/* ============================================================
+   FINAL
+   ============================================================ */
+
+.detail26-final {
+    padding:
+            0 0 90px;
+
+    background:
+            #fffaf8;
+}
+
+
+.detail26-final-card {
+    min-height: 265px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 50px;
+
+    padding:
+            45px;
+
+    border:
+            1px solid
+            #efd4dd;
+
+    border-radius:
+            32px 32px 90px 32px;
+
+    background:
+            linear-gradient(
+                    135deg,
+                    #ffe7ee,
+                    #fff1ee
+            );
+}
+
+
+.detail26-final-card > div > span {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: var(--pink-dark);
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 1.4px;
+}
+
+
+.detail26-final-card h2 {
+    max-width: 530px;
+
+    margin: 0;
+
+    color: var(--ink);
+
+    font-family: "Nunito", sans-serif;
+
+    font-size:
+            clamp(32px,4vw,47px);
+
+    font-weight: 900;
+
+    line-height: 1;
+
+    letter-spacing: -2px;
+}
+
+
+.detail26-final-card p {
+    max-width: 450px;
+
+    margin:
+            13px 0 0;
+
+    color: #866f79;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+.detail26-final-card > a {
+    min-height: 47px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    padding:
+            11px 20px;
+
+    border-radius: 999px;
+
+    background: var(--pink);
+
+    color: white;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    white-space: nowrap;
+
+    box-shadow:
+            0 10px 25px
+            rgba(220,68,114,.18);
+
+    transition:
+            transform .3s ease;
+}
+
+
+.detail26-final-card > a:hover {
+    transform: translateY(-4px);
+}
+
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.detail26-footer {
+    padding: 25px 0;
+
+    border-top:
+            1px solid
+            #f1dde3;
+
+    background: #fff4f5;
+}
+
+
+.detail26-footer
+.detail26-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+.detail26-footer strong {
+    color: var(--pink-dark);
+
+    font-family: "Nunito", sans-serif;
+
+    font-size: 16px;
+    font-weight: 900;
+}
+
+
+.detail26-footer p,
+.detail26-footer a {
+    margin: 0;
+
+    color: #99828c;
+
+    font-size: 10px;
+}
+
+
+/* ============================================================
+   ANIMACIONES
+   ============================================================ */
+
+@keyframes detail26Reveal {
+
+    from {
+        opacity: 0;
+
+        transform:
+                translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+                translateY(0);
+    }
+}
+
+
+@keyframes detail26Left {
+
+    from {
+        opacity: 0;
+
+        transform:
+                translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+                translateX(0);
+    }
+}
+
+
+@keyframes detail26Right {
+
+    from {
+        opacity: 0;
+
+        transform:
+                translateX(30px)
+                scale(.97);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+                translateX(0)
+                scale(1);
+    }
+}
+
+
+@keyframes detail26Float {
+
+    0%,
+    100% {
+        transform:
+                translateY(0);
+    }
+
+    50% {
+        transform:
+                translateY(-8px);
+    }
+}
+
+
+@keyframes detail26Shape {
+
+    0%,
+    100% {
+        border-radius:
+                50% 50% 43% 57% /
+            48% 55% 45% 52%;
+    }
+
+    50% {
+        border-radius:
+                56% 44% 52% 48% /
+            45% 50% 50% 55%;
+    }
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 1000px) {
+
+    .detail26-hero-grid {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+
+    .detail26-hero-copy {
+        text-align: center;
+    }
+
+
+    .detail26-eyebrow,
+    .detail26-back {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .detail26-hero-copy p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .detail26-hero-visual {
+        min-height: 390px;
+    }
+
+}
+
+
+/* ============================================================
+   MOVIL
+   ============================================================ */
+
+@media (max-width: 760px) {
+
+    .detail26-container {
+        width:
+                min(100% - 30px,1180px);
+    }
+
+
+    .detail26-menu {
+        display: none;
+    }
+
+
+    .detail26-brand-text span {
+        display: none;
+    }
+
+
+    .detail26-hero {
+        min-height: auto;
+
+        padding:
+                60px 0;
+    }
+
+
+    .detail26-hero h1 {
+        font-size: 49px;
+
+        letter-spacing: -3px;
+    }
+
+
+    .detail26-hero-copy p {
+        font-size: 13px;
+    }
+
+
+    .detail26-shape {
+        width: 310px;
+        height: 310px;
+    }
+
+
+    .detail26-note {
+        display: none;
+    }
+
+
+    .detail26-section-heading {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+
+    .detail26-work-top {
+        grid-template-columns:
+            55px 1fr;
+    }
+
+
+    .detail26-work-date {
+        grid-column:
+                1 / -1;
+
+        align-items: flex-start;
+
+        padding-left: 72px;
+    }
+
+
+    .detail26-file-item {
+        grid-template-columns:
+            46px 1fr;
+    }
+
+
+    .detail26-file-download {
+        grid-column:
+                1 / -1;
+
+        width: 100%;
+
+        justify-content: center;
+    }
+
+
+    .detail26-final-card {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding:
+                35px 27px;
+    }
+
+}
+
+
+/* ============================================================
+   CELULAR PEQUEÑO
+   ============================================================ */
+
+@media (max-width: 450px) {
+
+    .detail26-brand-logo {
+        width: 42px;
+        height: 42px;
+    }
+
+
+    .detail26-login {
+        min-height: 38px;
+
+        padding:
+                8px 11px;
+
+        font-size: 10px;
+    }
+
+
+    .detail26-hero h1 {
+        font-size: 41px;
+    }
+
+
+    .detail26-eyebrow {
+        font-size: 9px;
+    }
+
+
+    .detail26-hero-copy p {
+        font-size: 12px;
+    }
+
+
+    .detail26-shape {
+        width: 275px;
+        height: 275px;
+    }
+
+
+    .detail26-code-card {
+        transform:
+                scale(.85)
+                rotate(-3deg);
+    }
+
+
+    .detail26-work-card {
+        padding: 20px;
+    }
+
+
+    .detail26-work-top {
+        grid-template-columns:
+            1fr;
+
+        align-items: flex-start;
+    }
+
+
+    .detail26-work-number {
+        width: 48px;
+        height: 48px;
+    }
+
+
+    .detail26-work-date {
+        grid-column: auto;
+
+        padding-left: 0;
+    }
+
+
+    .detail26-description p {
+        font-size: 12px;
+    }
+
+
+    .detail26-empty h3 {
+        font-size: 23px;
+    }
+
+
+    .detail26-final-card h2 {
+        font-size: 34px;
+    }
+
+
+    .detail26-footer
+    .detail26-container {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+}
+
+
+/* ============================================================
+   ACCESIBILIDAD
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .detail26-page *,
+    .detail26-page *::before,
+    .detail26-page *::after {
+
+        animation: none !important;
+
+        transition-duration:
+                .01ms !important;
+    }
+}

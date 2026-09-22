@@ -1,0 +1,2266 @@
+/* ============================================================
+   DETALLE DE SEMANA - ESTUDIANTE
+   PORTAFOLIO ABIGAIL 2026
+   ============================================================ */
+
+:root {
+
+    --wd-pink: #ed4f7b;
+    --wd-pink-dark: #d9426d;
+    --wd-pink-soft: #fae2e9;
+
+    --wd-cream: #fcf8f6;
+    --wd-white: #ffffff;
+
+    --wd-lilac: #eee9f7;
+    --wd-green: #e9f1e6;
+    --wd-blue: #e8f0f8;
+    --wd-peach: #faeadf;
+
+    --wd-dark: #302833;
+    --wd-text: #6d6268;
+    --wd-muted: #998c93;
+
+    --wd-border: rgba(106, 77, 89, .10);
+
+    --wd-shadow:
+            0 22px 55px rgba(112, 77, 90, .08);
+}
+
+
+/* ============================================================
+   BASE
+   ============================================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    background: var(--wd-cream);
+}
+
+
+/* ============================================================
+   LAYOUT
+   ============================================================ */
+
+.weekdetail26-layout {
+
+    min-height: 100vh;
+
+    display: grid;
+
+    grid-template-columns:
+        255px minmax(0, 1fr);
+
+    color: var(--wd-dark);
+
+    font-family:
+            "DM Sans",
+            Arial,
+            sans-serif;
+
+    background:
+
+            radial-gradient(
+                    circle at 92% 7%,
+                    rgba(248, 208, 220, .50),
+                    transparent 22%
+            ),
+
+            radial-gradient(
+                    circle at 45% 90%,
+                    rgba(232, 240, 229, .45),
+                    transparent 23%
+            ),
+
+            #fcf8f6;
+}
+
+
+/* ============================================================
+   SIDEBAR
+   ============================================================ */
+
+.weekdetail26-sidebar {
+
+    position: sticky;
+
+    top: 0;
+
+    height: 100vh;
+
+    padding:
+            30px 22px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    border-right:
+            1px solid rgba(113, 77, 90, .08);
+
+    background:
+
+            linear-gradient(
+                    180deg,
+                    #faeeee 0%,
+                    #f8efed 100%
+            );
+}
+
+
+/* ============================================================
+   LOGO
+   ============================================================ */
+
+.weekdetail26-brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 42px;
+
+    color: inherit;
+
+    text-decoration: none;
+}
+
+
+.weekdetail26-brand-logo {
+
+    width: 48px;
+
+    height: 48px;
+
+    display: grid;
+
+    place-items: center;
+
+    border:
+            1px solid rgba(237, 79, 123, .17);
+
+    border-radius: 15px;
+
+    background: white;
+
+    color: var(--wd-pink);
+
+    font-family:
+            "Playfair Display",
+            Georgia,
+            serif;
+
+    font-size: 23px;
+
+    font-weight: 800;
+
+    box-shadow:
+            0 10px 24px rgba(133, 83, 100, .08);
+}
+
+
+.weekdetail26-brand-copy {
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.weekdetail26-brand-copy strong {
+
+    font-family:
+            "Playfair Display",
+            Georgia,
+            serif;
+
+    font-size: 21px;
+
+    line-height: 1;
+}
+
+
+.weekdetail26-brand-copy span {
+
+    margin-top: 6px;
+
+    color: #a17f8a;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.3px;
+}
+
+
+/* ============================================================
+   MENÚ
+   ============================================================ */
+
+.weekdetail26-menu {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.weekdetail26-menu a {
+
+    min-height: 49px;
+
+    padding:
+            0 14px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    border-radius: 14px;
+
+    color: #695f65;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition:
+            transform .25s ease,
+            background .25s ease,
+            color .25s ease;
+}
+
+
+.weekdetail26-menu a:hover {
+
+    transform:
+            translateX(4px);
+
+    background:
+            rgba(255,255,255,.64);
+
+    color:
+            var(--wd-pink);
+}
+
+
+.weekdetail26-menu a.active {
+
+    background: white;
+
+    color:
+            var(--wd-pink);
+
+    box-shadow:
+            0 10px 25px rgba(114,73,89,.08);
+}
+
+
+.weekdetail26-menu-icon {
+
+    width: 29px;
+
+    height: 29px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 9px;
+
+    background:
+            rgba(255,255,255,.68);
+
+    color:
+            var(--wd-pink);
+
+    font-size: 16px;
+}
+
+
+/* ============================================================
+   SIDEBAR BOTTOM
+   ============================================================ */
+
+.weekdetail26-sidebar-bottom {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.weekdetail26-sidebar-bottom > a {
+
+    min-height: 42px;
+
+    padding:
+            0 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    border-radius: 12px;
+
+    color: #71656c;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition:
+            background .25s ease,
+            color .25s ease;
+}
+
+
+.weekdetail26-sidebar-bottom > a:hover {
+
+    background:
+            rgba(255,255,255,.70);
+
+    color:
+            var(--wd-pink);
+}
+
+
+.weekdetail26-sidebar-bottom .logout {
+
+    color:
+            #ad6678;
+}
+
+
+.weekdetail26-user {
+
+    margin-top: 16px;
+
+    padding-top: 19px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    border-top:
+            1px solid rgba(84,59,69,.09);
+}
+
+
+.weekdetail26-user-avatar {
+
+    width: 39px;
+
+    height: 39px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background:
+            var(--wd-pink);
+
+    color: white;
+
+    font-weight: 800;
+}
+
+
+.weekdetail26-user > div:last-child {
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.weekdetail26-user span {
+
+    color: #aa8390;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.3px;
+}
+
+
+.weekdetail26-user strong {
+
+    margin-top: 3px;
+
+    font-family:
+            "Playfair Display",
+            Georgia,
+            serif;
+
+    font-size: 14px;
+}
+
+
+/* ============================================================
+   MAIN
+   ============================================================ */
+
+.weekdetail26-main {
+
+    position: relative;
+
+    min-width: 0;
+
+    padding:
+            52px
+            clamp(30px, 5vw, 78px)
+            70px;
+}
+
+
+/* ============================================================
+   HERO
+   ============================================================ */
+
+.weekdetail26-hero {
+
+    min-height: 330px;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr) 310px;
+
+    align-items: center;
+
+    gap: 55px;
+
+    padding:
+            45px;
+
+    overflow: hidden;
+
+    border:
+            1px solid var(--wd-border);
+
+    border-radius:
+            30px 30px 75px 30px;
+
+    background:
+
+            radial-gradient(
+                    circle at 82% 30%,
+                    rgba(250,213,224,.85),
+                    transparent 33%
+            ),
+
+            linear-gradient(
+                    145deg,
+                    #ffffff,
+                    #fff4f6
+            );
+
+    box-shadow:
+            var(--wd-shadow);
+
+    animation:
+            weekdetail26Enter
+            .65s ease both;
+}
+
+
+.weekdetail26-hero-copy {
+
+    position: relative;
+
+    z-index: 5;
+}
+
+
+.weekdetail26-eyebrow {
+
+    display: inline-flex;
+
+    color:
+            #b36b80;
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.8px;
+}
+
+
+.weekdetail26-hero h1 {
+
+    max-width: 700px;
+
+    margin:
+            12px 0;
+
+    color:
+            var(--wd-dark);
+
+    font-family:
+            "Playfair Display",
+            Georgia,
+            serif;
+
+    font-size:
+            clamp(43px, 4.5vw, 62px);
+
+    line-height: 1;
+
+    letter-spacing: -2px;
+}
+
+
+.weekdetail26-hero-copy > p {
+
+    max-width: 650px;
+
+    margin: 0;
+
+    color:
+            var(--wd-text);
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* ============================================================
+   HERO BOTONES
+   ============================================================ */
+
+.weekdetail26-hero-actions {
+
+    margin-top: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+}
+
+
+.weekdetail26-primary,
+.weekdetail26-secondary {
+
+    min-height: 47px;
+
+    padding:
+            0 19px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    border-radius: 14px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    transition:
+            transform .25s ease,
+            box-shadow .25s ease;
+}
+
+
+.weekdetail26-primary {
+
+    color: white;
+
+    background:
+
+            linear-gradient(
+                    135deg,
+                    #ef5a83,
+                    #e74573
+            );
+
+    box-shadow:
+            0 12px 27px rgba(230,69,115,.20);
+}
+
+
+.weekdetail26-secondary {
+
+    color: #76626b;
+
+    background:
+            rgba(255,255,255,.78);
+
+    border:
+            1px solid rgba(130,91,106,.15);
+}
+
+
+.weekdetail26-primary:hover,
+.weekdetail26-secondary:hover {
+
+    transform:
+            translateY(-3px);
+}
+
+
+/* ============================================================
+   HERO ART
+   ============================================================ */
+
+.weekdetail26-hero-art {
+
+    position: relative;
+
+    min-height: 235px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.weekdetail26-shape {
+
+    position: relative;
+
+    width: 220px;
+
+    height: 220px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius:
+            50% 50% 43% 57% /
+        50% 45% 55% 50%;
+
+    background:
+
+            linear-gradient(
+                    145deg,
+                    #f7d7e1,
+                    #f4e8ec
+            );
+
+    animation:
+            weekdetail26Shape
+            8s ease-in-out infinite;
+}
+
+
+.weekdetail26-shape-label {
+
+    color: #b87889;
+
+    font-size: 8px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+}
+
+
+.weekdetail26-shape > strong {
+
+    color:
+            rgba(64,47,56,.20);
+
+    font-family:
+            "Playfair Display",
+            Georgia,
+            serif;
+
+    font-size: 62px;
+
+    line-height: 1;
+}
+
+
+.weekdetail26-code {
+
+    width: 79px;
+
+    height: 62px;
+
+    margin-top: 5px;
+
+    display: grid;
+
+    place-items: center;
+
+    border:
+            4px solid rgba(255,255,255,.70);
+
+    border-radius: 17px;
+
+    background:
+            rgba(255,255,255,.62);
+
+    color:
+            var(--wd-pink);
+
+    font-family: monospace;
+
+    font-size: 20px;
+
+    font-weight: 900;
+
+    box-shadow:
+            0 12px 25px rgba(85,59,70,.08);
+}
+
+
+.weekdetail26-note {
+
+    position: absolute;
+
+    top: 7px;
+
+    right: -15px;
+
+    min-width: 110px;
+
+    padding:
+            14px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    border:
+            1px solid rgba(209,125,148,.15);
+
+    border-radius:
+            17px 17px 35px 17px;
+
+    background:
+            rgba(255,255,255,.90);
+
+    box-shadow:
+            0 13px 28px rgba(80,53,65,.10);
+
+    animation:
+            weekdetail26Float
+            5s ease-in-out infinite;
+}
+
+
+.weekdetail26-note span {
+
+    margin-bottom: 5px;
+
+    color: #af7a89;
+
+    font-size: 7px;
+
+    font-weight: 900;
+}
+
+
+.weekdetail26-note strong {
+
+    color: #625159;
+
+    font-family:
+            "Playfair Display",
+            Georgia,
+            serif;
+
+    font-size: 13px;
+}
+
+
+.weekdetail26-note small {
+
+    margin-top: 5px;
+
+    color:
+            var(--wd-pink);
+
+    text-align: center;
+}
+
+
+/* ============================================================
+   DECORACIONES
+   ============================================================ */
+
+.weekdetail26-star {
+
+    position: absolute;
+
+    color:
+            #e7a2b5;
+
+    pointer-events: none;
+
+    animation:
+            weekdetail26Float
+            4s ease-in-out infinite;
+}
+
+
+.weekdetail26-star.star-one {
+
+    top: 30px;
+
+    right: 7%;
+
+    font-size: 20px;
+}
+
+
+.weekdetail26-star.star-two {
+
+    top: 400px;
+
+    right: 3%;
+
+    font-size: 17px;
+}
+
+
+/* ============================================================
+   ALERTAS
+   ============================================================ */
+
+.weekdetail26-alert {
+
+    margin-bottom: 20px;
+
+    padding:
+            14px 17px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 11px;
+
+    border-radius: 14px;
+
+    font-size: 12px;
+}
+
+
+.weekdetail26-alert strong {
+
+    display: block;
+
+    margin-bottom: 3px;
+}
+
+
+.weekdetail26-alert p {
+
+    margin: 0;
+}
+
+
+.weekdetail26-alert.success {
+
+    background:
+            #edf5ea;
+
+    color:
+            #587253;
+
+    border:
+            1px solid #d8e6d4;
+}
+
+
+.weekdetail26-alert.error {
+
+    background:
+            #fff0f3;
+
+    color:
+            #a24f66;
+
+    border:
+            1px solid #efd1d9;
+}
+
+
+/* ============================================================
+   ENCABEZADO SECCIÓN
+   ============================================================ */
+
+.weekdetail26-section-heading {
+
+    margin:
+            45px 0 22px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+.weekdetail26-section-heading > div > span {
+
+    color:
+            var(--wd-pink);
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.6px;
+}
+
+
+.weekdetail26-section-heading h2 {
+
+    margin:
+            5px 0 0;
+
+    color:
+            var(--wd-dark);
+
+    font-family:
+            "Playfair Display",
+            Georgia,
+            serif;
+
+    font-size: 32px;
+}
+
+
+.weekdetail26-section-heading > p {
+
+    max-width: 400px;
+
+    margin: 0;
+
+    color:
+            var(--wd-muted);
+
+    text-align: right;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+
+/* ============================================================
+   LISTA
+   ============================================================ */
+
+.weekdetail26-work-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 22px;
+}
+
+
+/* ============================================================
+   TRABAJO
+   ============================================================ */
+
+.weekdetail26-work-card {
+
+    overflow: hidden;
+
+    padding: 28px;
+
+    border:
+            1px solid var(--wd-border);
+
+    border-radius:
+            25px 25px 55px 25px;
+
+    background: white;
+
+    box-shadow:
+            0 15px 38px rgba(91,65,76,.06);
+
+    transition:
+            transform .3s ease,
+            box-shadow .3s ease;
+
+    animation:
+            weekdetail26Enter
+            .55s ease both;
+}
+
+
+.weekdetail26-work-card:hover {
+
+    transform:
+            translateY(-5px);
+
+    box-shadow:
+            0 23px 50px rgba(91,65,76,.10);
+}
+
+
+/* ============================================================
+   WORK TOP
+   ============================================================ */
+
+.weekdetail26-work-top {
+
+    display: grid;
+
+    grid-template-columns:
+        60px minmax(0,1fr) auto;
+
+    align-items: center;
+
+    gap: 17px;
+
+    padding-bottom: 20px;
+
+    border-bottom:
+            1px solid #f0e5e8;
+}
+
+
+.weekdetail26-work-number {
+
+    width: 56px;
+
+    height: 56px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius:
+            15px 15px 27px 15px;
+
+    background:
+            var(--wd-pink-soft);
+
+    color:
+            #ad5d74;
+
+    font-family:
+            "Playfair Display",
+            Georgia,
+            serif;
+
+    font-size: 19px;
+
+    font-weight: 800;
+}
+
+
+.weekdetail26-work-title > span {
+
+    color:
+            var(--wd-pink);
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+}
+
+
+.weekdetail26-work-title h3 {
+
+    margin:
+            5px 0 0;
+
+    color:
+            var(--wd-dark);
+
+    font-family:
+            "Playfair Display",
+            Georgia,
+            serif;
+
+    font-size: 24px;
+
+    line-height: 1.15;
+}
+
+
+.weekdetail26-date {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+}
+
+
+.weekdetail26-date span {
+
+    color:
+            #ad949d;
+
+    font-size: 8px;
+
+    font-weight: 900;
+}
+
+
+.weekdetail26-date strong {
+
+    margin-top: 3px;
+
+    color:
+            #77636c;
+
+    font-size: 11px;
+}
+
+
+/* ============================================================
+   DESCRIPCIÓN
+   ============================================================ */
+
+.weekdetail26-description {
+
+    padding:
+            20px 0 3px;
+}
+
+
+.weekdetail26-description > span {
+
+    color:
+            #ac7182;
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.3px;
+}
+
+
+.weekdetail26-description p {
+
+    margin:
+            7px 0 0;
+
+    color:
+            var(--wd-text);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* ============================================================
+   BLOQUES
+   ============================================================ */
+
+.weekdetail26-content-block {
+
+    margin-top: 20px;
+
+    padding-top: 19px;
+
+    border-top:
+            1px solid #f0e5e8;
+}
+
+
+.weekdetail26-block-heading {
+
+    margin-bottom: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.weekdetail26-block-icon {
+
+    width: 38px;
+
+    height: 38px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius:
+            12px 12px 21px 12px;
+
+    background:
+            var(--wd-pink-soft);
+
+    color:
+            var(--wd-pink);
+
+    font-size: 16px;
+}
+
+
+.weekdetail26-block-icon.link {
+
+    background:
+            var(--wd-blue);
+
+    color:
+            #668398;
+}
+
+
+.weekdetail26-block-heading > div:last-child {
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.weekdetail26-block-heading span {
+
+    color:
+            #ad7887;
+
+    font-size: 8px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.3px;
+}
+
+
+.weekdetail26-block-heading strong {
+
+    margin-top: 2px;
+
+    color:
+            #625159;
+
+    font-size: 12px;
+}
+
+
+/* ============================================================
+   ARCHIVOS
+   ============================================================ */
+
+.weekdetail26-file-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+}
+
+
+.weekdetail26-file {
+
+    min-height: 67px;
+
+    padding:
+            10px 13px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    border:
+            1px solid #eee2e5;
+
+    border-radius: 13px;
+
+    background:
+            #fffafa;
+
+    transition:
+            transform .25s ease,
+            background .25s ease;
+}
+
+
+.weekdetail26-file:hover {
+
+    transform:
+            translateX(4px);
+
+    background:
+            white;
+}
+
+
+.weekdetail26-file-info {
+
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+}
+
+
+.weekdetail26-file-icon {
+
+    width: 42px;
+
+    height: 42px;
+
+    min-width: 42px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 11px;
+
+    background:
+            #f7e7eb;
+}
+
+
+.weekdetail26-file-info > div:last-child {
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.weekdetail26-file-info strong {
+
+    overflow: hidden;
+
+    color:
+            #584950;
+
+    font-size: 12px;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+}
+
+
+.weekdetail26-file-info span {
+
+    margin-top: 2px;
+
+    color:
+            #9b8990;
+
+    font-size: 9px;
+}
+
+
+.weekdetail26-download {
+
+    padding:
+            8px 12px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    border-radius: 999px;
+
+    background:
+            var(--wd-pink-soft);
+
+    color:
+            var(--wd-pink-dark);
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    font-weight: 800;
+}
+
+
+/* ============================================================
+   SIN ARCHIVOS
+   ============================================================ */
+
+.weekdetail26-no-file {
+
+    min-height: 65px;
+
+    padding:
+            13px 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    border:
+            1px dashed #e3cbd2;
+
+    border-radius: 13px;
+
+    background:
+            #fff9fa;
+
+    color:
+            #94848b;
+
+    font-size: 11px;
+}
+
+
+.weekdetail26-no-file > span {
+
+    font-size: 19px;
+}
+
+
+/* ============================================================
+   ENLACE
+   ============================================================ */
+
+.weekdetail26-external {
+
+    min-height: 59px;
+
+    padding:
+            12px 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    border:
+            1px solid #dae5ec;
+
+    border-radius: 13px;
+
+    background:
+            #f4f8fb;
+
+    color:
+            #617d8d;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    transition:
+            transform .25s ease;
+}
+
+
+.weekdetail26-external:hover {
+
+    transform:
+            translateX(4px);
+}
+
+
+.weekdetail26-external > div {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+/* ============================================================
+   FOOTER DEL TRABAJO
+   ============================================================ */
+
+.weekdetail26-work-footer {
+
+    margin-top: 23px;
+
+    padding-top: 17px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 18px;
+
+    border-top:
+            1px solid #eee4e7;
+}
+
+
+.weekdetail26-work-footer > span {
+
+    color:
+            #a18f96;
+
+    font-size: 9px;
+
+    font-weight: 700;
+}
+
+
+.weekdetail26-management {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+.weekdetail26-management form {
+
+    margin: 0;
+}
+
+
+.weekdetail26-edit,
+.weekdetail26-delete {
+
+    min-height: 38px;
+
+    padding:
+            0 13px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 6px;
+
+    border-radius: 11px;
+
+    font-family:
+            "DM Sans",
+            Arial,
+            sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+            transform .25s ease,
+            background .25s ease;
+}
+
+
+.weekdetail26-edit {
+
+    color:
+            #76628b;
+
+    background:
+            var(--wd-lilac);
+
+    border:
+            1px solid #e3dbef;
+
+    text-decoration: none;
+}
+
+
+.weekdetail26-delete {
+
+    color:
+            #af596e;
+
+    background:
+            #fff0f3;
+
+    border:
+            1px solid #efd3da;
+}
+
+
+.weekdetail26-edit:hover,
+.weekdetail26-delete:hover {
+
+    transform:
+            translateY(-2px);
+}
+
+
+/* ============================================================
+   VACÍO
+   ============================================================ */
+
+.weekdetail26-empty {
+
+    min-height: 390px;
+
+    padding:
+            45px 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    border:
+            1px solid rgba(131,91,106,.09);
+
+    border-radius:
+            30px 30px 75px 30px;
+
+    background:
+
+            radial-gradient(
+                    circle at 20% 10%,
+                    rgba(232,240,229,.65),
+                    transparent 25%
+            ),
+
+            linear-gradient(
+                    135deg,
+                    #fff,
+                    #fdf0f4 55%,
+                    #f3eef9
+            );
+
+    text-align: center;
+
+    box-shadow:
+            var(--wd-shadow);
+}
+
+
+.weekdetail26-empty-art {
+
+    position: relative;
+
+    width: 120px;
+
+    height: 100px;
+
+    margin-bottom: 10px;
+}
+
+
+.weekdetail26-empty-folder {
+
+    width: 92px;
+
+    height: 78px;
+
+    margin: auto;
+
+    display: grid;
+
+    place-items: center;
+
+    border:
+            4px solid white;
+
+    border-radius:
+            17px 17px 29px 17px;
+
+    background:
+            var(--wd-pink-soft);
+
+    color:
+            var(--wd-pink);
+
+    font-size: 25px;
+
+    box-shadow:
+            0 15px 28px rgba(91,63,75,.09);
+
+    transform:
+            rotate(-4deg);
+}
+
+
+.weekdetail26-empty-star {
+
+    position: absolute;
+
+    top: 0;
+
+    right: 0;
+
+    color:
+            #d998aa;
+
+    font-size: 20px;
+
+    animation:
+            weekdetail26Float
+            4s ease-in-out infinite;
+}
+
+
+.weekdetail26-empty-label {
+
+    color:
+            var(--wd-pink);
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.7px;
+}
+
+
+.weekdetail26-empty h2 {
+
+    margin:
+            8px 0 10px;
+
+    color:
+            var(--wd-dark);
+
+    font-family:
+            "Playfair Display",
+            Georgia,
+            serif;
+
+    font-size: 35px;
+}
+
+
+.weekdetail26-empty h2 em {
+
+    color:
+            var(--wd-pink);
+
+    font-weight: 500;
+}
+
+
+.weekdetail26-empty > p {
+
+    max-width: 500px;
+
+    margin:
+            0 0 21px;
+
+    color:
+            var(--wd-text);
+
+    font-size: 13px;
+
+    line-height: 1.75;
+}
+
+
+/* ============================================================
+   FINAL
+   ============================================================ */
+
+.weekdetail26-bottom {
+
+    min-height: 190px;
+
+    margin-top: 30px;
+
+    padding:
+            32px 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 40px;
+
+    border:
+            1px solid rgba(111,79,91,.08);
+
+    border-radius:
+            26px 26px 65px 26px;
+
+    background:
+
+            linear-gradient(
+                    120deg,
+                    #f8e7ec,
+                    #f4edf7,
+                    #eaf1e7
+            );
+}
+
+
+.weekdetail26-bottom > div > span {
+
+    color:
+            #ab7182;
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+}
+
+
+.weekdetail26-bottom h2 {
+
+    margin:
+            6px 0;
+
+    color:
+            var(--wd-dark);
+
+    font-family:
+            "Playfair Display",
+            Georgia,
+            serif;
+
+    font-size: 29px;
+}
+
+
+.weekdetail26-bottom p {
+
+    margin: 0;
+
+    color:
+            #786b71;
+
+    font-size: 12px;
+}
+
+
+.weekdetail26-bottom > a {
+
+    min-height: 44px;
+
+    padding:
+            0 17px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    border-radius: 999px;
+
+    background:
+            white;
+
+    color:
+            #a05c70;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    white-space: nowrap;
+
+    box-shadow:
+            0 10px 22px rgba(92,65,76,.07);
+
+    transition:
+            transform .25s ease;
+}
+
+
+.weekdetail26-bottom > a:hover {
+
+    transform:
+            translateY(-3px);
+}
+
+
+/* ============================================================
+   ANIMACIONES
+   ============================================================ */
+
+@keyframes weekdetail26Enter {
+
+    from {
+        opacity: 0;
+
+        transform:
+                translateY(17px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+                translateY(0);
+    }
+}
+
+
+@keyframes weekdetail26Float {
+
+    0%,
+    100% {
+        transform:
+                translateY(0);
+    }
+
+    50% {
+        transform:
+                translateY(-7px);
+    }
+}
+
+
+@keyframes weekdetail26Shape {
+
+    0%,
+    100% {
+
+        border-radius:
+                50% 50% 43% 57% /
+            50% 45% 55% 50%;
+    }
+
+    50% {
+
+        border-radius:
+                56% 44% 51% 49% /
+            45% 52% 48% 55%;
+    }
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 1050px) {
+
+    .weekdetail26-layout {
+
+        grid-template-columns:
+            220px minmax(0,1fr);
+    }
+
+
+    .weekdetail26-main {
+
+        padding:
+                45px 35px 60px;
+    }
+
+
+    .weekdetail26-hero {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .weekdetail26-hero-art {
+
+        display: none;
+    }
+}
+
+
+/* ============================================================
+   MÓVIL
+   ============================================================ */
+
+@media (max-width: 850px) {
+
+    .weekdetail26-layout {
+
+        display: block;
+    }
+
+
+    .weekdetail26-sidebar {
+
+        position: relative;
+
+        width: 100%;
+
+        height: auto;
+
+        padding: 18px;
+    }
+
+
+    .weekdetail26-brand {
+
+        margin-bottom: 17px;
+    }
+
+
+    .weekdetail26-menu {
+
+        flex-direction: row;
+
+        overflow-x: auto;
+    }
+
+
+    .weekdetail26-menu a {
+
+        flex: 0 0 auto;
+    }
+
+
+    .weekdetail26-sidebar-bottom {
+
+        margin-top: 15px;
+
+        flex-direction: row;
+
+        flex-wrap: wrap;
+    }
+
+
+    .weekdetail26-user {
+
+        width: 100%;
+    }
+
+
+    .weekdetail26-section-heading {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+
+    .weekdetail26-section-heading > p {
+
+        text-align: left;
+    }
+}
+
+
+/* ============================================================
+   CELULAR PEQUEÑO
+   ============================================================ */
+
+@media (max-width: 650px) {
+
+    .weekdetail26-main {
+
+        padding:
+                34px 17px 45px;
+    }
+
+
+    .weekdetail26-hero {
+
+        min-height: auto;
+
+        padding:
+                30px 23px;
+
+        border-radius:
+                23px 23px 55px 23px;
+    }
+
+
+    .weekdetail26-hero h1 {
+
+        font-size: 41px;
+    }
+
+
+    .weekdetail26-hero-copy > p {
+
+        font-size: 13px;
+    }
+
+
+    .weekdetail26-hero-actions {
+
+        align-items: stretch;
+
+        flex-direction: column;
+    }
+
+
+    .weekdetail26-primary,
+    .weekdetail26-secondary {
+
+        width: 100%;
+    }
+
+
+    .weekdetail26-work-card {
+
+        padding:
+                21px 18px;
+    }
+
+
+    .weekdetail26-work-top {
+
+        grid-template-columns:
+            55px minmax(0,1fr);
+    }
+
+
+    .weekdetail26-date {
+
+        grid-column:
+                1 / -1;
+
+        align-items: flex-start;
+
+        padding-left: 72px;
+    }
+
+
+    .weekdetail26-file {
+
+        align-items: stretch;
+
+        flex-direction: column;
+    }
+
+
+    .weekdetail26-download {
+
+        justify-content: center;
+    }
+
+
+    .weekdetail26-work-footer {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .weekdetail26-management {
+
+        width: 100%;
+
+        flex-direction: column;
+    }
+
+
+    .weekdetail26-management form {
+
+        width: 100%;
+    }
+
+
+    .weekdetail26-edit,
+    .weekdetail26-delete {
+
+        width: 100%;
+    }
+
+
+    .weekdetail26-bottom {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        padding:
+                27px 23px;
+    }
+}
+
+
+/* ============================================================
+   MENOS MOVIMIENTO
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .weekdetail26-layout *,
+    .weekdetail26-layout *::before,
+    .weekdetail26-layout *::after {
+
+        animation: none !important;
+
+        transition: none !important;
+    }
+}
