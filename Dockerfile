@@ -1,6 +1,7 @@
 FROM maven:3.9.6-eclipse-temurin-21 AS build
 WORKDIR /app
-COPY portafolio/ .
+COPY portafolio/pom.xml .
+COPY portafolio/src ./src
 RUN mvn clean package -DskipTests
 
 FROM tomcat:jdk21-temurin
