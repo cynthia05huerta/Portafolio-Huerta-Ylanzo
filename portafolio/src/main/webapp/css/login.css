@@ -1,0 +1,1347 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800;900&display=swap');
+
+
+/* ============================================================
+   LOGIN 2026
+   PORTAFOLIO ACADÉMICO
+   ============================================================ */
+
+.login26-body {
+    margin: 0;
+
+    min-height: 100vh;
+
+    background: #fff8f5;
+
+    font-family:
+            "DM Sans",
+            sans-serif;
+
+    color: #352d3a;
+}
+
+
+.login26-body * {
+    box-sizing: border-box;
+}
+
+
+/* ============================================================
+   LAYOUT
+   ============================================================ */
+
+.login26-page {
+    width: 100%;
+
+    min-height: 100vh;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+}
+
+
+/* ============================================================
+   LADO IZQUIERDO
+   ============================================================ */
+
+.login26-visual {
+    position: relative;
+
+    min-height: 100vh;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding:
+            55px;
+
+    background:
+            radial-gradient(
+                    circle at 70% 40%,
+                    rgba(255, 201, 217, .60),
+                    transparent 35%
+            ),
+            linear-gradient(
+                    145deg,
+                    #fff3f6,
+                    #fff8f5
+            );
+}
+
+
+.login26-visual-content {
+    position: relative;
+
+    z-index: 5;
+
+    width: 100%;
+
+    max-width: 580px;
+}
+
+
+/* ============================================================
+   BRAND
+   ============================================================ */
+
+.login26-brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    margin-bottom:
+            60px;
+}
+
+
+.login26-logo {
+    width: 50px;
+
+    height: 50px;
+
+    display: grid;
+
+    place-items: center;
+
+    overflow: hidden;
+
+    padding: 4px;
+
+    border:
+            1px solid
+            #efd4dd;
+
+    border-radius: 14px;
+
+    background: white;
+
+    box-shadow:
+            0 9px 22px
+            rgba(219, 68, 115, .10);
+}
+
+
+.login26-logo img {
+    width: 100% !important;
+
+    height: 100% !important;
+
+    display: block;
+
+    object-fit: contain;
+}
+
+
+.login26-brand > div:last-child {
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.login26-brand strong {
+    color: #352d3a;
+
+    font-family:
+            "Nunito",
+            sans-serif;
+
+    font-size: 19px;
+
+    font-weight: 900;
+}
+
+
+.login26-brand span {
+    margin-top: -2px;
+
+    color: #a0939b;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: .8px;
+
+    text-transform: uppercase;
+}
+
+
+/* ============================================================
+   MENSAJE IZQUIERDO
+   ============================================================ */
+
+.login26-message > span {
+    display: inline-block;
+
+    margin-bottom:
+            15px;
+
+    color: #df557f;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing:
+            1.5px;
+}
+
+
+.login26-message h2 {
+    max-width: 480px;
+
+    margin: 0;
+
+    color: #352d3a;
+
+    font-family:
+            "Nunito",
+            sans-serif;
+
+    font-size:
+            clamp(52px,5vw,76px);
+
+    font-weight: 900;
+
+    line-height: .88;
+
+    letter-spacing:
+            -4px;
+}
+
+
+.login26-message h2 em {
+    color: #ef5f8c;
+
+    font-style: normal;
+}
+
+
+.login26-message p {
+    max-width: 480px;
+
+    margin:
+            25px 0 0;
+
+    color: #776970;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* ============================================================
+   ILUSTRACIÓN
+   ============================================================ */
+
+.login26-illustration {
+    position: relative;
+
+    height: 290px;
+
+    margin-top:
+            30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.login26-circle {
+    position: absolute;
+
+    width: 260px;
+
+    height: 260px;
+
+    border-radius:
+            50% 50% 42% 58% /
+        48% 54% 46% 52%;
+
+    background:
+            linear-gradient(
+                    145deg,
+                    #ffdce7,
+                    #f7c5d7
+            );
+
+    animation:
+            login26Shape
+            8s ease-in-out infinite;
+}
+
+
+/* ============================================================
+   LAPTOP
+   ============================================================ */
+
+.login26-laptop {
+    position: relative;
+
+    z-index: 3;
+
+    width: 205px;
+
+    height: 150px;
+}
+
+
+.login26-screen {
+    width: 190px;
+
+    height: 125px;
+
+    margin: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+            7px solid
+            rgba(255,255,255,.80);
+
+    border-radius: 18px;
+
+    background:
+            rgba(255,255,255,.70);
+
+    box-shadow:
+            0 18px 40px
+            rgba(80,48,62,.12);
+
+    transform: rotate(-3deg);
+}
+
+
+.login26-screen > span {
+    color: #ef5f8c;
+
+    font-family:
+            "Nunito",
+            sans-serif;
+
+    font-size: 33px;
+
+    font-weight: 900;
+}
+
+
+.login26-screen small {
+    margin-top: 5px;
+
+    color: #9f7b88;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing:
+            1.3px;
+}
+
+
+.login26-base {
+    width: 210px;
+
+    height: 10px;
+
+    margin-top: -1px;
+
+    border-radius:
+            2px 2px 13px 13px;
+
+    background: #f5ecef;
+
+    box-shadow:
+            0 8px 17px
+            rgba(80,48,61,.08);
+}
+
+
+/* ============================================================
+   NOTA FLOTANTE
+   ============================================================ */
+
+.login26-note {
+    position: absolute;
+
+    z-index: 6;
+
+    top: 25px;
+
+    right: 5px;
+
+    min-width: 110px;
+
+    padding: 15px;
+
+    border:
+            1px solid
+            rgba(215,93,130,.13);
+
+    border-radius:
+            18px 18px 36px 18px;
+
+    background:
+            rgba(255,253,251,.93);
+
+    box-shadow:
+            0 14px 30px
+            rgba(88,52,67,.10);
+
+    backdrop-filter:
+            blur(10px);
+
+    animation:
+            login26Float
+            5s ease-in-out infinite;
+}
+
+
+.login26-note > span {
+    display: block;
+
+    margin-bottom:
+            5px;
+
+    color: #b67f91;
+
+    font-size: 8px;
+
+    font-weight: 800;
+}
+
+
+.login26-note strong {
+    display: block;
+
+    color: #624b56;
+
+    font-family:
+            "Nunito",
+            sans-serif;
+
+    font-size: 12px;
+
+    line-height: 1.4;
+}
+
+
+.login26-note small {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #ef5f8c;
+
+    text-align: center;
+}
+
+
+/* ============================================================
+   FORM SIDE
+   ============================================================ */
+
+.login26-form-side {
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding:
+            50px 45px;
+
+    background:
+            #fffdfb;
+}
+
+
+/* ============================================================
+   CARD
+   ============================================================ */
+
+.login26-card {
+    width: 100%;
+
+    max-width: 525px;
+
+    padding:
+            42px;
+
+    border:
+            1px solid
+            #eedce1;
+
+    border-radius:
+            30px 30px 80px 30px;
+
+    background:
+            white;
+
+    box-shadow:
+            0 24px 65px
+            rgba(88,48,64,.09);
+
+    animation:
+            login26Card
+            .75s ease both;
+}
+
+
+/* ============================================================
+   HEADING
+   ============================================================ */
+
+.login26-heading > span {
+    display: block;
+
+    margin-bottom:
+            10px;
+
+    color: #df557f;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing:
+            1.5px;
+}
+
+
+.login26-heading h1 {
+    margin: 0;
+
+    color: #352d3a;
+
+    font-family:
+            "Nunito",
+            sans-serif;
+
+    font-size: 46px;
+
+    font-weight: 900;
+
+    line-height: 1;
+
+    letter-spacing:
+            -2px;
+}
+
+
+.login26-heading p {
+    max-width: 430px;
+
+    margin:
+            14px 0 28px;
+
+    color: #83747c;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* ============================================================
+   ERROR
+   ============================================================ */
+
+.login26-error {
+    display: grid;
+
+    grid-template-columns:
+        38px 1fr;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom:
+            22px;
+
+    padding:
+            13px 15px;
+
+    border:
+            1px solid
+            #e9bdc8;
+
+    border-radius: 14px;
+
+    background: #fff0f3;
+
+    color: #814050;
+}
+
+
+.login26-error-icon {
+    width: 34px;
+
+    height: 34px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 11px;
+
+    background: #ffdbe4;
+
+    color: #c9506d;
+
+    font-size: 16px;
+
+    font-weight: 900;
+}
+
+
+.login26-error strong {
+    display: block;
+
+    font-size: 13px;
+}
+
+
+.login26-error p {
+    margin:
+            3px 0 0;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+/* ============================================================
+   FORM
+   ============================================================ */
+
+.login26-form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 19px;
+}
+
+
+.login26-field > label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #59464f;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+/* ============================================================
+   INPUTS
+   ============================================================ */
+
+.login26-input-wrap {
+    position: relative;
+}
+
+
+.login26-input-icon {
+    position: absolute;
+
+    left: 15px;
+
+    top: 50%;
+
+    transform:
+            translateY(-50%);
+
+    color: #d86a8b;
+
+    font-size: 14px;
+
+    font-weight: 800;
+}
+
+
+.login26-input-wrap input {
+    width: 100%;
+
+    height: 52px;
+
+    padding:
+            0 15px 0 42px;
+
+    border:
+            1px solid
+            #e5cfd5;
+
+    border-radius: 14px;
+
+    outline: none;
+
+    background:
+            #fffafa;
+
+    color: #43343b;
+
+    font-family:
+            "DM Sans",
+            sans-serif;
+
+    font-size: 14px;
+
+    transition:
+            border-color .25s ease,
+            box-shadow .25s ease,
+            background .25s ease;
+}
+
+
+.login26-input-wrap input::placeholder {
+    color: #ad9ca3;
+}
+
+
+.login26-input-wrap input:focus {
+    border-color:
+            #e584a1;
+
+    background: white;
+
+    box-shadow:
+            0 0 0 4px
+            rgba(239,95,140,.08);
+}
+
+
+/* ============================================================
+   ROLES
+   ============================================================ */
+
+.login26-role-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap: 11px;
+}
+
+
+.login26-role-card {
+    position: relative;
+
+    min-height: 105px;
+
+    display: grid;
+
+    grid-template-columns:
+        48px 1fr;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 14px;
+
+    border:
+            1px solid
+            #ead8dd;
+
+    border-radius:
+            17px 17px 34px 17px;
+
+    background:
+            #fffafa;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    font-family:
+            "DM Sans",
+            sans-serif;
+
+    transition:
+            transform .25s ease,
+            border-color .25s ease,
+            box-shadow .25s ease,
+            background .25s ease;
+}
+
+
+.login26-role-card:hover {
+    transform:
+            translateY(-4px);
+
+    border-color:
+            #e4a6b7;
+
+    box-shadow:
+            0 10px 23px
+            rgba(91,58,70,.07);
+}
+
+
+.login26-role-card.active {
+    border-color:
+            #ef6b92;
+
+    background:
+            linear-gradient(
+                    145deg,
+                    #ffe7ee,
+                    #fff4f6
+            );
+
+    box-shadow:
+            0 12px 27px
+            rgba(215,78,119,.10);
+}
+
+
+/* ============================================================
+   ROLE ICON
+   ============================================================ */
+
+.login26-role-icon {
+    width: 45px;
+
+    height: 45px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius:
+            13px 13px 24px 13px;
+
+    font-size: 22px;
+}
+
+
+.login26-role-icon.student {
+    background:
+            #f4e7fa;
+}
+
+
+.login26-role-icon.teacher {
+    background:
+            #e8f1e4;
+}
+
+
+.login26-role-card strong {
+    display: block;
+
+    color: #4a3941;
+
+    font-size: 14px;
+}
+
+
+.login26-role-card small {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #8c7b83;
+
+    font-size: 10px;
+
+    line-height: 1.4;
+}
+
+
+/* CHECK */
+
+.login26-role-check {
+    position: absolute;
+
+    top: 10px;
+
+    right: 10px;
+
+    width: 20px;
+
+    height: 20px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: #ef5f8c;
+
+    color: white;
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    opacity: 0;
+
+    transform:
+            scale(.6);
+
+    transition:
+            opacity .25s ease,
+            transform .25s ease;
+}
+
+
+.login26-role-card.active
+.login26-role-check {
+    opacity: 1;
+
+    transform:
+            scale(1);
+}
+
+
+/* ============================================================
+   SUBMIT
+   ============================================================ */
+
+.login26-submit {
+    width: 100%;
+
+    min-height: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 11px;
+
+    margin-top: 4px;
+
+    border: 0;
+
+    border-radius:
+            999px;
+
+    background:
+            linear-gradient(
+                    135deg,
+                    #ef668f,
+                    #dc4475
+            );
+
+    color: white;
+
+    font-family:
+            "DM Sans",
+            sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    box-shadow:
+            0 12px 28px
+            rgba(221,69,115,.20);
+
+    transition:
+            transform .3s ease,
+            box-shadow .3s ease;
+}
+
+
+.login26-submit > span {
+    font-size: 16px;
+
+    transition:
+            transform .25s ease;
+}
+
+
+.login26-submit:hover {
+    transform:
+            translateY(-3px);
+
+    box-shadow:
+            0 17px 35px
+            rgba(221,69,115,.28);
+}
+
+
+.login26-submit:hover > span {
+    transform:
+            translateX(4px);
+}
+
+
+/* ============================================================
+   BACK
+   ============================================================ */
+
+.login26-back {
+    width: fit-content;
+
+    display: block;
+
+    margin:
+            23px auto 0;
+
+    color: #b85470;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+            transform .25s ease;
+}
+
+
+.login26-back:hover {
+    transform:
+            translateX(-3px);
+}
+
+
+/* ============================================================
+   NOTE
+   ============================================================ */
+
+.login26-small-note {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 6px;
+
+    margin-top:
+            18px;
+
+    padding-top:
+            17px;
+
+    border-top:
+            1px solid
+            #f1e4e7;
+
+    color: #a18d95;
+
+    font-size: 10px;
+}
+
+
+.login26-small-note span {
+    color: #ef5f8c;
+}
+
+
+/* ============================================================
+   DECORACIONES
+   ============================================================ */
+
+.login26-shape {
+    position: absolute;
+
+    border-radius: 50%;
+}
+
+
+.shape-one {
+    width: 300px;
+
+    height: 300px;
+
+    left: -160px;
+
+    bottom: -150px;
+
+    background:
+            rgba(232,241,228,.75);
+}
+
+
+.shape-two {
+    width: 320px;
+
+    height: 320px;
+
+    right: -180px;
+
+    top: -170px;
+
+    background:
+            rgba(238,232,250,.70);
+}
+
+
+.login26-star {
+    position: absolute;
+
+    color: #ee8dab;
+
+    opacity: .65;
+
+    animation:
+            login26Float
+            5s ease-in-out infinite;
+}
+
+
+.star-one {
+    top: 95px;
+
+    right: 130px;
+
+    font-size: 24px;
+}
+
+
+.star-two {
+    left: 90px;
+
+    bottom: 120px;
+
+    font-size: 22px;
+
+    animation-delay:
+            -2s;
+}
+
+
+/* ============================================================
+   ANIMACIONES
+   ============================================================ */
+
+@keyframes login26Card {
+
+    from {
+        opacity: 0;
+
+        transform:
+                translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+                translateY(0);
+    }
+}
+
+
+@keyframes login26Float {
+
+    0%,
+    100% {
+        transform:
+                translateY(0);
+    }
+
+    50% {
+        transform:
+                translateY(-8px);
+    }
+}
+
+
+@keyframes login26Shape {
+
+    0%,
+    100% {
+        border-radius:
+                50% 50% 42% 58% /
+            48% 54% 46% 52%;
+    }
+
+    50% {
+        border-radius:
+                56% 44% 52% 48% /
+            44% 50% 50% 56%;
+    }
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 950px) {
+
+    .login26-page {
+        grid-template-columns: 1fr;
+    }
+
+
+    .login26-visual {
+        min-height: auto;
+
+        padding:
+                45px 30px 30px;
+    }
+
+
+    .login26-visual-content {
+        max-width:
+                700px;
+    }
+
+
+    .login26-brand {
+        margin-bottom:
+                35px;
+    }
+
+
+    .login26-message {
+        text-align: center;
+    }
+
+
+    .login26-message h2,
+    .login26-message p {
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+
+    .login26-illustration {
+        height: 250px;
+    }
+
+
+    .login26-form-side {
+        min-height: auto;
+
+        padding:
+                35px 20px 55px;
+    }
+
+}
+
+
+/* ============================================================
+   MOVIL
+   ============================================================ */
+
+@media (max-width: 600px) {
+
+    .login26-visual {
+        padding:
+                30px 20px;
+    }
+
+
+    .login26-brand strong {
+        font-size: 17px;
+    }
+
+
+    .login26-brand span {
+        font-size: 8px;
+    }
+
+
+    .login26-message h2 {
+        font-size: 48px;
+    }
+
+
+    .login26-message p {
+        font-size: 12px;
+    }
+
+
+    .login26-illustration {
+        height: 220px;
+    }
+
+
+    .login26-circle {
+        width: 220px;
+
+        height: 220px;
+    }
+
+
+    .login26-laptop {
+        transform:
+                scale(.87);
+    }
+
+
+    .login26-note {
+        display: none;
+    }
+
+
+    .login26-form-side {
+        padding:
+                25px 14px 45px;
+    }
+
+
+    .login26-card {
+        padding:
+                30px 22px;
+
+        border-radius:
+                24px 24px 55px 24px;
+    }
+
+
+    .login26-heading h1 {
+        font-size: 39px;
+    }
+
+
+    .login26-heading p {
+        font-size: 12px;
+    }
+
+
+    .login26-role-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .login26-role-card {
+        min-height: 90px;
+    }
+
+}

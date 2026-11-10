@@ -1,0 +1,1573 @@
+/* ============================================================
+   EDITAR TRABAJO - ESTUDIANTE
+   ============================================================ */
+
+:root {
+    --ew-pink: #ed4f7b;
+    --ew-pink-dark: #d9426d;
+    --ew-pink-soft: #fae2e9;
+
+    --ew-cream: #fcf8f6;
+    --ew-paper: #ffffff;
+
+    --ew-purple: #eee9f7;
+    --ew-green: #e9f1e6;
+    --ew-blue: #e8f0f8;
+    --ew-peach: #faeadf;
+
+    --ew-dark: #302833;
+    --ew-text: #6c6268;
+    --ew-muted: #9a8d94;
+
+    --ew-border: rgba(106, 77, 89, .11);
+
+    --ew-shadow:
+            0 22px 55px rgba(112, 77, 90, .08);
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    background: var(--ew-cream);
+}
+
+
+/* ============================================================
+   LAYOUT
+   ============================================================ */
+
+.editwork26-layout {
+    min-height: 100vh;
+
+    display: grid;
+
+    grid-template-columns:
+        255px minmax(0, 1fr);
+
+    color: var(--ew-dark);
+
+    font-family:
+            "DM Sans",
+            Arial,
+            sans-serif;
+
+    background:
+            radial-gradient(
+                    circle at 92% 8%,
+                    rgba(248,208,220,.48),
+                    transparent 22%
+            ),
+            radial-gradient(
+                    circle at 40% 90%,
+                    rgba(232,240,229,.50),
+                    transparent 23%
+            ),
+            var(--ew-cream);
+}
+
+
+/* ============================================================
+   SIDEBAR
+   ============================================================ */
+
+.editwork26-sidebar {
+    position: sticky;
+
+    top: 0;
+
+    height: 100vh;
+
+    padding: 30px 22px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    border-right:
+            1px solid rgba(113,77,90,.08);
+
+    background:
+            linear-gradient(
+                    180deg,
+                    #faeeee 0%,
+                    #f8efed 100%
+            );
+}
+
+
+/* BRAND */
+
+.editwork26-brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 42px;
+
+    color: inherit;
+
+    text-decoration: none;
+}
+
+
+.editwork26-brand-logo {
+    width: 48px;
+    height: 48px;
+
+    display: grid;
+    place-items: center;
+
+    border:
+            1px solid rgba(237,79,123,.17);
+
+    border-radius: 15px;
+
+    background: white;
+
+    color: var(--ew-pink);
+
+    font-family:
+            "Playfair Display",
+            Georgia,
+            serif;
+
+    font-size: 23px;
+
+    font-weight: 800;
+
+    box-shadow:
+            0 10px 24px rgba(133,83,100,.08);
+}
+
+
+.editwork26-brand-copy {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.editwork26-brand-copy strong {
+    font-family:
+            "Playfair Display",
+            Georgia,
+            serif;
+
+    font-size: 21px;
+
+    line-height: 1;
+}
+
+
+.editwork26-brand-copy span {
+    margin-top: 6px;
+
+    color: #a17f8a;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.3px;
+}
+
+
+/* ============================================================
+   MENÚ
+   ============================================================ */
+
+.editwork26-menu {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.editwork26-menu a {
+    min-height: 49px;
+
+    padding: 0 14px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    border-radius: 14px;
+
+    color: #695f65;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition:
+            transform .25s ease,
+            background .25s ease,
+            color .25s ease;
+}
+
+
+.editwork26-menu a:hover {
+    transform: translateX(4px);
+
+    color: var(--ew-pink);
+
+    background:
+            rgba(255,255,255,.62);
+}
+
+
+.editwork26-menu a.active {
+    color: var(--ew-pink);
+
+    background: white;
+
+    box-shadow:
+            0 10px 25px rgba(114,73,89,.08);
+}
+
+
+.editwork26-menu-icon {
+    width: 29px;
+    height: 29px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 9px;
+
+    background:
+            rgba(255,255,255,.68);
+
+    color: var(--ew-pink);
+
+    font-size: 16px;
+}
+
+
+/* ============================================================
+   SIDEBAR BOTTOM
+   ============================================================ */
+
+.editwork26-sidebar-bottom {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.editwork26-sidebar-bottom > a {
+    min-height: 42px;
+
+    padding: 0 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    border-radius: 12px;
+
+    color: #71656c;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition:
+            background .25s ease,
+            color .25s ease;
+}
+
+
+.editwork26-sidebar-bottom > a:hover {
+    background:
+            rgba(255,255,255,.7);
+
+    color: var(--ew-pink);
+}
+
+
+.editwork26-sidebar-bottom .logout {
+    color: #ad6678;
+}
+
+
+.editwork26-user {
+    margin-top: 16px;
+
+    padding-top: 19px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    border-top:
+            1px solid rgba(84,59,69,.09);
+}
+
+
+.editwork26-user-avatar {
+    width: 39px;
+    height: 39px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: var(--ew-pink);
+
+    color: white;
+
+    font-weight: 800;
+}
+
+
+.editwork26-user > div:last-child {
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.editwork26-user span {
+    color: #aa8390;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.3px;
+}
+
+
+.editwork26-user strong {
+    margin-top: 3px;
+
+    font-family:
+            "Playfair Display",
+            Georgia,
+            serif;
+
+    font-size: 14px;
+}
+
+
+/* ============================================================
+   MAIN
+   ============================================================ */
+
+.editwork26-main {
+    position: relative;
+
+    min-width: 0;
+
+    padding:
+            52px
+            clamp(30px,5vw,78px)
+            70px;
+}
+
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+.editwork26-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 45px;
+
+    margin-bottom: 35px;
+
+    padding-bottom: 35px;
+
+    border-bottom:
+            1px solid var(--ew-border);
+
+    animation:
+            editwork26Enter
+            .65s ease both;
+}
+
+
+.editwork26-header > div:first-child {
+    max-width: 660px;
+}
+
+
+.editwork26-eyebrow {
+    color: #b36b80;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+.editwork26-header h1 {
+    margin: 10px 0;
+
+    color: var(--ew-dark);
+
+    font-family:
+            "Playfair Display",
+            Georgia,
+            serif;
+
+    font-size:
+            clamp(48px,5vw,70px);
+
+    line-height: .98;
+
+    letter-spacing: -2px;
+}
+
+
+.editwork26-header h1 em {
+    color: var(--ew-pink);
+
+    font-weight: 500;
+}
+
+
+.editwork26-header p {
+    max-width: 590px;
+
+    margin: 0;
+
+    color: var(--ew-text);
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* ============================================================
+   HEADER CARD
+   ============================================================ */
+
+.editwork26-header-card {
+    min-width: 175px;
+
+    padding: 24px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    border:
+            1px solid rgba(230,131,159,.16);
+
+    border-radius:
+            24px 24px 55px 24px;
+
+    background:
+            linear-gradient(
+                    145deg,
+                    #f9e3e9,
+                    #fdf3f5
+            );
+
+    box-shadow:
+            var(--ew-shadow);
+
+    animation:
+            editwork26Float
+            5s ease-in-out infinite;
+}
+
+
+.editwork26-header-card > span {
+    margin-bottom: 8px;
+
+    color: #a97a88;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.4px;
+}
+
+
+.editwork26-header-card strong {
+    color: #5c4d54;
+
+    font-family:
+            "Playfair Display",
+            Georgia,
+            serif;
+
+    font-size: 19px;
+
+    line-height: 1.35;
+}
+
+
+.editwork26-header-card small {
+    margin-top: 7px;
+
+    color: var(--ew-pink);
+
+    font-size: 17px;
+}
+
+
+/* ============================================================
+   DECORACIONES
+   ============================================================ */
+
+.editwork26-star {
+    position: absolute;
+
+    color: #f0a0b6;
+
+    pointer-events: none;
+
+    animation:
+            editwork26Float
+            4s ease-in-out infinite;
+}
+
+
+.editwork26-star.star-one {
+    top: 35px;
+    right: 7%;
+
+    font-size: 20px;
+}
+
+
+.editwork26-star.star-two {
+    top: 210px;
+    right: 3%;
+
+    font-size: 15px;
+
+    animation-delay: -1.5s;
+}
+
+
+/* ============================================================
+   ALERTA
+   ============================================================ */
+
+.editwork26-alert {
+    margin-bottom: 20px;
+
+    padding: 14px 17px;
+
+    display: flex;
+
+    gap: 11px;
+
+    border-radius: 14px;
+
+    font-size: 12px;
+}
+
+
+.editwork26-alert strong {
+    display: block;
+
+    margin-bottom: 3px;
+}
+
+
+.editwork26-alert p {
+    margin: 0;
+}
+
+
+.editwork26-alert.error {
+    background: #fff0f3;
+
+    color: #a24f66;
+
+    border:
+            1px solid #efd1d9;
+}
+
+
+/* ============================================================
+   CARD
+   ============================================================ */
+
+.editwork26-card {
+    overflow: hidden;
+
+    border:
+            1px solid var(--ew-border);
+
+    border-radius: 30px;
+
+    background:
+            rgba(255,255,255,.90);
+
+    box-shadow:
+            var(--ew-shadow);
+}
+
+
+/* ============================================================
+   SECCIONES
+   ============================================================ */
+
+.editwork26-section {
+    display: grid;
+
+    grid-template-columns:
+        120px minmax(0,1fr);
+
+    gap: 35px;
+
+    padding: 42px;
+
+    border-bottom:
+            1px solid rgba(102,73,85,.08);
+}
+
+
+.editwork26-section:nth-of-type(1) {
+    background:
+            linear-gradient(
+                    90deg,
+                    rgba(249,225,232,.38),
+                    transparent 35%
+            );
+}
+
+
+.editwork26-section:nth-of-type(2) {
+    background:
+            linear-gradient(
+                    90deg,
+                    rgba(237,232,248,.42),
+                    transparent 35%
+            );
+}
+
+
+.editwork26-section:nth-of-type(3) {
+    background:
+            linear-gradient(
+                    90deg,
+                    rgba(232,240,248,.45),
+                    transparent 35%
+            );
+}
+
+
+.editwork26-section:nth-of-type(4) {
+    background:
+            linear-gradient(
+                    90deg,
+                    rgba(250,234,223,.45),
+                    transparent 35%
+            );
+}
+
+
+.editwork26-section:nth-of-type(5) {
+    background:
+            linear-gradient(
+                    90deg,
+                    rgba(232,240,229,.48),
+                    transparent 35%
+            );
+}
+
+
+/* ============================================================
+   NÚMEROS
+   ============================================================ */
+
+.editwork26-number {
+    width: 90px;
+    height: 90px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 25px;
+
+    background:
+            rgba(255,255,255,.80);
+
+    border:
+            1px solid rgba(124,86,101,.10);
+
+    color:
+            rgba(89,67,77,.28);
+
+    font-family:
+            "Playfair Display",
+            Georgia,
+            serif;
+
+    font-size: 40px;
+
+    font-weight: 800;
+
+    box-shadow:
+            0 12px 25px rgba(101,75,86,.07);
+}
+
+
+/* ============================================================
+   CONTENIDO
+   ============================================================ */
+
+.editwork26-section-content {
+    min-width: 0;
+
+    max-width: 850px;
+}
+
+
+.editwork26-label {
+    color: var(--ew-pink);
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.8px;
+}
+
+
+.editwork26-section-content h2 {
+    margin: 7px 0;
+
+    color: var(--ew-dark);
+
+    font-family:
+            "Playfair Display",
+            Georgia,
+            serif;
+
+    font-size: 28px;
+
+    line-height: 1.15;
+}
+
+
+.editwork26-section-content > p {
+    max-width: 620px;
+
+    margin: 0 0 23px;
+
+    color: var(--ew-muted);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* ============================================================
+   CAMPOS
+   ============================================================ */
+
+.editwork26-field {
+    width: 100%;
+}
+
+
+.editwork26-field label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #5d5056;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+.editwork26-input,
+.editwork26-textarea {
+    width: 100%;
+
+    border:
+            1px solid rgba(128,91,106,.18);
+
+    border-radius: 14px;
+
+    outline: none;
+
+    background:
+            rgba(255,255,255,.87);
+
+    color: var(--ew-dark);
+
+    font-family:
+            "DM Sans",
+            Arial,
+            sans-serif;
+
+    font-size: 14px;
+
+    transition:
+            border .25s ease,
+            box-shadow .25s ease,
+            background .25s ease;
+}
+
+
+.editwork26-input {
+    min-height: 52px;
+
+    padding: 0 16px;
+}
+
+
+.editwork26-textarea {
+    min-height: 145px;
+
+    padding: 15px 16px;
+
+    resize: vertical;
+
+    line-height: 1.6;
+}
+
+
+.editwork26-input:focus,
+.editwork26-textarea:focus {
+    border-color: #e787a3;
+
+    background: white;
+
+    box-shadow:
+            0 0 0 4px
+            rgba(237,79,123,.08);
+}
+
+
+/* ============================================================
+   URL
+   ============================================================ */
+
+.editwork26-url {
+    position: relative;
+}
+
+
+.editwork26-url > span {
+    position: absolute;
+
+    top: 50%;
+    left: 16px;
+
+    transform: translateY(-50%);
+
+    color: var(--ew-pink);
+
+    z-index: 2;
+}
+
+
+.editwork26-url
+.editwork26-input {
+    padding-left: 43px;
+}
+
+
+/* ============================================================
+   ARCHIVOS
+   ============================================================ */
+
+.editwork26-files {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+.editwork26-file-row {
+    min-height: 70px;
+
+    padding: 11px 13px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    border:
+            1px solid #eee1e5;
+
+    border-radius: 14px;
+
+    background:
+            rgba(255,255,255,.82);
+
+    transition:
+            transform .25s ease,
+            background .25s ease;
+}
+
+
+.editwork26-file-row:hover {
+    transform: translateX(4px);
+
+    background: white;
+}
+
+
+.editwork26-file-info {
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.editwork26-file-icon {
+    width: 42px;
+    height: 42px;
+
+    min-width: 42px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 12px;
+
+    background: var(--ew-pink-soft);
+}
+
+
+.editwork26-file-info > div:last-child {
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.editwork26-file-info strong {
+    color: #594a51;
+
+    font-size: 12px;
+
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+}
+
+
+.editwork26-file-info span {
+    margin-top: 2px;
+
+    color: #99878e;
+
+    font-size: 9px;
+}
+
+
+.editwork26-delete-file {
+    min-height: 37px;
+
+    padding: 0 13px;
+
+    border:
+            1px solid #efd0d8;
+
+    border-radius: 11px;
+
+    background: #fff0f3;
+
+    color: #b4566d;
+
+    font-family:
+            "DM Sans",
+            Arial,
+            sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+            transform .25s ease,
+            background .25s ease;
+}
+
+
+.editwork26-delete-file:hover {
+    transform: translateY(-2px);
+
+    background: #fbe3e9;
+}
+
+
+/* ============================================================
+   SIN ARCHIVOS
+   ============================================================ */
+
+.editwork26-empty-file {
+    min-height: 82px;
+
+    padding: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    border:
+            1px dashed #decbd1;
+
+    border-radius: 14px;
+
+    background: #fffafa;
+}
+
+
+.editwork26-empty-file > span {
+    font-size: 23px;
+}
+
+
+.editwork26-empty-file strong {
+    color: #66565e;
+
+    font-size: 12px;
+}
+
+
+.editwork26-empty-file p {
+    margin: 3px 0 0;
+
+    color: #98878e;
+
+    font-size: 10px;
+}
+
+
+/* ============================================================
+   SUBIR ARCHIVO
+   ============================================================ */
+
+.editwork26-upload-box {
+    min-height: 220px;
+
+    padding: 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+            2px dashed rgba(211,116,143,.30);
+
+    border-radius: 24px;
+
+    background:
+            linear-gradient(
+                    145deg,
+                    #fff9fa,
+                    #fdf1f4
+            );
+
+    text-align: center;
+
+    cursor: pointer;
+
+    transition:
+            transform .25s ease,
+            border-color .25s ease,
+            background .25s ease;
+}
+
+
+.editwork26-upload-box:hover {
+    transform: translateY(-3px);
+
+    border-color:
+            rgba(211,116,143,.55);
+
+    background: white;
+}
+
+
+.editwork26-upload-icon {
+    width: 64px;
+    height: 64px;
+
+    margin-bottom: 14px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 18px;
+
+    background: var(--ew-pink-soft);
+
+    color: var(--ew-pink);
+
+    font-size: 28px;
+}
+
+
+.editwork26-upload-box strong {
+    color: var(--ew-dark);
+
+    font-family:
+            "Playfair Display",
+            Georgia,
+            serif;
+
+    font-size: 20px;
+}
+
+
+.editwork26-upload-box > span {
+    margin-top: 5px;
+
+    color: #89777f;
+
+    font-size: 12px;
+}
+
+
+.editwork26-upload-box small {
+    margin-top: 7px;
+
+    color: #ac9ba2;
+
+    font-size: 10px;
+}
+
+
+.editwork26-upload-box input {
+    margin-top: 17px;
+
+    max-width: 280px;
+
+    color: #7d6d74;
+
+    font-family:
+            "DM Sans",
+            Arial,
+            sans-serif;
+
+    font-size: 11px;
+}
+
+
+/* ============================================================
+   ACTIONS
+   ============================================================ */
+
+.editwork26-actions {
+    padding: 26px 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 11px;
+
+    background: #fffafa;
+
+    border-top:
+            1px solid rgba(103,72,85,.07);
+}
+
+
+.editwork26-cancel,
+.editwork26-submit {
+    min-height: 48px;
+
+    padding: 0 20px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    border-radius: 14px;
+
+    font-family:
+            "DM Sans",
+            Arial,
+            sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    text-decoration: none;
+
+    transition:
+            transform .25s ease,
+            box-shadow .25s ease;
+}
+
+
+.editwork26-cancel {
+    color: #74656c;
+
+    background: white;
+
+    border:
+            1px solid rgba(119,83,97,.14);
+}
+
+
+.editwork26-submit {
+    border: none;
+
+    cursor: pointer;
+
+    color: white;
+
+    background:
+            linear-gradient(
+                    135deg,
+                    #ef5a83,
+                    #e74573
+            );
+
+    box-shadow:
+            0 13px 27px
+            rgba(230,69,115,.20);
+}
+
+
+.editwork26-cancel:hover,
+.editwork26-submit:hover {
+    transform: translateY(-3px);
+}
+
+
+.editwork26-submit:hover {
+    box-shadow:
+            0 17px 34px
+            rgba(230,69,115,.28);
+}
+
+
+/* ============================================================
+   CONSEJO
+   ============================================================ */
+
+.editwork26-tip {
+    margin-top: 26px;
+
+    padding: 25px 30px;
+
+    display: grid;
+
+    grid-template-columns:
+        55px 1fr auto;
+
+    align-items: center;
+
+    gap: 18px;
+
+    border:
+            1px solid rgba(118,82,96,.09);
+
+    border-radius:
+            22px 22px 50px 22px;
+
+    background:
+            linear-gradient(
+                    110deg,
+                    #eee9f7,
+                    #f8f3f5,
+                    #e9f1e6
+            );
+}
+
+
+.editwork26-tip-icon {
+    width: 52px;
+    height: 52px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 16px;
+
+    background:
+            rgba(255,255,255,.76);
+
+    color: #9675ad;
+
+    font-size: 22px;
+}
+
+
+.editwork26-tip > div:nth-child(2) > span {
+    color: #997b8d;
+
+    font-size: 8px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+}
+
+
+.editwork26-tip h3 {
+    margin: 4px 0;
+
+    color: var(--ew-dark);
+
+    font-family:
+            "Playfair Display",
+            Georgia,
+            serif;
+
+    font-size: 20px;
+}
+
+
+.editwork26-tip p {
+    margin: 0;
+
+    color: #776b71;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+
+.editwork26-tip-heart {
+    color:
+            rgba(237,79,123,.55);
+
+    font-size: 35px;
+}
+
+
+/* ============================================================
+   ANIMACIONES
+   ============================================================ */
+
+@keyframes editwork26Enter {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes editwork26Float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 1050px) {
+
+    .editwork26-layout {
+        grid-template-columns:
+            220px minmax(0,1fr);
+    }
+
+    .editwork26-main {
+        padding:
+                45px 35px 60px;
+    }
+}
+
+
+@media (max-width: 850px) {
+
+    .editwork26-layout {
+        display: block;
+    }
+
+    .editwork26-sidebar {
+        position: relative;
+
+        width: 100%;
+        height: auto;
+
+        padding: 18px;
+    }
+
+    .editwork26-brand {
+        margin-bottom: 17px;
+    }
+
+    .editwork26-menu {
+        flex-direction: row;
+
+        overflow-x: auto;
+    }
+
+    .editwork26-menu a {
+        flex: 0 0 auto;
+    }
+
+    .editwork26-sidebar-bottom {
+        margin-top: 15px;
+
+        flex-direction: row;
+
+        flex-wrap: wrap;
+    }
+
+    .editwork26-user {
+        width: 100%;
+    }
+
+    .editwork26-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .editwork26-header-card {
+        display: none;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .editwork26-main {
+        padding:
+                34px 17px 45px;
+    }
+
+    .editwork26-header h1 {
+        font-size: 47px;
+    }
+
+    .editwork26-header p {
+        font-size: 13px;
+    }
+
+    .editwork26-section {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+
+        padding: 28px 21px;
+    }
+
+    .editwork26-number {
+        width: 65px;
+        height: 65px;
+
+        border-radius: 18px;
+
+        font-size: 30px;
+    }
+
+    .editwork26-section-content h2 {
+        font-size: 24px;
+    }
+
+    .editwork26-file-row {
+        align-items: stretch;
+
+        flex-direction: column;
+    }
+
+    .editwork26-delete-file {
+        width: 100%;
+    }
+
+    .editwork26-actions {
+        padding: 22px 21px;
+
+        flex-direction: column-reverse;
+    }
+
+    .editwork26-cancel,
+    .editwork26-submit {
+        width: 100%;
+    }
+
+    .editwork26-tip {
+        grid-template-columns:
+            50px 1fr;
+    }
+
+    .editwork26-tip-heart {
+        display: none;
+    }
+}
