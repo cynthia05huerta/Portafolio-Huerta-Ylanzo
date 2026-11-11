@@ -20,11 +20,10 @@ public final class ArchivoStorage {
 
     private static final long MAX = 20L * 1024 * 1024; // 20 MB
 
-    // Configuración de Cloudinary leyendo desde variables de entorno de Render
     private static final Cloudinary cloudinary = new Cloudinary(ObjectUtils.asMap(
-            "cloud_name", System.getenv().getOrDefault("CLOUDINARY_CLOUD_NAME", "tu_cloud_name"),
-            "api_key", System.getenv().getOrDefault("CLOUDINARY_API_KEY", "tu_api_key"),
-            "api_secret", System.getenv().getOrDefault("CLOUDINARY_API_SECRET", "tu_api_secret"),
+            "cloud_name", System.getenv().getOrDefault("CLOUDINARY_CLOUD_NAME", ""),
+            "api_key", System.getenv().getOrDefault("CLOUDINARY_API_KEY", ""),
+            "api_secret", System.getenv().getOrDefault("CLOUDINARY_API_SECRET", ""),
             "secure", true
     ));
 
@@ -42,7 +41,6 @@ public final class ArchivoStorage {
             throw new IllegalArgumentException("Tipo de archivo no permitido: ." + ext);
         }
 
-        // Subir archivo directamente a Cloudinary mediante sus bytes
         Map uploadResult;
         try (InputStream in = part.getInputStream()) {
             byte[] fileBytes = in.readAllBytes();
@@ -55,7 +53,6 @@ public final class ArchivoStorage {
         String secureUrl = (String) uploadResult.get("secure_url");
         String publicId = (String) uploadResult.get("public_id");
 
-        // Retornamos el record con la URL segura en el campo 'ruta' para que la app abra el enlace directo en la nube
         return new Guardado(original, publicId, secureUrl, part.getContentType(), ext, part.getSize());
     }
 
