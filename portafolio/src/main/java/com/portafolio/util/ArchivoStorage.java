@@ -5,6 +5,7 @@ import com.cloudinary.utils.ObjectUtils;
 import jakarta.servlet.http.Part;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Locale;
 import java.util.Map;
@@ -54,6 +55,14 @@ public final class ArchivoStorage {
         String publicId = (String) uploadResult.get("public_id");
 
         return new Guardado(original, publicId, secureUrl, part.getContentType(), ext, part.getSize());
+    }
+
+    // Método de compatibilidad para evitar errores en los controladores
+    public static Path resolver(String rutaRelativa) {
+        if (rutaRelativa == null || rutaRelativa.startsWith("http")) {
+            return Paths.get(System.getProperty("java.io.tmpdir"));
+        }
+        return Paths.get(rutaRelativa).normalize();
     }
 
     private static String extension(String nombre) {
