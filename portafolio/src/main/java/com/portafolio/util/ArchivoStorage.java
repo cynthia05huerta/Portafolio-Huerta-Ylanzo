@@ -70,5 +70,9 @@ public final class ArchivoStorage {
         return i < 0 ? "" : nombre.substring(i + 1).toLowerCase(Locale.ROOT);
     }
 
-    public record Guardado(String original, String servidor, String ruta, String tipo, String extension, long tamano) {}
+    public record Guardado(String original, String servidor, String ruta, String tipo, String extension, long tamano) {
+        public String url() {
+            return "";
+        }
+    }
 }

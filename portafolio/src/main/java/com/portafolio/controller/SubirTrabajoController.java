@@ -94,7 +94,8 @@ public class SubirTrabajoController extends HttpServlet {
                 Archivo archivo = new Archivo();
                 archivo.setTrabajoId(trabajoId);
                 archivo.setNombreArchivo(guardado.original());
-                archivo.setRutaArchivo(guardado.ruta());
+                // Aseguramos que se guarde la URL segura de Cloudinary o la ruta devuelta
+                archivo.setRutaArchivo(guardado.ruta() != null ? guardado.ruta() : guardado.url());
 
                 archivoDAO.guardar(archivo);
             }
